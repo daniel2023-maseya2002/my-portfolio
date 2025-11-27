@@ -16,12 +16,12 @@ const education = [
     period: "2021 — Present",
     location: "Kigali, Rwanda",
     gpa: "3.6 / 4.0",
-    honors: "Dean's List (2023)",
+    honors: "Dean's List (2025)",
     logo: aucaLogo,
     transcripts: aucaTranscript,
     type: "degree",
     highlights: [
-      "Relevant coursework: Data Structures, Databases, Web Development",
+      "Relevant coursework: Data Structures, java, Web Development, Linux",
       "Project: AUCA Master Registration System — backend & UI work",
     ]
   },

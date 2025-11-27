@@ -31,9 +31,10 @@ const BlogCard = ({ post, index }) => {
 
   return (
     <article
-      className="group relative h-full"
+      className="group relative h-full cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={() => post.articleUrl && window.open(post.articleUrl, '_blank')}
       style={{
         animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
       }}
@@ -101,22 +102,32 @@ const BlogCard = ({ post, index }) => {
             </div>
 
             {/* CTA Button */}
-            <button className="group/btn relative inline-flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 overflow-hidden">
-              <span className="relative z-10 transition-transform duration-300 group-hover/btn:translate-x-1">
-                Read Article
-              </span>
-              <svg 
-                className="w-4 h-4 relative z-10 transition-all duration-300 group-hover/btn:translate-x-2" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
+            {post.articleUrl ? (
+              <a
+                href={post.articleUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="group/btn relative inline-flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 overflow-hidden"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-              </svg>
-              
-              {/* Animated underline */}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-emerald-400 dark:to-teal-400 group-hover/btn:w-full transition-all duration-300"></span>
-            </button>
+                <span className="relative z-10 transition-transform duration-300 group-hover/btn:translate-x-1">
+                  Read Article
+                </span>
+                <svg 
+                  className="w-4 h-4 relative z-10 transition-all duration-300 group-hover/btn:translate-x-2" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+                
+                {/* Animated underline */}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-emerald-400 dark:to-teal-400 group-hover/btn:w-full transition-all duration-300"></span>
+              </a>
+            ) : (
+              <span className="text-sm text-slate-400 dark:text-slate-500 italic">Coming soon</span>
+            )}
           </div>
 
           {/* Decorative Corner Accent */}
