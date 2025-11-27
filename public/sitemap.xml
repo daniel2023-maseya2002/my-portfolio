@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://daniel-maseya-portfolio.vercel.app/</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+
+    <!-- Hero Section -->
+    <url>
+        <loc>https://daniel-maseya-portfolio.vercel.app/#hero</loc>
+        <priority>0.9</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <!-- About Section -->
+    <url>
+        <loc>https://daniel-maseya-portfolio.vercel.app/#about</loc>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <!-- Skills Section -->
+    <url>
+        <loc>https://daniel-maseya-portfolio.vercel.app/#skills</loc>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <!-- Projects Section -->
+    <url>
+        <loc>https://daniel-maseya-portfolio.vercel.app/#projects</loc>
+        <priority>0.9</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+
+    <!-- Experience Section -->
+    <url>
+        <loc>https://daniel-maseya-portfolio.vercel.app/#experience</loc>
+        <priority>0.9</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <!-- Education Section -->
+    <url>
+        <loc>https://daniel-maseya-portfolio.vercel.app/#education</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <!-- Blog Section (if active) -->
+    <url>
+        <loc>https://daniel-maseya-portfolio.vercel.app/#blog</loc>
+        <priority>0.6</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <!-- Contact Section -->
+    <url>
+        <loc>https://daniel-maseya-portfolio.vercel.app/#contact</loc>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+
+</urlset>
