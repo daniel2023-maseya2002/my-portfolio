@@ -6,7 +6,7 @@ const About = () => {
   const stats = [
     {
       title: "Experience",
-      value: "4+ Years",
+      value: "2+ Years",
       detail: "Building & Delivering Solutions",
       icon: (
         <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -40,7 +40,7 @@ const About = () => {
     },
     {
       title: "Projects",
-      value: "50+ Systems",
+      value: "10+ Systems",
       detail: "Deployed Real-World Impact",
       icon: (
         <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
