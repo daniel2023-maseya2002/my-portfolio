@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative h-screen w-full overflow-hidden pt-20"
+      className="relative min-h-screen w-full overflow-hidden"
     >
       {/* Simple Background */}
       <div className="absolute inset-0 bg-white dark:bg-slate-950 transition-colors duration-300">
@@ -44,7 +44,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_80%)]" />
 
       {/* Main Content */}
-      <div className="relative z-10 h-full flex items-center px-6 lg:px-12 xl:px-16">
+      <div className="relative z-10 min-h-screen flex items-center px-6 lg:px-12 xl:px-16 pt-20 pb-16">
         <div className="w-full max-w-7xl mx-auto">
           
           {/* Two Column Layout */}

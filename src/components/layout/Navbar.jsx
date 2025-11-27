@@ -5,124 +5,121 @@ import { useState } from "react";
 const Navbar = ({ theme, onToggleTheme }) => {
   const [open, setOpen] = useState(false);
 
-  // Theme Colors (Match Global CSS variables)
-  const primaryColor = 'indigo';
-  const secondaryColor = 'cyan';
-
   const links = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
-    { href: "#experience", label: "Experience" },
-    { href: "#education", label: "Education" },
-    { href: "#blog", label: "Blog" },
     { href: "#contact", label: "Contact" },
   ];
 
   return (
-    // FIX 1: Ensure the header spans the full viewport width (w-screen)
-    <header className="sticky top-0 z-40 transition-colors duration-300 w-full xl:w-screen"> 
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
       
-      {/* FIX 2: Increased inner container max-width to max-w-7xl, 
-        ensuring content is still centered and readable on very large screens.
-      */}
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
 
         {/* Logo */}
         <a
           href="#home"
-          className="font-extrabold text-2xl tracking-tighter text-slate-900 dark:text-slate-100 transition-colors"
+          className="font-black text-2xl tracking-tight text-slate-900 dark:text-white transition-colors group"
         >
-          Daniel<span className={`text-gradient bg-clip-text bg-gradient-to-r from-${primaryColor}-500 to-${secondaryColor}-500 font-black`}>.</span>
+          Daniel
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500 group-hover:from-emerald-400 group-hover:to-teal-400 transition-all">
+            .
+          </span>
         </a>
 
-        {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-8 text-base text-slate-600 dark:text-slate-300 list-none font-medium">
-          {links.map((l) => (
-            <li key={l.href}>
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex items-center gap-1 list-none">
+          {links.map((link) => (
+            <li key={link.href}>
               <a
-                href={l.href}
-                className={`hover:text-${primaryColor}-500 dark:hover:text-${primaryColor}-400 transition-colors duration-200`}
+                href={link.href}
+                className="px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all duration-200"
               >
-                {l.label}
+                {link.label}
               </a>
             </li>
           ))}
         </ul>
 
-        {/* Right side actions */}
-        <div className="flex items-center gap-4">
+        {/* Right Side Actions */}
+        <div className="flex items-center gap-3">
 
-          {/* Theme toggle */}
+          {/* Theme Toggle Button */}
           <button
             type="button"
             onClick={onToggleTheme}
             aria-label="Toggle theme"
-            className="inline-flex items-center justify-center p-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-100/50 dark:bg-slate-800/50 text-slate-700 dark:text-slate-200 hover:border-indigo-500 dark:hover:border-indigo-500 transition-all duration-200"
+            className="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 transition-all duration-200"
           >
             {theme === "dark" ? (
-              <Moon className="w-5 h-5 text-indigo-400" />
+              <Moon className="w-5 h-5 text-emerald-400" />
             ) : (
-              <Sun className="w-5 h-5 text-amber-500" />
+              <Sun className="w-5 h-5 text-slate-700" />
             )}
           </button>
 
-          {/* Contact button (desktop - uses global btn-primary) */}
+          {/* Contact Button (Desktop) */}
           <a
             href="#contact"
-            className="btn-primary hidden md:inline-flex px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300"
+            className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg text-sm font-semibold hover:shadow-lg hover:shadow-emerald-500/30 transition-all duration-300 hover:scale-105"
           >
-            Let’s talk
+            Let's Talk
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </a>
 
-          {/* Mobile menu toggle */}
+          {/* Mobile Menu Toggle */}
           <button
             type="button"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
-            className="md:hidden p-2 rounded-xl text-slate-800 dark:text-slate-200 hover:bg-slate-200/50 dark:hover:bg-slate-700/50 transition-colors"
+            className="md:hidden p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:border-emerald-500/50 transition-all"
           >
-            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile dropdown (Uses framer-motion) */}
+      {/* Mobile Menu Dropdown */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, scaleY: 0 }}
-            animate={{ opacity: 1, scaleY: 1 }}
-            exit={{ opacity: 0, scaleY: 0 }}
-            transition={{ duration: 0.3 }}
-            // Mobile dropdown should also span full width
-            className="md:hidden origin-top bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 absolute w-full"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden overflow-hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800"
           >
-            <ul className="flex flex-col py-4 px-6 gap-3 text-base text-slate-700 dark:text-slate-300 list-none">
-              {links.map((l) => (
-                <li key={l.href}>
-                  <a
-                    href={l.href}
-                    className={`block w-full py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-${primaryColor}-500 transition-all`}
-                    onClick={() => setOpen(false)} 
-                  >
-                    {l.label}
-                  </a>
-                </li>
-              ))}
+            <div className="max-w-7xl mx-auto px-6 py-6">
+              <ul className="flex flex-col gap-2 list-none mb-4">
+                {links.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      className="block w-full py-3 px-4 text-base font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all"
+                      onClick={() => setOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
 
-              {/* Mobile - Contact button (uses global btn-primary) */}
-              <li className="pt-2">
-                <a
-                  href="#contact"
-                  onClick={() => setOpen(false)}
-                  className="btn-primary inline-block w-full text-center px-4 py-3 rounded-xl text-sm font-semibold transition-all"
-                >
-                  Let’s talk
-                </a>
-              </li>
-            </ul>
+              {/* Mobile Contact Button */}
+              <a
+                href="#contact"
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg text-sm font-semibold hover:shadow-lg hover:shadow-emerald-500/30 transition-all"
+              >
+                Let's Talk
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
