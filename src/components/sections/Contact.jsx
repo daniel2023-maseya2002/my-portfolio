@@ -143,10 +143,10 @@ const Contact = () => {
               </div>
               <h3 className="text-sm font-bold text-slate-900 dark:text-white mb-2">Email Me</h3>
               <a 
-                href="mailto:danielmaseya5@gmail.com"
+                href="mailto:maseyadaniel@gmail.com"
                 className="text-sm text-emerald-600 dark:text-emerald-400 hover:underline break-all"
               >
-                danielmaseya5@gmail.com
+                maseyadaniel@gmail.com
               </a>
             </div>
 

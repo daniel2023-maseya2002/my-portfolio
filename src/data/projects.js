@@ -1,21 +1,6 @@
 // src/data/projects.js
 
-// Import project images so Vite bundles them for production
-import imas1 from "../assets/projects/imas-1.jpg";
-import imas2 from "../assets/projects/imas-2.jpg";
-import imasCover from "../assets/projects/imas-cover.jpg";
-
-import savingdm1 from "../assets/projects/savingdm-1.jpg";
-import savingdm2 from "../assets/projects/savingdm-2.jpg";
-import savingdmCover from "../assets/projects/savingdm-cover.jpg";
-
-import eyecare1 from "../assets/projects/eyecare-1.jpg";
-import eyecareCover from "../assets/projects/eyecare-cover.jpg";
-
-import auca1 from "../assets/projects/auca-1.jpg";
-import aucaCover from "../assets/projects/auca-cover.jpg";
-
-// Each project has: id, title, type ('ux'|'eng'), short, role, tech, cover (imported), images (array), longDescription
+// Each project has: id, title, type ('ux'|'eng'), short, role, tech, cover (path in /src/assets), images (array), longDescription
 const projects = [
   {
     id: "imas",
@@ -23,11 +8,15 @@ const projects = [
     type: "ux",
     short: "Mobility platform for improving ride experiences in Kinshasa.",
     role: "UX / UI / Frontend",
-    tech: ["Figma", "React", "Tailwind", "Django"],
-    cover: imasCover,
-    images: [imas1, imas2],
+    tech: ["Figma", "React", "Tailwind", "Springboot"],
+    cover: "/src/assets/projects/imas-cover.jpg",
+    images: [
+      "/src/assets/projects/imas-1.jpg",
+      "/src/assets/projects/imas-2.jpg"
+    ],
     longDescription:
-      "IMAS helps passengers request rides, track vehicles, and review drivers. I led the product flow, wireframes, UI design, and built the React prototype that communicates with backend APIs."
+      "IMAS helps passengers request rides, track vehicles, and review drivers. I led the product flow, wireframes, UI design, and built the React prototype that communicates with backend APIs.",
+    liveUrl: "https://www.figma.com/proto/DpfNLTluKiiHRNtQshnhmX/IMAS?node-id=30-66&t=S1LJ4smKL7kroiuk-1" // Replace with your actual project URL
   },
   {
     id: "savingdm",
@@ -36,10 +25,14 @@ const projects = [
     short: "Savings & microcredit app with transactional features.",
     role: "Frontend / Backend",
     tech: ["React", "Expo", "Django REST", "Postgres"],
-    cover: savingdmCover,
-    images: [savingdm1, savingdm2],
+    cover: "/src/assets/projects/savingdm-cover.jpg",
+    images: [
+      "/src/assets/projects/savingdm-1.jpg",
+      "/src/assets/projects/savingdm-2.jpg"
+    ],
     longDescription:
-      "SavingDm manages user savings goals, transactions, and simple credit flows. I built the app logic, API integration, and the core data structures."
+      "SavingDm manages user savings goals, transactions, and simple credit flows. I built the app logic, API integration, and the core data structures.",
+    liveUrl: "https://savings-management-frontend.vercel.app/" // Replace with your actual project URL
   },
   {
     id: "eyecare",
@@ -48,22 +41,24 @@ const projects = [
     short: "Health system for patient management and eyewear orders.",
     role: "Architecture / UI",
     tech: ["ASP.NET", "C#", "SQL"],
-    cover: eyecareCover,
-    images: [eyecare1],
+    cover: "/src/assets/projects/eyecare-cover.jpg",
+    images: ["/src/assets/projects/eyecare-1.jpg"],
     longDescription:
-      "A hospital system handling appointments, prescriptions, and eyewear inventory — built as a full product with role-based dashboards."
+      "A hospital system handling appointments, prescriptions, and eyewear inventory — built as a full product with role-based dashboards.",
+    liveUrl: "https://github.com/nestormuk/EyeCareMGT.git" // Replace with your actual project URL
   },
   {
     id: "auca",
-    title: "AUCA Master Registration System",
+    title: "AUCA English Professional Certifiacate",
     type: "eng",
-    short: "University registration system with role-based dashboards.",
+    short: "University priting the certificate of english profesional 1 & 2.",
     role: "Backend / DB / UI",
     tech: ["ASP.NET", "SQL Server", "Stored Procedures"],
-    cover: aucaCover,
-    images: [auca1],
+    cover: "/src/assets/projects/auca-cover.jpg",
+    images: ["/src/assets/projects/auca-1.jpg"],
     longDescription:
-      "A modular registration system supporting Student, Teacher, and Admin roles; implemented role based redirects and PDF export of registration forms."
+      "A certificate management system for AUCA English Professional levels 1 & 2; implemented backend workflows for certificate generation, database-driven validation using SQL Server and stored procedures, and a user-friendly UI for administrators to print and export official certificates.",
+    liveUrl: "https://registration.auca.ac.rw/StudentHome" // Replace with your actual project URL
   }
 ];
 
