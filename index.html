@@ -5,12 +5,68 @@
 
     <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
     <meta name="google-site-verification" content="6apnKZDmqPN-bWRt2U2dCzuQNTv4tKrg7NQ0tb6weIU" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Basic meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-portfolio</title>
+    <title>Daniel Maseya — UI/UX & Software Engineer</title>
+    <meta name="description" content="Daniel Maseya — UI/UX Designer & Software Engineer. Portfolio showcasing projects, case studies, skills, experience and contact information." />
+    <link rel="canonical" href="https://daniel-maseya-portfolio.vercel.app/" />
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#0B1120" />
+
+    <!-- Favicons / Social image -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Add a social preview image to public/social.png (recommended size 1200x630) -->
+    <meta property="og:image" content="https://daniel-maseya-portfolio.vercel.app/social.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Open Graph (social preview) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Daniel Maseya — UI/UX & Software Engineer" />
+    <meta property="og:description" content="Portfolio showcasing projects, case studies, skills, experience and contact information." />
+    <meta property="og:url" content="https://daniel-maseya-portfolio.vercel.app/" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Daniel Maseya — UI/UX & Software Engineer" />
+    <meta name="twitter:description" content="Portfolio showcasing projects, case studies, skills, experience and contact information." />
+    <meta name="twitter:image" content="https://daniel-maseya-portfolio.vercel.app/social.png" />
+
+    <!-- Structured data (Person) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Daniel Maseya",
+      "url": "https://daniel-maseya-portfolio.vercel.app/",
+      "jobTitle": "UI/UX Designer & Software Engineer",
+      "email": "mailto:danielmaseya@dm2002.site",
+      "sameAs": [
+        "https://github.com/daniel2023-maseya2002",
+        "https://www.linkedin.com/in/daniel-maseya"
+      ],
+      "description": "Portfolio of Daniel Maseya — UI/UX and software engineering projects, case studies and contact information."
+    }
+    </script>
+
+    <!-- Optional: preload main assets for faster LCP (Vite will generate hashed names in production) -->
+    <!-- <link rel="preload" href="/assets/index-BpQWKRKP.css" as="style"> -->
+    <!-- <link rel="preload" href="/assets/index-Bxgbvi2S.js" as="script"> -->
+
+    <!-- NOTE: Add these files to public/:
+         - social.png  (1200x630) for social preview
+         - robots.txt  (already added)
+         - sitemap.xml (already added)
+    -->
+
+    <!-- Vite entry -->
+    <script type="module" src="/src/main.jsx"></script>
+    <link rel="stylesheet" href="/src/index.css">
   </head>
+
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
