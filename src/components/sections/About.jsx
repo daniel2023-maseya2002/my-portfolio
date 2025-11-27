@@ -40,7 +40,7 @@ const About = () => {
     },
     {
       title: "Projects",
-      value: "10+ Systems",
+      value: "5+ Systems",
       detail: "Deployed Real-World Impact",
       icon: (
         <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
