@@ -1,43 +1,15 @@
-import { useCallback, useState } from 'react';
-// Mocking framer-motion's components and functions for a single file structure
-const motion = { 
-    div: ({ children, ...props }) => <div {...props}>{children}</div> 
-};
-const experience = [
-    {
-        id: 1,
-        role: "Senior Full Stack Engineer",
-        tag: "Current",
-        org: "Innovatech Solutions",
-        location: "Seattle, WA",
-        period: "2022 - Present",
-        bullets: [
-            "Led the architecture and implementation of a microservices platform using Node.js and TypeScript, reducing latency by 40%.",
-            "Mentored junior developers on best practices in React hooks, state management, and performance optimization.",
-            "Designed and maintained CI/CD pipelines with GitHub Actions, improving deployment frequency by 10x."
-        ]
-    },
-    {
-        id: 2,
-        role: "Software Development Intern",
-        tag: "Internship",
-        org: "Tech Global",
-        location: "Remote",
-        period: "Summer 2021",
-        bullets: [
-            "Developed a responsive user interface for a new data analytics dashboard using React and Tailwind CSS.",
-            "Contributed to database schema design (PostgreSQL) and wrote optimized SQL queries.",
-            "Participated in agile development cycles, including daily standups and sprint reviews."
-        ]
-    }
-];
-
-// --- Component Definitions ---
+// src/components/sections/Experience.jsx
+import { motion } from "framer-motion";
+import { useCallback } from "react";
+import experience from "../../data/experience";
 
 const ExperienceCard = ({ item, index }) => {
-  // Use a simple div since we're mocking motion
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
       className="group relative"
     >
       {/* Timeline Dot */}
@@ -105,138 +77,123 @@ const ExperienceCard = ({ item, index }) => {
           ))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const Experience = () => {
-    // State to hold any messages (replacing the use of `alert()`)
-    const [downloadMessage, setDownloadMessage] = useState('');
+  // Programmatic download handler — fetches the PDF and forces a client download
+  const handleDownloadResume = useCallback(async () => {
+    try {
+      const res = await fetch("/resume.pdf");
+      console.log("resume fetch status:", res.status);
+      console.log("resume content-type:", res.headers.get("content-type"));
+      console.log("resume content-length (header):", res.headers.get("content-length"));
 
-    // Programmatic download handler — fetches the PDF and forces a client download
-    const handleDownloadResume = useCallback(async () => {
-      // The file path is assumed to be at the root of the serving folder (e.g., in the 'public' folder)
-      // If your file is truly named 'resume.pdf' and you want it accessible, place it in your public folder.
-      const filePath = "/resume.pdf"; 
-      setDownloadMessage('Attempting to download resume...');
-      
-      try {
-        const res = await fetch(filePath);
-        console.log("Resume fetch status:", res.status);
-        
-        if (!res.ok) {
-            throw new Error(`Failed to fetch resume (${res.status}). Ensure '${filePath}' exists.`);
-        }
+      if (!res.ok) throw new Error(`Failed to fetch resume (${res.status})`);
 
-        const blob = await res.blob();
-        if (!blob || blob.size === 0) {
-          throw new Error("Fetched resume is empty (0 bytes).");
-        }
+      const blob = await res.blob();
+      console.log("resume blob size:", blob.size);
 
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "resume.pdf";
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        window.URL.revokeObjectURL(url);
-        setDownloadMessage('Resume download initiated successfully.');
-        setTimeout(() => setDownloadMessage(''), 5000);
-
-      } catch (err) {
-        console.error("Resume download error:", err.message);
-        // Fallback: open the file directly so user can manually save
-        window.open(filePath, "_blank", "noopener,noreferrer");
-        setDownloadMessage(`Download failed: ${err.message}. Opening in a new tab for manual download.`);
+      if (!blob || blob.size === 0) {
+        throw new Error("Fetched resume is empty (0 bytes). Server may be serving an empty file.");
       }
-    }, []);
 
-    return (
-        <section id="experience" className="py-16 lg:py-20 bg-gray-50 dark:bg-slate-950 min-h-screen font-sans">
-            <div className="max-w-5xl mx-auto px-6 lg:px-12">
-                
-                {/* Section Header */}
-                <div className="mb-12">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-500/30 mb-6">
-                        <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-300 uppercase tracking-wider">
-                            Work History
-                        </span>
-                    </div>
-                    
-                    <div className="max-w-2xl">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white leading-tight mb-3">
-                            Professional Experience
-                        </h2>
-                        <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                            My journey through professional roles, internships, and major project contributions — organized as a clear timeline.
-                        </p>
-                    </div>
-                </div>
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Resume.pdf";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error("Resume download error:", err);
+      // Fallback: open the file directly so user can manually save
+      window.open("/resume.pdf", "_blank", "noopener,noreferrer");
+      alert("Automatic download failed. Opening the resume in a new tab so you can save it manually.");
+    }
+  }, []);
 
-                {/* Timeline */}
-                <div className="relative">
-                    <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-500 via-teal-500 to-emerald-500"></div>
+  return (
+    <section id="experience" className="py-16 lg:py-20">
+      <div className="max-w-5xl mx-auto px-6 lg:px-12">
+        
+        {/* Section Header */}
+        <div className="mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-500/30 mb-6">
+            <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-300 uppercase tracking-wider">
+              Work History
+            </span>
+          </div>
+          
+          <div className="max-w-2xl">
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white leading-tight mb-3">
+              Professional Experience
+            </h2>
+            <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+              My journey through professional roles, internships, and major project contributions — organized as a clear timeline.
+            </p>
+          </div>
+        </div>
 
-                    <div className="space-y-8 lg:pl-16">
-                        {experience.map((item, index) => (
-                            <ExperienceCard key={item.id} item={item} index={index} />
-                        ))}
-                    </div>
-                </div>
+        {/* Timeline */}
+        <div className="relative">
+          <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-500 via-teal-500 to-emerald-500"></div>
 
-                {/* Bottom CTA */}
-                <div className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 border border-emerald-200 dark:border-emerald-500/30">
-                    <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                        <div>
-                            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1">
-                                Want to know more?
-                            </h3>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">
-                                Download my full resume or get in touch to discuss opportunities
-                            </p>
-                        </div>
-                        <div className="flex gap-3">
+          <div className="space-y-8 lg:pl-16">
+            {experience.map((item, index) => (
+              <ExperienceCard key={item.id} item={item} index={index} />
+            ))}
+          </div>
+        </div>
 
-                            {/* Programmatic download button (fetches and forces download) */}
-                            <button
-                                type="button"
-                                onClick={handleDownloadResume}
-                                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-semibold hover:border-emerald-500/50 dark:hover:border-emerald-500/50 transition-all duration-300 hover:shadow-lg"
-                                aria-label="Download resume"
-                            >
-                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                </svg>
-                                Resume
-                            </button>
+        {/* Bottom CTA */}
+        <div className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 border border-emerald-200 dark:border-emerald-500/30">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1">
+                Want to know more?
+              </h3>
+            <p className="text-sm text-slate-600 dark:text-slate-400">
+              Download my full resume or get in touch to discuss opportunities
+            </p>
+          </div>
+            <div className="flex gap-3">
 
-                            {/* Anchor fallback (open in new tab) */}
-                            <a
-                                href="/resume.pdf"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold hover:shadow-xl hover:shadow-emerald-500/30 transition-all duration-300"
-                            >
-                                Open resume
-                            </a>
+              {/* Programmatic download button (fetches and forces download) */}
+              <button
+                type="button"
+                onClick={handleDownloadResume}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-semibold hover:border-emerald-500/50 dark:hover:border-emerald-500/50 transition-all duration-300 hover:shadow-lg"
+                aria-label="Download resume"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Resume
+              </button>
 
-                        </div>
-                    </div>
-                    {/* Download Message / Status */}
-                    {downloadMessage && (
-                        <p className={`mt-4 text-center text-sm font-medium ${downloadMessage.includes('failed') ? 'text-red-600 dark:text-red-400' : 'text-emerald-600 dark:text-emerald-400'}`}>
-                            {downloadMessage}
-                        </p>
-                    )}
-                </div>
+              {/* Anchor fallback (open in new tab) */}
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold hover:shadow-xl hover:shadow-emerald-500/30 transition-all duration-300"
+              >
+                Open resume
+              </a>
 
             </div>
-        </section>
-    );
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
 };
 
 export default Experience;
