@@ -15,6 +15,10 @@ import eyecareCover from "../assets/projects/eyecare-cover.jpg";
 import auca1 from "../assets/projects/auca-1.jpg";
 import aucaCover from "../assets/projects/auca-cover.jpg";
 
+// Import images for Cassie Posh Events
+import cassie1 from "../assets/projects/cassie1.png";
+import cassieCover from "../assets/projects/cassiecover.png";
+
 // Each project has: id, title, type ('ux'|'eng'), short, role, tech, cover (bundled URL), images (array of bundled URLs), longDescription, liveUrl
 const projects = [
   {
@@ -69,6 +73,19 @@ const projects = [
     longDescription:
       "A certificate management system for AUCA English Professional levels 1 & 2; implemented backend workflows for certificate generation, database-driven validation using SQL Server and stored procedures, and a user-friendly UI for administrators to print and export official certificates.",
     liveUrl: "https://registration.auca.ac.rw/StudentHome"
+  },
+  {
+    id: "cassieposhevents", // Fixed ID spelling to match the actual business name
+    title: "Cassie Posh Events",
+    type: "eng",
+    short: "Luxury wedding and event planning website for bookings and organization of marriages, birthdays, and parties.",
+    role: "Developer / DevOps",
+    tech: ["HTML", "Tailwind CSS", "JavaScript"],
+    cover: cassieCover,
+    images: [cassie1],
+    longDescription:
+      "This is a sophisticated, modern website for Cassie Posh Events, LLC, a luxury wedding and event planning company based in Philadelphia, serving clients throughout the Tri-State area. The website embodies elegance, sophistication, and professionalism through its thoughtful design and user experience. Features include event portfolio showcase, service packages, booking system, client testimonials, and a contact management system.",
+    liveUrl: "https://cassieposhevents.com/"
   }
 ];
 
