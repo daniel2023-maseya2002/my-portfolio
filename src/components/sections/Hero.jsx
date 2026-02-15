@@ -1,6 +1,6 @@
 // src/components/sections/Hero.jsx
 import { useEffect, useState } from 'react';
-import profilePicture from '../../assets/profile.jpg';
+import profilePicture from '../../assets/profile.jpeg';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
