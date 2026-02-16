@@ -14,7 +14,6 @@ import javascript from "../assets/transcripts/javascript.png";
 import va from "../assets/transcripts/VA.png";
 import web from "../assets/transcripts/web.png";
 
-
 const education = [
   {
     id: "auca-bsc",
@@ -29,7 +28,7 @@ const education = [
     transcripts: aucaTranscript,
     type: "degree",
     highlights: [
-      "Relevant coursework: Data Structures, java, Web Development, Linux",
+      "Relevant coursework: Data Structures, Java, Web Development, Linux",
       "Project: AUCA Master Registration System — backend & UI work",
     ]
   },
@@ -50,7 +49,7 @@ const education = [
     ]
   },
   {
-    id: "cert-figma-2024",
+    id: "cert-figma-uiux-2024",
     institution: "Professional UI/UX Certificate (Figma)",
     degree: "Certificate",
     field: "UI/UX & Prototyping",
@@ -66,7 +65,7 @@ const education = [
     ]
   },
   {
-    id: "cert-figma-2025",
+    id: "cert-alx-va-2025",
     institution: "Alx Africa",
     degree: "Certificate",
     field: "Virtual Assistance",
@@ -78,11 +77,11 @@ const education = [
     transcripts: va,
     type: "certificate",
     highlights: [
-      "For successsfully completing an 8-weeks programme in VA Skills in the Digital Age."
+      "Successfully completed an 8-weeks programme in VA Skills in the Digital Age."
     ]
   },
-   {
-    id: "cert-figma-2025",
+  {
+    id: "cert-fcc-web-2025",
     institution: "FreeCodeCamp",
     degree: "Certificate",
     field: "Responsive Web Design",
@@ -94,14 +93,15 @@ const education = [
     transcripts: web,
     type: "certificate",
     highlights: [
-      "Representing approximately 300 hours of works"
+      "Representing approximately 300 hours of coursework",
+      "Hands-on projects: 5 responsive web applications"
     ]
   },
   {
-    id: "cert-figma-2026",
+    id: "cert-fcc-js-2026",
     institution: "FreeCodeCamp",
     degree: "Certificate",
-    field: "JavaScript",
+    field: "JavaScript Algorithms and Data Structures",
     period: "2026",
     location: "Online",
     gpa: null,
@@ -110,14 +110,15 @@ const education = [
     transcripts: javascript,
     type: "certificate",
     highlights: [
-      "Representing approximately 300 hours of works"
+      "Representing approximately 300 hours of coursework",
+      "Mastered ES6, Data Structures, and Algorithm Scripting"
     ]
   },
   {
-    id: "cert-figma-2024",
-    institution: "Cisco Network",
-    degree: "NDG LINUX SERIES",
-    field: "JavaScript",
+    id: "cert-cisco-linux-2024",
+    institution: "Cisco Networking Academy",
+    degree: "NDG Linux Series",
+    field: "Linux Operating System",
     period: "2024",
     location: "Online",
     gpa: null,
@@ -126,7 +127,9 @@ const education = [
     transcripts: internet,
     type: "certificate",
     highlights: [
-      "Become a stronger prospect in the job market by pairing our certificate with other industry-recognized certifications such as Cisco Certified Network Associate (CCNA"
+      "Gained proficiency in Linux system administration",
+      "Command line interface and shell scripting",
+      "Pair with CCNA for comprehensive networking knowledge"
     ]
   }
 ];
