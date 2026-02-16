@@ -118,7 +118,7 @@ const education = [
     institution: "Cisco Network",
     degree: "NDG LINUX SERIES",
     field: "JavaScript",
-    period: "2025",
+    period: "2024",
     location: "Online",
     gpa: null,
     honors: null,
