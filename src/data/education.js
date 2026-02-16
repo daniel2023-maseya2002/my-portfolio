@@ -1,5 +1,5 @@
 // src/data/education.js
-import alxLogo from "../assets/logos/AlxLogo.png";
+import alxLogo from "../assets/logos/AlxLogo.jpg";
 import aucaLogo from "../assets/logos/auca-logo.png";
 import ciscologo from "../assets/logos/ciscologo.png";
 import figmaLogo from "../assets/logos/figma-logo.png";
