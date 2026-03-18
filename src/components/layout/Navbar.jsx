@@ -23,7 +23,7 @@ const Navbar = ({ theme, onToggleTheme }) => {
           href="#home"
           className="font-black text-2xl tracking-tight text-slate-900 dark:text-white transition-colors group"
         >
-          Daniel
+          D2M
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500 group-hover:from-emerald-400 group-hover:to-teal-400 transition-all">
             .
           </span>
