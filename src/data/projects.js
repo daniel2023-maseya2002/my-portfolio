@@ -19,6 +19,9 @@ import aucaCover from "../assets/projects/auca-cover.jpg";
 import cassie1 from "../assets/projects/cassie1.png";
 import cassieCover from "../assets/projects/cassiecover.png";
 
+import jeremie1 from "../assets/projects/jeremie1.png";
+import jeremieCover from "../assets/projects/jeremiecover.png";
+
 // Each project has: id, title, type ('ux'|'eng'), short, role, tech, cover (bundled URL), images (array of bundled URLs), longDescription, liveUrl
 const projects = [
   {
@@ -86,6 +89,19 @@ const projects = [
     longDescription:
       "This is a sophisticated, modern website for Cassie Posh Events, LLC, a luxury wedding and event planning company based in Philadelphia, serving clients throughout the Tri-State area. The website embodies elegance, sophistication, and professionalism through its thoughtful design and user experience. Features include event portfolio showcase, service packages, booking system, client testimonials, and a contact management system.",
     liveUrl: "https://cassieposhevents.com/"
+  },
+  {
+    id: "jeremienze-portfolio", // Fixed ID spelling to match the actual business name
+    title: "Jeremy Nze's Portfolio",
+    type: "eng",
+    short: "Personal portfolio website showcasing projects and skills.",
+    role: "Developer / DevOps",
+    tech: ["React js", "Plain CSS", "JavaScript", "Vite", "React Router DOM", "Framer Motion", "Formspree", "GitHub Pages", "Andasy Dev"],
+    cover: jeremieCover,
+    images: [jeremie1],
+    longDescription:
+      "A modern, professional portfolio website built with React.js to showcase skills, experience, projects, and certifications. The portfolio features a clean, responsive design with smooth animations and a professional blue color scheme. It includes sections for an about me, project showcase with detailed descriptions, a skills section with proficiency indicators, and a contact form that integrates with email services for easy communication.",
+    liveUrl: "https://jeremienze-portfolio.andasy.dev/"
   }
 ];
 
