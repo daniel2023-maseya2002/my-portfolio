@@ -22,6 +22,9 @@ import cassieCover from "../assets/projects/cassiecover.png";
 import jeremie1 from "../assets/projects/jeremie1.png";
 import jeremieCover from "../assets/projects/jeremiecover.png";
 
+import bisman1 from "../assets/projects/bisman1.png";
+import bismanCover from "../assets/projects/bismancover.png";
+
 // Each project has: id, title, type ('ux'|'eng'), short, role, tech, cover (bundled URL), images (array of bundled URLs), longDescription, liveUrl
 const projects = [
   {
@@ -102,6 +105,19 @@ const projects = [
     longDescription:
       "A modern, professional portfolio website built with React.js to showcase skills, experience, projects, and certifications. The portfolio features a clean, responsive design with smooth animations and a professional blue color scheme. It includes sections for an about me, project showcase with detailed descriptions, a skills section with proficiency indicators, and a contact form that integrates with email services for easy communication.",
     liveUrl: "https://jeremienze-portfolio.andasy.dev/"
+  },
+  {
+    id: "bismanfx-acadmique", // Fixed ID spelling to match the actual business name
+    title: "Maîtrisez les marchés avec la précision d'un institutionnel - BismanFX Académique",
+    type: "eng",
+    short: "Académie de trading professionnelle. Des stratégies institutionnelles pour des résultats consistants.",
+    role: "Developer And Collaborator with Eng Ariel Aganze",
+    tech: ["HTML", "Tailwind CDN", "JavaScript", "React js", "Formspree", "GitHub Pages", "Render Dev", "GoDaddy"],
+    cover: bismanCover,
+    images: [bisman1],
+    longDescription:
+      "BismanFx Academy is a professional trading education platform founded by Matthieu Bisimwa, focused on institutional trading strategies (Smart Money Concepts) with structured training, live mentorship, and risk management guidance. It positions itself as a community for ambitious traders, particularly in Africa, aiming to build sustainable financial independence through disciplined trading.",
+    liveUrl: "https://bismanfx.com/"
   }
 ];
 
