@@ -24,6 +24,10 @@ import jeremieCover from "../assets/projects/jeremiecover.png";
 
 import bisman1 from "../assets/projects/bisman1.png";
 import bismanCover from "../assets/projects/bismancover.png";
+import stayease1 from "../assets/projects/stayease1.png";
+import stayease2 from "../assets/projects/stayease2.png";
+import stayease3 from "../assets/projects/stayease3.png";
+import stayeaseCover from "../assets/projects/stayeasecover.png";
 
 // Each project has: id, title, type ('ux'|'eng'), short, role, tech, cover (bundled URL), images (array of bundled URLs), longDescription, liveUrl
 const projects = [
@@ -118,7 +122,36 @@ const projects = [
     longDescription:
       "BismanFx Academy is a professional trading education platform founded by Matthieu Bisimwa, focused on institutional trading strategies (Smart Money Concepts) with structured training, live mentorship, and risk management guidance. It positions itself as a community for ambitious traders, particularly in Africa, aiming to build sustainable financial independence through disciplined trading.",
     liveUrl: "https://bismanfx.com/"
-  }
+  },
+  {
+  id: "stayease",
+  title: "StayEase Africa – Apartment Booking Platform",
+  type: "eng",
+
+  short: "A full-stack apartment booking platform designed for Africa, enabling users to discover, book, and manage apartments with real-time availability and role-based access.",
+
+  role: "Full-Stack Developer & System Architect",
+
+  tech: [
+    "React.js (Vite)",
+    "JavaScript",
+    "Tailwind CSS",
+    "Django REST Framework",
+    "PostgreSQL (Neon)",
+    "Render",
+    "Vercel",
+    "JWT Authentication",
+    "Google OAuth"
+  ],
+
+  cover: stayeaseCover,
+  images: [stayease1, stayease2, stayease3],
+
+  longDescription:
+    "StayEase Africa is a full-stack web platform designed to simplify apartment discovery and booking across Africa. The system connects tenants, property owners, and administrators into a unified ecosystem. Users can browse apartments, view detailed listings with images and videos, and book using a unique booking code system. Property owners can manage listings, monitor bookings, and verify payments manually using local payment methods such as mobile money. Administrators oversee the platform, manage users, and analyze property performance. The platform is built with scalability and real-world usability in mind, addressing housing and payment challenges specific to the African market.",
+
+  liveUrl: "https://stayeasy-africa-peter-frontend.vercel.app"
+}
 ];
 
 export default projects;
