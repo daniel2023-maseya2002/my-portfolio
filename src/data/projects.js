@@ -22,6 +22,10 @@ import cassieCover from "../assets/projects/cassiecover.png";
 import jeremie1 from "../assets/projects/jeremie1.png";
 import jeremieCover from "../assets/projects/jeremiecover.png";
 
+import apartment1 from "../assets/projects/apartment1.png";
+import apartment2 from "../assets/projects/apartment2.png";
+import apartment3 from "../assets/projects/apartment3.png";
+import apartmentcover from "../assets/projects/apartmentcover.png";
 import bisman1 from "../assets/projects/bisman1.png";
 import bismanCover from "../assets/projects/bismancover.png";
 import stayease1 from "../assets/projects/stayease1.png";
@@ -151,7 +155,21 @@ const projects = [
     "StayEase Africa is a full-stack web platform designed to simplify apartment discovery and booking across Africa. The system connects tenants, property owners, and administrators into a unified ecosystem. Users can browse apartments, view detailed listings with images and videos, and book using a unique booking code system. Property owners can manage listings, monitor bookings, and verify payments manually using local payment methods such as mobile money. Administrators oversee the platform, manage users, and analyze property performance. The platform is built with scalability and real-world usability in mind, addressing housing and payment challenges specific to the African market.",
 
   liveUrl: "https://stayeasy-africa-peter-frontend.vercel.app"
-}
+},
+{
+    id: "apartment-booking-platform",
+    title: "A luxury Apartment Booking Platform for Africa",
+    type: "ux",
+    short: "A Ui Ux Design and prototype for a luxury apartment booking platform tailored for the African market, addressing unique housing and payment challenges.",
+    role: "UX / UI ",
+    tech: ["Figma", "Ai Powered Design"],
+    // bundled URLs (use these in your UI as project.cover / project.images)
+    cover: apartmentcover,
+    images: [apartment1, apartment2, apartment3],
+    longDescription:
+      "A luxury apartment booking platform designed for the African market, addressing unique housing and payment challenges. The design focuses on a seamless user experience, allowing users to easily discover, book, and manage apartments. The platform includes features such as real-time availability, detailed listings with images and videos, and a unique booking code system. The design also incorporates a role-based access system for tenants, property owners, and administrators, ensuring a secure and efficient booking process.",
+    liveUrl: "https://www.figma.com/make/4CzOrrdoM90K2Tyb8cGSGo/Apartment-Website-UI-UX-Design?fullscreen=1&t=bPEyAiONp9sX1pZI-1&preview-route=%2Fservices"
+  },
 ];
 
 export default projects;
