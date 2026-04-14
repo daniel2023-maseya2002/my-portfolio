@@ -1,0 +1,382 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "education": "Formation",
+    "blog": "Blog",
+    "contact": "Contact",
+    "letsTalk": "Discutons"
+  },
+  "hero": {
+    "status": "Disponible pour opportunités",
+    "name": "DANIEL MASEYA",
+    "title": "Construire des",
+    "titleHighlight": "Expériences Numériques",
+    "role": "UI/UX & Ingénieur Logiciel",
+    "description": "Je crée des applications haute performance et des interfaces intuitives, transformant les problèmes complexes en solutions digitales élégantes.",
+    "techStack": "Stack Technique",
+    "viewProjects": "Explorer mon travail",
+    "contactMe": "Connectons-nous",
+    "location": "Kigali, Rwanda",
+    "remote": "Distanciel Mondial",
+    "timezone": "UTC+2",
+    "softwareEngineer": "Ingénieur Logiciel",
+    "yearsExp": "Ans d'expérience",
+    "projects": "Projets",
+    "clients": "Clients",
+    "openForWork": "Ouvert au travail",
+    "available": "Disponible",
+    "scroll": "DÉFILER"
+  },
+  "about": {
+    "badge": "À propos de moi",
+    "title": "Créer des",
+    "titleHighlight": "Solutions",
+    "titleEnd": "Numériques avec Objectif",
+    "description1": "Je suis un ingénieur full-stack et passionné d'UX, déterminé à transformer les défis complexes en produits digitaux intuitifs et esthétiques. J'aime combiner le design thinking avec une infrastructure backend robuste.",
+    "description2": "Mon expérience couvre divers domaines, y compris la fintech, les plateformes de mobilité et les systèmes de santé critiques. Je m'engage profondément pour la clarté, la performance et l'impact utilisateur dans chaque projet.",
+    "coreTech": "Technologies clés",
+    "proficiency": "Maîtrise",
+    "experience": "Expérience",
+    "focus": "Focus",
+    "location": "Localisation",
+    "projects": "Projets",
+    "years": "Ans",
+    "building": "Solutions complètes",
+    "webApps": "Applications web & UX",
+    "fullStack": "Pensée design full-stack",
+    "remote": "Ouvert au distanciel",
+    "completed": "Réalisés",
+    "impact": "Impact réel",
+    "ctaTitle": "Prêt à concrétiser votre vision ?",
+    "ctaDesc": "Collaborons sur des projets innovants, évolutifs et centrés sur l'utilisateur.",
+    "ctaButton": "Commencer une conversation"
+  },
+  "skills": {
+    "badge": "Compétences & Expertise",
+    "title": "Développement Full-Stack",
+    "titleHighlight": "& Design",
+    "description": "Je travaille à la fois en ingénierie et en design, passant aisément de la réflexion produit à l'implémentation UI détaillée.",
+    "engineering": "Ingénierie",
+    "engineeringDesc": "Expertise full-stack",
+    "ux": "Design UX/UI",
+    "uxDesc": "Approche centrée utilisateur"
+  },
+  "projects": {
+    "badge": "Travaux remarquables",
+    "title": "Projets",
+    "titleHighlight": "Sélectionnés",
+    "description": "Une collection de mes récentes études de cas UX et projets d'ingénierie résolvant des problèmes concrets.",
+    "all": "Tous",
+    "ux": "UX/UI",
+    "engineering": "Ingénierie",
+    "viewDetails": "Voir détails",
+    "role": "Rôle",
+    "technologies": "Technologies",
+    "viewLive": "Voir le projet en ligne",
+    "discussSimilar": "Discuter d'un projet similaire",
+    "close": "Fermer",
+    "noProjects": "Aucun projet trouvé dans cette catégorie.",
+    "imas": {
+      "title": "IMAS — Système Intelligent d'Assistance à la Mobilité",
+      "short": "Plateforme de mobilité améliorant l'expérience de transport à Kinshasa.",
+      "role": "UX / UI / Frontend",
+      "longDescription": "IMAS aide les passagers à demander des trajets, suivre les véhicules et évaluer les conducteurs. J'ai dirigé le flux produit, les wireframes, la conception UI et construit le prototype React qui communique avec les API backend."
+    },
+    "savingdm": {
+      "title": "SavingDm (ex-CreditJambo)",
+      "short": "Application d'épargne et microcrédit avec fonctionnalités transactionnelles.",
+      "role": "Frontend / Backend",
+      "longDescription": "SavingDm gère les objectifs d'épargne, les transactions et les flux de crédit simples des utilisateurs. J'ai construit la logique applicative, l'intégration API et les structures de données principales."
+    },
+    "eyecare": {
+      "title": "Système de Gestion des Soins Oculaires",
+      "short": "Système de santé pour la gestion des patients et commandes de lunettes.",
+      "role": "Architecture / UI",
+      "longDescription": "Un système hospitalier gérant les rendez-vous, prescriptions et inventaire des lunettes — construit comme un produit complet avec tableaux de bord basés sur les rôles."
+    },
+    "auca": {
+      "title": "Certificat d'Anglais Professionnel AUCA",
+      "short": "Université imprimant le certificat d'anglais professionnel niveaux 1 & 2.",
+      "role": "Backend / DB / UI",
+      "longDescription": "Un système de gestion de certificats pour les niveaux 1 et 2 d'Anglais Professionnel AUCA; implémentation des flux backend pour la génération de certificats, validation basée sur base de données et interface utilisateur conviviale."
+    },
+    "cassie": {
+      "title": "Cassie Posh Events",
+      "short": "Site web de planification de mariages et événements de luxe.",
+      "role": "Développeur / DevOps",
+      "longDescription": "Un site web sophistiqué et moderne pour Cassie Posh Events, LLC, une entreprise de planification de mariages et événements de luxe basée à Philadelphie."
+    },
+    "jeremie": {
+      "title": "Portfolio de Jeremy Nze",
+      "short": "Site web portfolio personnel présentant projets et compétences.",
+      "role": "Développeur / DevOps",
+      "longDescription": "Un portfolio professionnel moderne construit avec React.js pour présenter les compétences, l'expérience, les projets et les certifications."
+    },
+    "bisman": {
+      "title": "Maîtrisez les marchés avec la précision d'un institutionnel - BismanFX Académique",
+      "short": "Académie de trading professionnelle.",
+      "role": "Développeur et Collaborateur",
+      "longDescription": "BismanFx Academy est une plateforme éducative de trading professionnelle fondée par Matthieu Bisimwa."
+    },
+    "stayease": {
+      "title": "StayEase Africa – Plateforme de Réservation d'Appartements",
+      "short": "Plateforme full-stack pour la découverte et réservation d'appartements en Afrique.",
+      "role": "Développeur Full-Stack & Architecte Système",
+      "longDescription": "StayEase Africa est une plateforme web full-stack conçue pour simplifier la découverte et la réservation d'appartements en Afrique."
+    },
+    "apartment": {
+      "title": "Plateforme de Réservation d'Appartements de Luxe pour l'Afrique",
+      "short": "Design UI/UX pour plateforme de réservation d'appartements adaptée au marché africain.",
+      "role": "UX / UI",
+      "longDescription": "Une plateforme de réservation d'appartements de luxe conçue pour le marché africain."
+    }
+  },
+  "experience": {
+    "badge": "Parcours professionnel",
+    "title": "Expérience",
+    "titleHighlight": "Professionnelle",
+    "description": "Mon parcours à travers différents rôles professionnels, stages et contributions majeures — organisé en chronologie claire.",
+    "wantMore": "Vous voulez en savoir plus ?",
+    "downloadResume": "Téléchargez mon CV complet ou contactez-moi pour discuter des opportunités",
+    "resume": "CV",
+    "openResume": "Ouvrir le CV",
+    "freelance": {
+      "role": "Ingénieur Logiciel Freelance & Designer UI/UX",
+      "org": "Freelance / Projets Personnels",
+      "location": "Kigali, Rwanda",
+      "bullets": [
+        "Conception et implémentation de l'interface UI et prototype IMAS ; construction de prototypes React et coordination de la conception API.",
+        "Développement des fonctionnalités principales pour SavingDm (CreditJambo) incluant les flux d'épargne et l'interface de transaction.",
+        "Collaboration avec les parties prenantes pour définir les flux produits et conversion des designs Figma en composants React de production."
+      ],
+      "tag": "Auto-initié"
+    },
+    "eyecare": {
+      "role": "Développeur Fullstack — Système de Gestion des Soins Oculaires",
+      "org": "Projet Universitaire / Client",
+      "location": "Distanciel",
+      "bullets": [
+        "Architecture des modules patient-médecin-admin et schéma de base de données.",
+        "Construction de tableaux de bord responsifs, prise de rendez-vous et suivi des commandes de lunettes.",
+        "Implémentation d'export PDF pour l'enregistrement et les rapports."
+      ],
+      "tag": "HealthTech"
+    },
+    "auca": {
+      "role": "Backend & Frontend — Enregistrement AUCA",
+      "org": "Université Adventiste d'Afrique Centrale (AUCA)",
+      "location": "Kigali, Rwanda",
+      "bullets": [
+        "Conception de la logique d'enregistrement pilotée par procédures stockées et redirections basées sur les rôles.",
+        "Implémentation des tableaux de bord Étudiant/Enseignant/Admin et impression PDF des formulaires d'inscription."
+      ],
+      "tag": "Académique"
+    },
+    "intern": {
+      "role": "Développeur Junior (Stagiaire)",
+      "org": "Petite Startup Technologique",
+      "location": "Kigali, Rwanda",
+      "bullets": [
+        "Travail sur les fonctionnalités frontend et corrections de bugs avec React et Tailwind.",
+        "Participation aux tests utilisateurs et itération de l'interface basée sur les retours."
+      ],
+      "tag": "Stage"
+    }
+  },
+  "education": {
+    "badge": "Parcours académique",
+    "title": "Formation &",
+    "titleHighlight": "Certifications",
+    "description": "Aperçu complet de mes réalisations académiques et certifications professionnelles.",
+    "total": "Total",
+    "degrees": "Diplômes",
+    "certificates": "Certificats",
+    "all": "Tous",
+    "degree": "Diplômes",
+    "certificate": "Certificats",
+    "preview": "Aperçu",
+    "download": "Télécharger",
+    "noTranscript": "Aucun relevé disponible",
+    "noRecords": "Aucun enregistrement de formation trouvé dans cette catégorie.",
+    "previewTranscript": "Aperçu du relevé / certificat",
+    "open": "Ouvrir",
+    "loading": "Chargement du document...",
+    "toClose": "pour fermer",
+    "toDownload": "pour télécharger",
+    "auca": {
+      "institution": "Université Adventiste d'Afrique Centrale (AUCA)",
+      "degree": "Licence en Sciences",
+      "field": "Technologie de l'Information / Génie Logiciel",
+      "location": "Kigali, Rwanda",
+      "honors": "Liste du Doyen (2025)",
+      "highlights": [
+        "Cours pertinents : Structures de Données, Java, Développement Web, Linux",
+        "Projet : Système d'Enregistrement Master AUCA — travail backend & UI"
+      ]
+    },
+    "highschool": {
+      "institution": "Collège Boboto",
+      "degree": "Diplôme d'Études Secondaires",
+      "field": "Biologie",
+      "location": "Kinshasa, RD CONGO",
+      "honors": "Avec Distinction",
+      "highlights": [
+        "Diplômé avec un fort intérêt pour la programmation et le design"
+      ]
+    },
+    "figma": {
+      "institution": "Certificat Professionnel UI/UX (Figma)",
+      "degree": "Certificat",
+      "field": "UI/UX & Prototypage",
+      "location": "En ligne",
+      "highlights": [
+        "Projets pratiques : Systèmes de design, prototypes responsifs"
+      ]
+    },
+    "alx": {
+      "institution": "Alx Africa",
+      "degree": "Certificat",
+      "field": "Assistance Virtuelle",
+      "location": "En ligne",
+      "highlights": [
+        "Programme de 8 semaines réussi en Compétences d'Assistance Virtuelle à l'ère numérique."
+      ]
+    },
+    "freecodecamp_web": {
+      "institution": "FreeCodeCamp",
+      "degree": "Certificat",
+      "field": "Conception Web Responsive",
+      "location": "En ligne",
+      "highlights": [
+        "Environ 300 heures de cours",
+        "Projets pratiques : 5 applications web responsives"
+      ]
+    },
+    "freecodecamp_js": {
+      "institution": "FreeCodeCamp",
+      "degree": "Certificat",
+      "field": "Algorithmes JavaScript et Structures de Données",
+      "location": "En ligne",
+      "highlights": [
+        "Environ 300 heures de cours",
+        "Maîtrise d'ES6, Structures de Données et Scripting d'Algorithmes"
+      ]
+    },
+    "cisco": {
+      "institution": "Cisco Networking Academy",
+      "degree": "Série NDG Linux",
+      "field": "Système d'Exploitation Linux",
+      "location": "En ligne",
+      "highlights": [
+        "Compétences en administration système Linux",
+        "Interface en ligne de commande et scripting shell",
+        "Complément à CCNA pour une connaissance réseau complète"
+      ]
+    }
+  },
+  "blog": {
+    "badge": "Écrits & Perspectives",
+    "title": "Derniers",
+    "titleHighlight": "Articles",
+    "description": "Analyses approfondies du design thinking, de l'architecture système et du développement produit — partage de leçons tirées de projets réels.",
+    "viewAll": "Voir tous les articles",
+    "featured": "À la une",
+    "readArticle": "Lire l'article",
+    "comingSoon": "Bientôt disponible",
+    "newsletterTitle": "Restez informé",
+    "newsletterDesc": "Recevez une notification lors de la publication de nouvelles études de cas, tutoriels et perspectives.",
+    "getInTouch": "Contactez-moi",
+    "learnMore": "En savoir plus",
+    "backToHome": "Retour à l'accueil",
+    "allArticles": "Tous les articles",
+    "searchPlaceholder": "Rechercher des articles...",
+    "allPosts": "Tous les articles",
+    "showing": "Affichage de",
+    "article": "article",
+    "articles": "articles",
+    "noArticles": "Aucun article trouvé correspondant à vos critères.",
+    "clearFilters": "Effacer les filtres",
+    "posts": {
+    "imas": {
+      "title": "Conception d'IMAS : Une Expérience de Mobilité pour Kinshasa",
+      "tag": "Étude de Cas",
+      "summary": "Comment j'ai abordé l'UX pour une plateforme de mobilité : cartographie des flux, définition des personas et transformation des problèmes réels en interfaces claires.",
+      "readingTime": "6 min de lecture"
+    },
+    "savingdm": {
+      "title": "De l'Idée à l'Architecture : SavingDm",
+      "tag": "Ingénierie",
+      "summary": "Analyse du modèle de données et de la conception API pour une application d'épargne et microcrédit.",
+      "readingTime": "5 min de lecture"
+    },
+    "eyecare": {
+      "title": "Leçons de la Construction d'un Système de Gestion des Soins Oculaires",
+      "tag": "Produit",
+      "summary": "Ce que j'ai appris sur les flux de travail, les tableaux de bord basés sur les rôles et les flux centrés sur le patient.",
+      "readingTime": "4 min de lecture"
+    }
+  }
+  },
+  "contact": {
+    "badge": "Contactez-moi",
+    "title": "Travaillons",
+    "titleHighlight": "Ensemble",
+    "description": "Vous avez un projet, une opportunité d'emploi ou simplement envie de dire bonjour ? Envoyez-moi un message — je vous répondrai sous 24 heures.",
+    "email": "Email",
+    "location": "Localisation",
+    "quickResponse": "Réponse rapide",
+    "openToRemote": "Ouvert au distanciel",
+    "responseTime": "Réponse sous 24h",
+    "responseSubtitle": "Généralement pendant les heures de bureau",
+    "yourName": "Votre nom",
+    "emailAddress": "Adresse email",
+    "yourMessage": "Votre message",
+    "messagePlaceholder": "Parlez-moi de votre projet, du calendrier et de vos besoins spécifiques...",
+    "sendMessage": "Envoyer",
+    "reset": "Effacer",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé avec succès !",
+    "successDesc": "Merci de m'avoir contacté. Je vous répondrai bientôt.",
+    "error": "Une erreur s'est produite",
+    "privacy": "Votre vie privée est importante. Les messages sont envoyés sécuritairement via Formspree.",
+    "validationName": "Veuillez entrer votre nom.",
+    "validationEmail": "Veuillez entrer un email valide.",
+    "validationMessage": "Le message doit contenir au moins 10 caractères.",
+    "endpointError": "Point de terminaison du formulaire non configuré. Ajoutez VITE_FORMSPREE_ENDPOINT à votre fichier .env.",
+    "sendError": "Échec de l'envoi. Réessayez plus tard.",
+    "networkError": "Erreur réseau. Vérifiez votre connexion et réessayez."
+  },
+  "footer": {
+    "designedBy": "Conçu et développé par",
+    "basedIn": "Basé à",
+    "openToRemote": "Ouvert au distanciel",
+    "quickLinks": "Liens rapides",
+    "connect": "Connectez-vous",
+    "followMe": "Suivez-moi sur les réseaux",
+    "available": "Disponible pour opportunités",
+    "rights": "Tous droits réservés.",
+    "backToTop": "Retour en haut",
+    "description": "Développeur full-stack et designer UI/UX créant des expériences numériques magnifiques et centrées sur l'utilisateur sur les plateformes web et mobiles.",
+    "contact": "Contact",
+  "home": "Accueil",
+  "about": "À propos",
+  "skills": "Compétences",
+  "projects": "Projets",
+  "experience": "Expérience",
+  "education": "Formation",
+  "blog": "Blog",
+  "linkedin": "LinkedIn",
+  "github": "GitHub",
+  "twitter": "Twitter",
+  "email": "Email",
+  "location": "Kigali, Rwanda",
+  "remote": "Distanciel Mondial",
+  "timezone": "UTC+2",
+  "status": "Disponible pour opportunités",
+  "scroll": "DÉFILER"
+  }
+}

@@ -17,120 +17,66 @@ import web from "../assets/transcripts/web.png";
 const education = [
   {
     id: "auca-bsc",
-    institution: "Adventist University of Central Africa (AUCA)",
-    degree: "Bachelor of Science",
-    field: "Information Technology / Software Engineering",
+    translationKey: "education.auca",
     period: "2021 — 2025",
-    location: "Kigali, Rwanda",
     gpa: "3.6 / 4.0",
-    honors: "Dean's List (2025)",
     logo: aucaLogo,
     transcripts: aucaTranscript,
     type: "degree",
-    highlights: [
-      "Relevant coursework: Data Structures, Java, Web Development, Linux",
-      "Project: AUCA Master Registration System — backend & UI work",
-    ]
   },
   {
     id: "highschool-2019",
-    institution: "College Boboto",
-    degree: "High School Diploma",
-    field: "Biology",
+    translationKey: "education.highschool",
     period: "2014 — 2019",
-    location: "Kinshasa, DR CONGO",
     gpa: "4.0 / 4.0",
-    honors: "Honors",
     logo: highschoolLogo,
     transcripts: highschoolTranscript,
     type: "degree",
-    highlights: [
-      "Graduated with strong interest in programming and design",
-    ]
   },
   {
     id: "cert-figma-uiux-2024",
-    institution: "Professional UI/UX Certificate (Figma)",
-    degree: "Certificate",
-    field: "UI/UX & Prototyping",
+    translationKey: "education.figma",
     period: "2024",
-    location: "Online",
     gpa: null,
-    honors: null,
     logo: figmaLogo,
     transcripts: figmaCertificate,
     type: "certificate",
-    highlights: [
-      "Hands-on projects: Design systems, responsive prototypes"
-    ]
   },
   {
     id: "cert-alx-va-2025",
-    institution: "Alx Africa",
-    degree: "Certificate",
-    field: "Virtual Assistance",
+    translationKey: "education.alx",
     period: "2025",
-    location: "Online",
     gpa: null,
-    honors: null,
     logo: alxLogo,
     transcripts: va,
     type: "certificate",
-    highlights: [
-      "Successfully completed an 8-weeks programme in VA Skills in the Digital Age."
-    ]
   },
   {
     id: "cert-fcc-web-2025",
-    institution: "FreeCodeCamp",
-    degree: "Certificate",
-    field: "Responsive Web Design",
+    translationKey: "education.freecodecamp_web",
     period: "2025",
-    location: "Online",
     gpa: null,
-    honors: null,
     logo: freecodecamplogo,
     transcripts: web,
     type: "certificate",
-    highlights: [
-      "Representing approximately 300 hours of coursework",
-      "Hands-on projects: 5 responsive web applications"
-    ]
   },
   {
     id: "cert-fcc-js-2026",
-    institution: "FreeCodeCamp",
-    degree: "Certificate",
-    field: "JavaScript Algorithms and Data Structures",
+    translationKey: "education.freecodecamp_js",
     period: "2026",
-    location: "Online",
     gpa: null,
-    honors: null,
     logo: freecodecamplogo,
     transcripts: javascript,
     type: "certificate",
-    highlights: [
-      "Representing approximately 300 hours of coursework",
-      "Mastered ES6, Data Structures, and Algorithm Scripting"
-    ]
   },
   {
     id: "cert-cisco-linux-2024",
-    institution: "Cisco Networking Academy",
-    degree: "NDG Linux Series",
-    field: "Linux Operating System",
+    translationKey: "education.cisco",
     period: "2024",
-    location: "Online",
     gpa: null,
-    honors: null,
     logo: ciscologo,
     transcripts: internet,
     type: "certificate",
-    highlights: [
-      "Gained proficiency in Linux system administration",
-      "Command line interface and shell scripting",
-      "Pair with CCNA for comprehensive networking knowledge"
-    ]
   }
 ];
 

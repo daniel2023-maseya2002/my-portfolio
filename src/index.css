@@ -1,4 +1,4 @@
-/* src/index.css - Tailwind + Emerald→Teal theme (NO BLUE) - FULLY RESPONSIVE */
+/* src/index.css - Tailwind + Emerald→Teal theme (NO BLUE) - FULLY RESPONSIVE + RTL SUPPORT */
 
 /* Tailwind */
 @tailwind base;
@@ -76,6 +76,218 @@ html.light {
   --card-shadow: 0 20px 40px -10px rgba(0,0,0,0.08);
 }
 
+/* --- RTL SUPPORT FOR ARABIC --- */
+html[dir="rtl"] {
+  --direction: rtl;
+  direction: rtl;
+}
+
+html[dir="ltr"] {
+  --direction: ltr;
+  direction: ltr;
+}
+
+/* RTL text alignment */
+html[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+html[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+html[dir="rtl"] .space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+html[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+html[dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+html[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+/* RTL margin/padding utilities */
+html[dir="rtl"] .ml-1 {
+  margin-left: 0;
+  margin-right: 0.25rem;
+}
+
+html[dir="rtl"] .ml-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+html[dir="rtl"] .ml-3 {
+  margin-left: 0;
+  margin-right: 0.75rem;
+}
+
+html[dir="rtl"] .ml-4 {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+html[dir="rtl"] .mr-1 {
+  margin-right: 0;
+  margin-left: 0.25rem;
+}
+
+html[dir="rtl"] .mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+html[dir="rtl"] .mr-3 {
+  margin-right: 0;
+  margin-left: 0.75rem;
+}
+
+html[dir="rtl"] .mr-4 {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+html[dir="rtl"] .pl-1 {
+  padding-left: 0;
+  padding-right: 0.25rem;
+}
+
+html[dir="rtl"] .pl-2 {
+  padding-left: 0;
+  padding-right: 0.5rem;
+}
+
+html[dir="rtl"] .pl-3 {
+  padding-left: 0;
+  padding-right: 0.75rem;
+}
+
+html[dir="rtl"] .pl-4 {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+html[dir="rtl"] .pr-1 {
+  padding-right: 0;
+  padding-left: 0.25rem;
+}
+
+html[dir="rtl"] .pr-2 {
+  padding-right: 0;
+  padding-left: 0.5rem;
+}
+
+html[dir="rtl"] .pr-3 {
+  padding-right: 0;
+  padding-left: 0.75rem;
+}
+
+html[dir="rtl"] .pr-4 {
+  padding-right: 0;
+  padding-left: 1rem;
+}
+
+/* RTL transform utilities */
+html[dir="rtl"] .translate-x-1 {
+  transform: translateX(-0.25rem);
+}
+
+html[dir="rtl"] .translate-x-2 {
+  transform: translateX(-0.5rem);
+}
+
+html[dir="rtl"] .-translate-x-1 {
+  transform: translateX(0.25rem);
+}
+
+html[dir="rtl"] .-translate-x-2 {
+  transform: translateX(0.5rem);
+}
+
+html[dir="rtl"] .group-hover\\:translate-x-1:hover {
+  transform: translateX(-0.25rem);
+}
+
+html[dir="rtl"] .group-hover\\:translate-x-0\\.5:hover {
+  transform: translateX(-0.125rem);
+}
+
+/* RTL icon rotations */
+html[dir="rtl"] .rotate-180 {
+  transform: rotate(-180deg);
+}
+
+html[dir="rtl"] .-rotate-90 {
+  transform: rotate(90deg);
+}
+
+html[dir="rtl"] .rotate-90 {
+  transform: rotate(-90deg);
+}
+
+/* RTL flex directions */
+html[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+/* RTL border radius */
+html[dir="rtl"] .rounded-l-lg {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+html[dir="rtl"] .rounded-r-lg {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+/* RTL inset positioning */
+html[dir="rtl"] .left-0 {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .right-0 {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .left-1\/2 {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+html[dir="rtl"] .-translate-x-1\/2 {
+  transform: translateX(50%);
+}
+
+/* RTL background gradient direction */
+html[dir="rtl"] .bg-gradient-to-r {
+  background-direction: to left;
+}
+
+html[dir="rtl"] .bg-gradient-to-l {
+  background-direction: to right;
+}
+
+/* RTL text truncation */
+html[dir="rtl"] .line-clamp-1,
+html[dir="rtl"] .line-clamp-2,
+html[dir="rtl"] .line-clamp-3 {
+  direction: rtl;
+}
+
 /* --- 2. CORE LAYOUT & RESET --- */
 html, body {
   width: 100%;
@@ -121,6 +333,16 @@ h1,h2,h3,h4,h5,h6 {
   hyphens: auto;
 }
 
+/* RTL font adjustments */
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6 {
+  letter-spacing: -0.01em;
+}
+
 h1 { font-size: clamp(2rem, 5vw, 4rem); line-height: 1.1; }
 h2 { font-size: clamp(1.75rem, 4vw, 3rem); line-height: 1.2; }
 h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.3; }
@@ -132,10 +354,23 @@ p, li {
   line-height: 1.7;
 }
 
+/* RTL text adjustments */
+html[dir="rtl"] p,
+html[dir="rtl"] li {
+  line-height: 1.8;
+}
+
 .text-gradient {
   background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* RTL gradient fix */
+html[dir="rtl"] .text-gradient {
+  background: linear-gradient(225deg, var(--primary-hue), var(--secondary-hue));
+  -webkit-background-clip: text;
   background-clip: text;
 }
 
@@ -186,6 +421,11 @@ header a:hover, header a.active {
     transform: translateY(-6px);
     box-shadow: 0 30px 60px -10px rgba(0,0,0,0.42);
     border-color: color-mix(in srgb, var(--primary-hue) 40%, transparent) !important;
+  }
+  
+  /* RTL hover fix */
+  html[dir="rtl"] .card:hover {
+    transform: translateY(-6px) translateX(0);
   }
 }
 
@@ -265,6 +505,15 @@ img[width], img[height] {
   margin-right: auto;
 }
 
+/* RTL container adjustments */
+html[dir="rtl"] .container,
+html[dir="rtl"] .max-w-7xl,
+html[dir="rtl"] .max-w-6xl,
+html[dir="rtl"] .max-w-5xl {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
 @media (max-width: 640px) {
   .container, .max-w-7xl, .max-w-6xl, .max-w-5xl {
     padding-left: 1rem;
@@ -311,6 +560,13 @@ textarea {
   resize: vertical;
 }
 
+/* RTL form adjustments */
+html[dir="rtl"] input,
+html[dir="rtl"] textarea,
+html[dir="rtl"] select {
+  text-align: right;
+}
+
 /* --- 13. ACCESSIBILITY --- */
 :focus-visible {
   outline: none !important;
@@ -351,6 +607,14 @@ textarea {
   margin-right: -50vw;
 }
 
+/* RTL full-bleed fix */
+html[dir="rtl"] .full-bleed {
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
 .surface-lift {
   background: linear-gradient(180deg, color-mix(in srgb, var(--page-surface) 96%, transparent), var(--page-surface)) !important;
   box-shadow: var(--card-shadow) !important;
@@ -385,4 +649,68 @@ textarea {
     min-height: 44px;
     min-width: 44px;
   }
+}
+
+/* --- 19. RTL SPECIFIC UTILITIES --- */
+/* Language-specific font optimizations */
+html[lang="ar"] {
+  font-family: 'Cairo', 'Tajawal', system-ui, -apple-system, sans-serif;
+  letter-spacing: 0;
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4 {
+  letter-spacing: 0;
+}
+
+/* Smooth language switching transition */
+html, body, * {
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* RTL scrollbar position */
+html[dir="rtl"] ::-webkit-scrollbar {
+  width: 12px;
+}
+
+html[dir="rtl"] ::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+html[dir="rtl"] ::-webkit-scrollbar-thumb {
+  background: var(--primary-hue);
+  border-radius: 6px;
+}
+
+/* --- 20. RTL ANIMATION ADJUSTMENTS --- */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+html[dir="ltr"] .animate-slide-in {
+  animation: slideInFromLeft 0.6s ease-out;
+}
+
+html[dir="rtl"] .animate-slide-in {
+  animation: slideInFromRight 0.6s ease-out;
 }

@@ -1,0 +1,382 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "education": "Educación",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "letsTalk": "Hablemos"
+  },
+  "hero": {
+    "status": "Disponible para oportunidades",
+    "name": "DANIEL MASEYA",
+    "title": "Construyendo",
+    "titleHighlight": "Experiencias Digitales",
+    "role": "UI/UX & Ingeniero de Software",
+    "description": "Creo aplicaciones de alto rendimiento e interfaces intuitivas, transformando problemas complejos en soluciones digitales elegantes.",
+    "techStack": "Tecnologías",
+    "viewProjects": "Ver Proyectos",
+    "contactMe": "Conectemos",
+    "location": "Kigali, Ruanda",
+    "remote": "Remoto Mundial",
+    "timezone": "UTC+2",
+    "softwareEngineer": "Ingeniero de Software",
+    "yearsExp": "Años Exp",
+    "projects": "Proyectos",
+    "clients": "Clientes",
+    "openForWork": "Abierto a trabajar",
+    "available": "Disponible",
+    "scroll": "DESPLAZAR"
+  },
+  "about": {
+    "badge": "Sobre mí",
+    "title": "Creando",
+    "titleHighlight": "Soluciones",
+    "titleEnd": "Digitales con Propósito",
+    "description1": "Soy ingeniero full-stack y entusiasta de UX, apasionado por convertir desafíos complejos en productos digitales intuitivos y hermosos. Disfruto unir el pensamiento de diseño con una infraestructura backend robusta.",
+    "description2": "Mi experiencia abarca diversos dominios, incluyendo fintech, plataformas de movilidad y sistemas críticos de salud. Estoy profundamente comprometido con la claridad, el rendimiento y el impacto en el usuario en cada proyecto.",
+    "coreTech": "Tecnologías principales",
+    "proficiency": "Dominio",
+    "experience": "Experiencia",
+    "focus": "Enfoque",
+    "location": "Ubicación",
+    "projects": "Proyectos",
+    "years": "Años",
+    "building": "Construyendo soluciones",
+    "webApps": "Aplicaciones web & UX",
+    "fullStack": "Pensamiento full-stack",
+    "remote": "Abierto a remoto",
+    "completed": "Completados",
+    "impact": "Impacto real",
+    "ctaTitle": "¿Listo para transformar tu visión?",
+    "ctaDesc": "Colaboremos en proyectos innovadores, escalables y centrados en el usuario.",
+    "ctaButton": "Iniciar conversación"
+  },
+  "skills": {
+    "badge": "Habilidades y experiencia",
+    "title": "Desarrollo Full-Stack",
+    "titleHighlight": "& Diseño",
+    "description": "Trabajo tanto en ingeniería como en diseño, pasando sin problemas del pensamiento de producto a la implementación detallada de UI.",
+    "engineering": "Ingeniería",
+    "engineeringDesc": "Experiencia full-stack",
+    "ux": "Diseño UX/UI",
+    "uxDesc": "Enfoque centrado en el usuario"
+  },
+  "projects": {
+    "badge": "Trabajos destacados",
+    "title": "Proyectos",
+    "titleHighlight": "Seleccionados",
+    "description": "Una colección de mis recientes estudios de caso UX y proyectos de ingeniería que resuelven problemas del mundo real.",
+    "all": "Todos",
+    "ux": "UX/UI",
+    "engineering": "Ingeniería",
+    "viewDetails": "Ver detalles",
+    "role": "Rol",
+    "technologies": "Tecnologías",
+    "viewLive": "Ver proyecto en vivo",
+    "discussSimilar": "Discutir proyecto similar",
+    "close": "Cerrar",
+    "noProjects": "No se encontraron proyectos en esta categoría.",
+    "imas": {
+      "title": "IMAS — Sistema Inteligente de Asistencia a la Movilidad",
+      "short": "Plataforma de movilidad para mejorar experiencias de viaje en Kinshasa.",
+      "role": "UX / UI / Frontend",
+      "longDescription": "IMAS ayuda a los pasajeros a solicitar viajes, rastrear vehículos y calificar conductores. Lideré el flujo de producto, wireframes, diseño UI y construí el prototipo React."
+    },
+    "savingdm": {
+      "title": "SavingDm (ex-CreditJambo)",
+      "short": "Aplicación de ahorros y microcréditos con funciones transaccionales.",
+      "role": "Frontend / Backend",
+      "longDescription": "SavingDm gestiona objetivos de ahorro, transacciones y flujos de crédito simples. Construí la lógica de la aplicación, integración de API y estructuras de datos principales."
+    },
+    "eyecare": {
+      "title": "Sistema de Gestión de Cuidado Ocular",
+      "short": "Sistema de salud para gestión de pacientes y pedidos de gafas.",
+      "role": "Arquitectura / UI",
+      "longDescription": "Un sistema hospitalario que maneja citas, recetas e inventario de gafas."
+    },
+    "auca": {
+      "title": "Certificado de Inglés Profesional AUCA",
+      "short": "Universidad que imprime el certificado de inglés profesional niveles 1 y 2.",
+      "role": "Backend / DB / UI",
+      "longDescription": "Sistema de gestión de certificados para los niveles 1 y 2 de Inglés Profesional de AUCA."
+    },
+    "cassie": {
+      "title": "Cassie Posh Events",
+      "short": "Sitio web de planificación de bodas y eventos de lujo.",
+      "role": "Desarrollador / DevOps",
+      "longDescription": "Un sitio web sofisticado y moderno para Cassie Posh Events, LLC."
+    },
+    "jeremie": {
+      "title": "Portafolio de Jeremy Nze",
+      "short": "Sitio web de portafolio personal mostrando proyectos y habilidades.",
+      "role": "Desarrollador / DevOps",
+      "longDescription": "Un portafolio profesional moderno construido con React.js."
+    },
+    "bisman": {
+      "title": "Domina los mercados con precisión institucional - BismanFX Académique",
+      "short": "Academia de trading profesional.",
+      "role": "Desarrollador y Colaborador",
+      "longDescription": "BismanFx Academy es una plataforma educativa de trading profesional."
+    },
+    "stayease": {
+      "title": "StayEase Africa – Plataforma de Reserva de Apartamentos",
+      "short": "Plataforma full-stack para descubrir y reservar apartamentos en África.",
+      "role": "Desarrollador Full-Stack & Arquitecto de Sistemas",
+      "longDescription": "StayEase Africa es una plataforma web full-stack diseñada para simplificar el descubrimiento y reserva de apartamentos en África."
+    },
+    "apartment": {
+      "title": "Plataforma de Reserva de Apartamentos de Lujo para África",
+      "short": "Diseño UI/UX para plataforma de reserva de apartamentos adaptada al mercado africano.",
+      "role": "UX / UI",
+      "longDescription": "Una plataforma de reserva de apartamentos de lujo diseñada para el mercado africano."
+    }
+  },
+  "experience": {
+    "badge": "Historial laboral",
+    "title": "Experiencia",
+    "titleHighlight": "Profesional",
+    "description": "Mi trayectoria a través de roles profesionales, pasantías y contribuciones importantes — organizada como una línea de tiempo clara.",
+    "wantMore": "¿Quieres saber más?",
+    "downloadResume": "Descarga mi CV completo o contáctame para discutir oportunidades",
+    "resume": "CV",
+    "openResume": "Abrir CV",
+    "freelance": {
+      "role": "Ingeniero de Software Freelance & Diseñador UI/UX",
+      "org": "Freelance / Proyectos Personales",
+      "location": "Kigali, Ruanda",
+      "bullets": [
+        "Diseñé e implementé la interfaz de usuario y prototipo de IMAS; construí prototipos React y coordiné el diseño de API.",
+        "Construí características principales para SavingDm (CreditJambo) incluyendo flujos de ahorro e interfaz de transacciones.",
+        "Colaboré con stakeholders para definir flujos de producto y convertí diseños de Figma en componentes React de producción."
+      ],
+      "tag": "Auto-iniciado"
+    },
+    "eyecare": {
+      "role": "Desarrollador Fullstack — Sistema de Gestión de Cuidado Ocular",
+      "org": "Proyecto Universitario / Cliente",
+      "location": "Remoto",
+      "bullets": [
+        "Arquitecté los módulos paciente-médico-admin y el esquema de base de datos.",
+        "Construí paneles responsivos, reserva de citas y seguimiento de pedidos de gafas.",
+        "Implementé exportación PDF para registro e informes."
+      ],
+      "tag": "HealthTech"
+    },
+    "auca": {
+      "role": "Backend & Frontend — Registro AUCA",
+      "org": "Universidad Adventista de África Central (AUCA)",
+      "location": "Kigali, Ruanda",
+      "bullets": [
+        "Diseñé la lógica de registro basada en procedimientos almacenados y redirecciones basadas en roles.",
+        "Implementé paneles de Estudiante/Profesor/Administrador e impresión PDF de formularios de registro."
+      ],
+      "tag": "Académico"
+    },
+    "intern": {
+      "role": "Desarrollador Junior (Pasante)",
+      "org": "Pequeña Startup Tecnológica",
+      "location": "Kigali, Ruanda",
+      "bullets": [
+        "Trabajé en características frontend y corrección de errores usando React y Tailwind.",
+        "Participé en pruebas de usuario e iteración de UI basada en comentarios."
+      ],
+      "tag": "Pasantía"
+    }
+  },
+  "education": {
+    "badge": "Trayectoria académica",
+    "title": "Educación &",
+    "titleHighlight": "Certificaciones",
+    "description": "Una visión general completa de mis logros académicos y certificaciones profesionales.",
+    "total": "Total",
+    "degrees": "Títulos",
+    "certificates": "Certificados",
+    "all": "Todos",
+    "degree": "Títulos",
+    "certificate": "Certificados",
+    "preview": "Vista previa",
+    "download": "Descargar",
+    "noTranscript": "No hay transcripción disponible",
+    "noRecords": "No se encontraron registros educativos en esta categoría.",
+    "previewTranscript": "Vista previa del expediente / certificado",
+    "open": "Abrir",
+    "loading": "Cargando documento...",
+    "toClose": "para cerrar",
+    "toDownload": "para descargar",
+    "auca": {
+      "institution": "Universidad Adventista de África Central (AUCA)",
+      "degree": "Licenciatura en Ciencias",
+      "field": "Tecnología de la Información / Ingeniería de Software",
+      "location": "Kigali, Ruanda",
+      "honors": "Lista del Decano (2025)",
+      "highlights": [
+        "Cursos relevantes: Estructuras de Datos, Java, Desarrollo Web, Linux",
+        "Proyecto: Sistema de Registro Master AUCA — trabajo backend & UI"
+      ]
+    },
+    "highschool": {
+      "institution": "Colegio Boboto",
+      "degree": "Diploma de Escuela Secundaria",
+      "field": "Biología",
+      "location": "Kinshasa, RD CONGO",
+      "honors": "Honores",
+      "highlights": [
+        "Graduado con gran interés en programación y diseño"
+      ]
+    },
+    "figma": {
+      "institution": "Certificado Profesional UI/UX (Figma)",
+      "degree": "Certificado",
+      "field": "UI/UX & Prototipado",
+      "location": "En línea",
+      "highlights": [
+        "Proyectos prácticos: Sistemas de diseño, prototipos responsivos"
+      ]
+    },
+    "alx": {
+      "institution": "Alx Africa",
+      "degree": "Certificado",
+      "field": "Asistencia Virtual",
+      "location": "En línea",
+      "highlights": [
+        "Programa de 8 semanas completado exitosamente en Habilidades de Asistente Virtual en la Era Digital."
+      ]
+    },
+    "freecodecamp_web": {
+      "institution": "FreeCodeCamp",
+      "degree": "Certificado",
+      "field": "Diseño Web Responsivo",
+      "location": "En línea",
+      "highlights": [
+        "Representa aproximadamente 300 horas de coursework",
+        "Proyectos prácticos: 5 aplicaciones web responsivas"
+      ]
+    },
+    "freecodecamp_js": {
+      "institution": "FreeCodeCamp",
+      "degree": "Certificado",
+      "field": "Algoritmos JavaScript y Estructuras de Datos",
+      "location": "En línea",
+      "highlights": [
+        "Representa aproximadamente 300 horas de coursework",
+        "Dominé ES6, Estructuras de Datos y Scripting de Algoritmos"
+      ]
+    },
+    "cisco": {
+      "institution": "Cisco Networking Academy",
+      "degree": "Serie NDG Linux",
+      "field": "Sistema Operativo Linux",
+      "location": "En línea",
+      "highlights": [
+        "Competencia en administración de sistemas Linux",
+        "Interfaz de línea de comandos y scripting de shell",
+        "Complemento con CCNA para conocimiento integral de redes"
+      ]
+    }
+  },
+  "blog": {
+    "badge": "Escritos y perspectivas",
+    "title": "Últimos",
+    "titleHighlight": "Artículos",
+    "description": "Inmersiones profundas en pensamiento de diseño, arquitectura de sistemas y desarrollo de productos — compartiendo lecciones de proyectos reales.",
+    "viewAll": "Ver todos los artículos",
+    "featured": "Destacado",
+    "readArticle": "Leer artículo",
+    "comingSoon": "Próximamente",
+    "newsletterTitle": "Mantente actualizado",
+    "newsletterDesc": "Recibe notificaciones cuando publique nuevos estudios de caso, tutoriales y perspectivas.",
+    "getInTouch": "Contáctame",
+    "learnMore": "Más información",
+    "backToHome": "Volver al inicio",
+    "allArticles": "Todos los artículos",
+    "searchPlaceholder": "Buscar artículos...",
+    "allPosts": "Todos los artículos",
+    "showing": "Mostrando",
+    "article": "artículo",
+    "articles": "artículos",
+    "noArticles": "No se encontraron artículos que coincidan con sus criterios.",
+    "clearFilters": "Limpiar filtros",
+    "posts": {
+    "imas": {
+      "title": "Diseñando IMAS: Una Experiencia de Movilidad para Kinshasa",
+      "tag": "Estudio de Caso",
+      "summary": "Cómo abordé la UX para una plataforma de movilidad: mapeo de flujos, definición de personas y conversión de problemas reales en interfaces claras.",
+      "readingTime": "6 min de lectura"
+    },
+    "savingdm": {
+      "title": "De la Idea a la Arquitectura: SavingDm",
+      "tag": "Ingeniería",
+      "summary": "Desglosando el modelo de datos y el diseño de API para una aplicación de ahorros y microcréditos.",
+      "readingTime": "5 min de lectura"
+    },
+    "eyecare": {
+      "title": "Lecciones de la Construcción de un Sistema de Gestión de Cuidado Ocular",
+      "tag": "Producto",
+      "summary": "Lo que aprendí sobre flujos de trabajo, paneles basados en roles y flujos centrados en el paciente.",
+      "readingTime": "4 min de lectura"
+    }
+  }
+  },
+  "contact": {
+    "badge": "Ponte en contacto",
+    "title": "Trabajemos",
+    "titleHighlight": "Juntos",
+    "description": "¿Tienes un proyecto, oportunidad laboral o solo quieres saludar? Envíame un mensaje — te responderé en 24 horas.",
+    "email": "Correo electrónico",
+    "location": "Ubicación",
+    "quickResponse": "Respuesta rápida",
+    "openToRemote": "Abierto a remoto",
+    "responseTime": "Respuesta en 24h",
+    "responseSubtitle": "Generalmente en horario laboral",
+    "yourName": "Tu nombre",
+    "emailAddress": "Correo electrónico",
+    "yourMessage": "Tu mensaje",
+    "messagePlaceholder": "Cuéntame sobre tu proyecto, cronograma y requisitos específicos...",
+    "sendMessage": "Enviar mensaje",
+    "reset": "Reiniciar",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado con éxito!",
+    "successDesc": "Gracias por contactarme. Te responderé pronto.",
+    "error": "Algo salió mal",
+    "privacy": "Tu privacidad es importante. Los mensajes se envían de forma segura a través de Formspree.",
+    "validationName": "Por favor ingrese su nombre.",
+    "validationEmail": "Por favor ingrese un email válido.",
+    "validationMessage": "El mensaje debe tener al menos 10 caracteres.",
+    "endpointError": "Endpoint del formulario no configurado. Agregue VITE_FORMSPREE_ENDPOINT a su archivo .env.",
+    "sendError": "Error al enviar. Intente nuevamente más tarde.",
+    "networkError": "Error de red. Verifique su conexión y vuelva a intentarlo."
+  },
+  "footer": {
+    "designedBy": "Diseñado y construido por",
+    "basedIn": "Basado en",
+    "openToRemote": "Abierto a remoto",
+    "quickLinks": "Enlaces rápidos",
+    "connect": "Conectar",
+    "followMe": "Sígueme en redes sociales",
+    "available": "Disponible para oportunidades",
+    "rights": "Todos los derechos reservados.",
+    "backToTop": "Volver arriba",
+    "description": "Desarrollador full-stack y diseñador UI/UX creando experiencias digitales hermosas y centradas en el usuario en plataformas web y móviles.",
+    "contact": "Contacto",
+  "home": "Inicio",
+  "about": "Sobre mí",
+  "skills": "Habilidades",
+  "projects": "Proyectos",
+  "experience": "Experiencia",
+  "education": "Educación",
+  "blog": "Blog",
+  "linkedin": "LinkedIn",
+  "github": "GitHub",
+  "twitter": "Twitter",
+  "email": "Correo",
+  "location": "Kigali, Ruanda",
+  "remote": "Remoto Mundial",
+  "timezone": "UTC+2",
+  "status": "Disponible para oportunidades",
+  "scroll": "DESPLAZAR"
+  }
+}

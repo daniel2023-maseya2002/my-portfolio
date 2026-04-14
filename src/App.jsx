@@ -13,9 +13,11 @@ import Experience from "./components/sections/Experience";
 import Hero from "./components/sections/Hero";
 import Projects from "./components/sections/Projects";
 import Skills from "./components/sections/Skills";
+import BlogPage from "./pages/BlogPage";
 
 function App() {
   const [theme, setTheme] = useState("dark");
+  const [currentPage, setCurrentPage] = useState("home");
 
   // Load theme from localStorage on first render
   useEffect(() => {
@@ -48,33 +50,64 @@ function App() {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
+  // Handle navigation
+  const navigateToBlog = () => {
+    setCurrentPage("blog");
+    window.scrollTo(0, 0);
+  };
+
+  const navigateToHome = () => {
+    setCurrentPage("home");
+    window.scrollTo(0, 0);
+  };
+
+  // Render different pages based on currentPage state
+  const renderContent = () => {
+    if (currentPage === "blog") {
+      return <BlogPage onBackToHome={navigateToHome} />;
+    }
+
+    return (
+      <main>
+        {/* Hero - Full width */}
+        <Hero />
+
+        {/* About - Full width with its own internal container */}
+        <About />
+
+        {/* Skills - Full width with its own internal container */}
+        <Skills />
+
+        {/* Projects - Full width with its own internal container */}
+        <Projects />
+
+        {/* Experience - Full width with its own internal container */}
+        <Experience />
+
+        {/* Education - Full width with its own internal container */}
+        <Education />
+
+        {/* Blog - Full width with its own internal container */}
+        <Blog onViewAll={navigateToBlog} />
+
+        {/* Contact - Full width with its own internal container */}
+        <Contact />
+      </main>
+    );
+  };
+
   return (
     <div className="min-h-screen transition-colors duration-300">
-      {/* Navbar receives the theme + toggle function */}
-      <Navbar theme={theme} onToggleTheme={toggleTheme} />
+      {/* Navbar receives the theme + toggle function and navigation props */}
+      <Navbar 
+        theme={theme} 
+        onToggleTheme={toggleTheme}
+        currentPage={currentPage}
+        onNavigate={navigateToHome}
+      />
 
       {/* Main content */}
-      <main>
-        {/* Full-bleed Hero:
-            outer wrapper stretches full width using negative margins
-            inner container keeps hero content aligned with the page grid */}
-        <div className="w-full -mx-4 sm:-mx-6 lg:-mx-8">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Hero />
-          </div>
-        </div>
-
-        {/* Centered content for the rest of the site */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <About />
-          <Skills />
-          <Projects />
-          <Experience />
-          <Education />
-          <Blog />
-          <Contact />
-        </div>
-      </main>
+      {renderContent()}
 
       <Footer />
       <BackToTop />

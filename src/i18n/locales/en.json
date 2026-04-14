@@ -1,0 +1,382 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "blog": "Blog",
+    "contact": "Contact",
+    "letsTalk": "Let's Talk"
+  },
+  "hero": {
+    "status": "Available for Opportunities",
+    "name": "DANIEL MASEYA",
+    "title": "Building",
+    "titleHighlight": "Experiences",
+    "role": "UI/UX & Software Engineer",
+    "description": "I craft high-performance applications and intuitive interfaces that transform ideas into powerful digital solutions.",
+    "techStack": "Tech Stack",
+    "viewProjects": "Explore My Work",
+    "contactMe": "Let's Connect",
+    "location": "Kigali, Rwanda",
+    "remote": "Remote Worldwide",
+    "timezone": "UTC+2",
+    "softwareEngineer": "Software Engineer",
+    "yearsExp": "Years Exp",
+    "projects": "Projects",
+    "clients": "Clients",
+    "openForWork": "Open for work",
+    "available": "Available",
+    "scroll": "SCROLL"
+  },
+  "about": {
+    "badge": "About Me",
+    "title": "Crafting Digital",
+    "titleHighlight": "Solutions",
+    "titleEnd": "with Purpose",
+    "description1": "I'm a Full-Stack Engineer and UX Enthusiast passionate about turning complex challenges into intuitive, beautiful digital products. I enjoy bridging the gap between design thinking and robust backend infrastructure.",
+    "description2": "My experience spans diverse domains, including fintech, mobility platforms, and critical healthcare systems. I am deeply committed to clarity, performance, and maximizing user impact in every project I undertake.",
+    "coreTech": "Core Technologies",
+    "proficiency": "Proficiency",
+    "experience": "Experience",
+    "focus": "Focus",
+    "location": "Location",
+    "projects": "Projects",
+    "years": "Years",
+    "building": "Building & Delivering Solutions",
+    "webApps": "Web Apps & UX",
+    "fullStack": "Full-Stack Design Thinking",
+    "remote": "Open to Remote Work",
+    "completed": "Completed",
+    "impact": "Real-World Impact",
+    "ctaTitle": "Ready to transform your vision?",
+    "ctaDesc": "Let's collaborate on innovative, scalable, and user-centered projects.",
+    "ctaButton": "Start a Conversation"
+  },
+  "skills": {
+    "badge": "Skills & Expertise",
+    "title": "Full-Stack Development",
+    "titleHighlight": "& Design",
+    "description": "I work across both engineering and design, moving seamlessly from high-level product thinking to detailed UI implementation.",
+    "engineering": "Engineering",
+    "engineeringDesc": "Full-stack development expertise",
+    "ux": "UX / UI Design",
+    "uxDesc": "User-centered design approach"
+  },
+  "projects": {
+    "badge": "Featured Work",
+    "title": "Selected",
+    "titleHighlight": "Projects",
+    "description": "A collection of my recent UX case studies and engineering projects that solve real-world problems.",
+    "all": "All",
+    "ux": "UX / UI",
+    "engineering": "Engineering",
+    "viewDetails": "View Details",
+    "role": "Role",
+    "technologies": "Technologies",
+    "viewLive": "View Live Project",
+    "discussSimilar": "Discuss Similar Project",
+    "close": "Close Details",
+    "noProjects": "No projects found in this category.",
+    "imas": {
+      "title": "IMAS — Intelligent Mobility Assistance System",
+      "short": "Mobility platform for improving ride experiences in Kinshasa.",
+      "role": "UX / UI / Frontend",
+      "longDescription": "IMAS helps passengers request rides, track vehicles, and review drivers. I led the product flow, wireframes, UI design, and built the React prototype that communicates with backend APIs."
+    },
+    "savingdm": {
+      "title": "SavingDm (ex-CreditJambo)",
+      "short": "Savings & microcredit app with transactional features.",
+      "role": "Frontend / Backend",
+      "longDescription": "SavingDm manages user savings goals, transactions, and simple credit flows. I built the app logic, API integration, and the core data structures."
+    },
+    "eyecare": {
+      "title": "Eye Care Management System",
+      "short": "Health system for patient management and eyewear orders.",
+      "role": "Architecture / UI",
+      "longDescription": "A hospital system handling appointments, prescriptions, and eyewear inventory — built as a full product with role-based dashboards."
+    },
+    "auca": {
+      "title": "AUCA English Professional Certificate",
+      "short": "University printing the certificate of English professional 1 & 2.",
+      "role": "Backend / DB / UI",
+      "longDescription": "A certificate management system for AUCA English Professional levels 1 & 2; implemented backend workflows for certificate generation, database-driven validation using SQL Server and stored procedures, and a user-friendly UI for administrators to print and export official certificates."
+    },
+    "cassie": {
+      "title": "Cassie Posh Events",
+      "short": "Luxury wedding and event planning website for bookings and organization of marriages, birthdays, and parties.",
+      "role": "Developer / DevOps",
+      "longDescription": "This is a sophisticated, modern website for Cassie Posh Events, LLC, a luxury wedding and event planning company based in Philadelphia, serving clients throughout the Tri-State area. The website embodies elegance, sophistication, and professionalism through its thoughtful design and user experience."
+    },
+    "jeremie": {
+      "title": "Jeremy Nze's Portfolio",
+      "short": "Personal portfolio website showcasing projects and skills.",
+      "role": "Developer / DevOps",
+      "longDescription": "A modern, professional portfolio website built with React.js to showcase skills, experience, projects, and certifications. The portfolio features a clean, responsive design with smooth animations and a professional blue color scheme."
+    },
+    "bisman": {
+      "title": "Maîtrisez les marchés avec la précision d'un institutionnel - BismanFX Académique",
+      "short": "Académie de trading professionnelle. Des stratégies institutionnelles pour des résultats consistants.",
+      "role": "Developer And Collaborator with Eng Ariel Aganze",
+      "longDescription": "BismanFx Academy is a professional trading education platform founded by Matthieu Bisimwa, focused on institutional trading strategies (Smart Money Concepts) with structured training, live mentorship, and risk management guidance."
+    },
+    "stayease": {
+      "title": "StayEase Africa – Apartment Booking Platform",
+      "short": "A full-stack apartment booking platform designed for Africa, enabling users to discover, book, and manage apartments with real-time availability and role-based access.",
+      "role": "Full-Stack Developer & System Architect",
+      "longDescription": "StayEase Africa is a full-stack web platform designed to simplify apartment discovery and booking across Africa. The system connects tenants, property owners, and administrators into a unified ecosystem."
+    },
+    "apartment": {
+      "title": "A luxury Apartment Booking Platform for Africa",
+      "short": "A Ui Ux Design and prototype for a luxury apartment booking platform tailored for the African market, addressing unique housing and payment challenges.",
+      "role": "UX / UI",
+      "longDescription": "A luxury apartment booking platform designed for the African market, addressing unique housing and payment challenges. The design focuses on a seamless user experience, allowing users to easily discover, book, and manage apartments."
+    }
+  },
+  "experience": {
+    "badge": "Work History",
+    "title": "Professional",
+    "titleHighlight": "Experience",
+    "description": "My journey through professional roles, internships, and major project contributions — organized as a clear timeline.",
+    "wantMore": "Want to know more?",
+    "downloadResume": "Download my full resume or get in touch to discuss opportunities",
+    "resume": "Resume",
+    "openResume": "Open resume",
+    "freelance": {
+      "role": "Freelance Software Engineer & UI/UX Designer",
+      "org": "Freelance / Personal Projects",
+      "location": "Kigali, Rwanda",
+      "bullets": [
+        "Designed and implemented IMAS (mobility platform) UI and prototype; built React prototypes and coordinated API design.",
+        "Built core features for SavingDm (CreditJambo) including savings flows and transaction UI.",
+        "Collaborated with stakeholders to define product flows and converted Figma designs to production React components."
+      ],
+      "tag": "Self-initiated"
+    },
+    "eyecare": {
+      "role": "Fullstack Developer — Eye Care Management System",
+      "org": "University Project / Client",
+      "location": "Remote",
+      "bullets": [
+        "Architected patient-doctor-admin modules and database schema.",
+        "Built responsive dashboards, appointment booking, and eyewear order tracking.",
+        "Implemented PDF export for registration and reports."
+      ],
+      "tag": "HealthTech"
+    },
+    "auca": {
+      "role": "Backend & Frontend — AUCA Registration",
+      "org": "Adventist University of Central Africa (AUCA)",
+      "location": "Kigali, Rwanda",
+      "bullets": [
+        "Designed stored-procedure-driven registration logic and role-based redirects.",
+        "Implemented Student/Teacher/Admin dashboards and PDF print of registration forms."
+      ],
+      "tag": "Academic"
+    },
+    "intern": {
+      "role": "Junior Developer (Intern)",
+      "org": "Small Tech Startup",
+      "location": "Kigali, Rwanda",
+      "bullets": [
+        "Worked on frontend features and bug fixes using React and Tailwind.",
+        "Participated in user testing and iterated UI based on feedback."
+      ],
+      "tag": "Internship"
+    }
+  },
+  "education": {
+    "badge": "Academic Journey",
+    "title": "Education &",
+    "titleHighlight": "Certifications",
+    "description": "A comprehensive overview of my academic achievements and professional certifications.",
+    "total": "Total",
+    "degrees": "Degrees",
+    "certificates": "Certificates",
+    "all": "All",
+    "degree": "Degrees",
+    "certificate": "Certificates",
+    "preview": "Preview",
+    "download": "Download",
+    "noTranscript": "No transcript available",
+    "noRecords": "No education records found in this category.",
+    "previewTranscript": "Preview transcript / certificate",
+  "open": "Open",
+  "loading": "Loading document...",
+  "toClose": "to close",
+  "toDownload": "to download",
+    "auca": {
+      "institution": "Adventist University of Central Africa (AUCA)",
+      "degree": "Bachelor of Science",
+      "field": "Information Technology / Software Engineering",
+      "location": "Kigali, Rwanda",
+      "honors": "Dean's List (2025)",
+      "highlights": [
+        "Relevant coursework: Data Structures, Java, Web Development, Linux",
+        "Project: AUCA Master Registration System — backend & UI work"
+      ]
+    },
+    "highschool": {
+      "institution": "College Boboto",
+      "degree": "High School Diploma",
+      "field": "Biology",
+      "location": "Kinshasa, DR CONGO",
+      "honors": "Honors",
+      "highlights": [
+        "Graduated with strong interest in programming and design"
+      ]
+    },
+    "figma": {
+      "institution": "Professional UI/UX Certificate (Figma)",
+      "degree": "Certificate",
+      "field": "UI/UX & Prototyping",
+      "location": "Online",
+      "highlights": [
+        "Hands-on projects: Design systems, responsive prototypes"
+      ]
+    },
+    "alx": {
+      "institution": "Alx Africa",
+      "degree": "Certificate",
+      "field": "Virtual Assistance",
+      "location": "Online",
+      "highlights": [
+        "Successfully completed an 8-weeks programme in VA Skills in the Digital Age."
+      ]
+    },
+    "freecodecamp_web": {
+      "institution": "FreeCodeCamp",
+      "degree": "Certificate",
+      "field": "Responsive Web Design",
+      "location": "Online",
+      "highlights": [
+        "Representing approximately 300 hours of coursework",
+        "Hands-on projects: 5 responsive web applications"
+      ]
+    },
+    "freecodecamp_js": {
+      "institution": "FreeCodeCamp",
+      "degree": "Certificate",
+      "field": "JavaScript Algorithms and Data Structures",
+      "location": "Online",
+      "highlights": [
+        "Representing approximately 300 hours of coursework",
+        "Mastered ES6, Data Structures, and Algorithm Scripting"
+      ]
+    },
+    "cisco": {
+      "institution": "Cisco Networking Academy",
+      "degree": "NDG Linux Series",
+      "field": "Linux Operating System",
+      "location": "Online",
+      "highlights": [
+        "Gained proficiency in Linux system administration",
+        "Command line interface and shell scripting",
+        "Pair with CCNA for comprehensive networking knowledge"
+      ]
+    }
+  },
+  "blog": {
+    "badge": "Writing & Insights",
+    "title": "Latest",
+    "titleHighlight": "Articles",
+    "description": "Deep dives into design thinking, system architecture, and product development — sharing lessons from real projects.",
+    "viewAll": "View All Posts",
+    "featured": "Featured",
+    "readArticle": "Read Article",
+    "comingSoon": "Coming soon",
+    "newsletterTitle": "Stay Updated",
+    "newsletterDesc": "Get notified when I publish new case studies, tutorials, and insights about design and development.",
+    "getInTouch": "Get In Touch",
+    "learnMore": "Learn More",
+    "backToHome": "Back to Home",
+    "allArticles": "All Articles",
+    "searchPlaceholder": "Search articles...",
+    "allPosts": "All Posts",
+    "showing": "Showing",
+    "article": "article",
+    "articles": "articles",
+    "noArticles": "No articles found matching your criteria.",
+    "clearFilters": "Clear filters",
+    "posts": {
+        "imas": {
+        "title": "Designing IMAS: A Mobility Experience for Kinshasa",
+        "tag": "Case Study",
+        "summary": "How I approached the UX for a mobility platform: mapping flows, defining personas, and turning real problems into clear interfaces.",
+        "readingTime": "6 min read"
+        },
+        "savingdm": {
+        "title": "From Idea to Architecture: SavingDm",
+        "tag": "Engineering",
+        "summary": "Breaking down the data model and API design for a savings and micro-credit app built with React and a Django backend.",
+        "readingTime": "5 min read"
+        },
+        "eyecare": {
+        "title": "Lessons from Building an Eye Care Management System",
+        "tag": "Product",
+        "summary": "What I learned about workflows, role-based dashboards, and patient-centered flows while designing a health system.",
+        "readingTime": "4 min read"
+        }
+    }
+  },
+  "contact": {
+    "badge": "Get In Touch",
+    "title": "Let's Work",
+    "titleHighlight": "Together",
+    "description": "Have a project, job opportunity, or just want to say hi? Drop me a message — I'll get back to you within 24 hours.",
+    "email": "Email Me",
+    "location": "Location",
+    "quickResponse": "Quick Response",
+    "openToRemote": "Open to Remote",
+    "responseTime": "24h Response Time",
+    "responseSubtitle": "Typically within business hours",
+    "yourName": "Your Name",
+    "emailAddress": "Email Address",
+    "yourMessage": "Your Message",
+    "messagePlaceholder": "Tell me about your project, timeline, and any specific requirements...",
+    "sendMessage": "Send Message",
+    "reset": "Reset",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "successDesc": "Thanks for reaching out. I'll get back to you soon.",
+    "error": "Oops! Something went wrong",
+    "privacy": "Your privacy is important. Messages are sent securely via Formspree.",
+    "validationName": "Please enter your name.",
+    "validationEmail": "Please enter a valid email.",
+    "validationMessage": "Message must be at least 10 characters.",
+    "endpointError": "Form endpoint not configured. Add VITE_FORMSPREE_ENDPOINT to your .env file.",
+    "sendError": "Failed to send. Try again later.",
+    "networkError": "Network error. Check your connection and try again."
+  },
+  "footer": {
+    "designedBy": "Designed & Built by",
+    "basedIn": "Based in",
+    "openToRemote": "Open to Remote",
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "followMe": "Follow me on social media",
+    "available": "Available for opportunities",
+    "rights": "All rights reserved.",
+    "backToTop": "Back to Top",
+    "description": "Full-stack developer and UI/UX designer crafting beautiful, user-centered digital experiences across web and mobile platforms.",
+    "contact": "Contact",
+  "home": "Home",
+  "about": "About",
+  "skills": "Skills",
+  "projects": "Projects",
+  "experience": "Experience",
+  "education": "Education",
+  "blog": "Blog",
+  "linkedin": "LinkedIn",
+  "github": "GitHub",
+  "twitter": "Twitter",
+  "email": "Email",
+  "location": "Kigali, Rwanda",
+  "remote": "Remote Worldwide",
+  "timezone": "UTC+2",
+  "status": "Available for Opportunities",
+  "scroll": "SCROLL"
+  }
+}
