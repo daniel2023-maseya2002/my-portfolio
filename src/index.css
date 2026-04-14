@@ -210,12 +210,8 @@ html[dir="rtl"] .-translate-x-2 {
   transform: translateX(0.5rem);
 }
 
-html[dir="rtl"] .group-hover\\:translate-x-1:hover {
+html[dir="rtl"] .group-hover\:translate-x-1:hover {
   transform: translateX(-0.25rem);
-}
-
-html[dir="rtl"] .group-hover\\:translate-x-0\\.5:hover {
-  transform: translateX(-0.125rem);
 }
 
 /* RTL icon rotations */
@@ -363,8 +359,8 @@ html[dir="rtl"] li {
 .text-gradient {
   background: var(--primary-gradient);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
 }
 
 /* RTL gradient fix */
