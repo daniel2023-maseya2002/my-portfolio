@@ -33,8 +33,31 @@ import stayease2 from "../assets/projects/stayease2.png";
 import stayease3 from "../assets/projects/stayease3.png";
 import stayeaseCover from "../assets/projects/stayeasecover.png";
 
+import salon1 from "../assets/projects/salon1.png";
+import salon2 from "../assets/projects/salon2.png";
+import salon3 from "../assets/projects/salon3.png";
+import saloncover from "../assets/projects/saloncover.png";
+
 // Each project now uses translationKey instead of hardcoded text
 const projects = [
+  {
+    id: "salon-booking-platform",
+    translationKey: "projects.salon",
+    type: "eng",
+    tech: ["django", "react js", "tailwind css", "jwt authentication", "google oauth", "postgresql", "render", "vercel","Stripe Api"],
+    cover: saloncover,
+    images: [salon1, salon2, salon3],
+    liveUrl: "https://nysha-frontend.onrender.com/"
+  },
+  {
+    id: "stayease",
+    translationKey: "projects.stayease",
+    type: "eng",
+    tech: ["React.js (Vite)", "JavaScript", "Tailwind CSS", "Django REST Framework", "PostgreSQL (Neon)", "Render", "Vercel", "JWT Authentication", "Google OAuth"],
+    cover: stayeaseCover,
+    images: [stayease1, stayease2, stayease3],
+    liveUrl: "https://stayeasy-africa-peter-frontend.vercel.app"
+  },
   {
     id: "imas",
     translationKey: "projects.imas",
@@ -98,15 +121,7 @@ const projects = [
     images: [bisman1],
     liveUrl: "https://bismanfx.com/"
   },
-  {
-    id: "stayease",
-    translationKey: "projects.stayease",
-    type: "eng",
-    tech: ["React.js (Vite)", "JavaScript", "Tailwind CSS", "Django REST Framework", "PostgreSQL (Neon)", "Render", "Vercel", "JWT Authentication", "Google OAuth"],
-    cover: stayeaseCover,
-    images: [stayease1, stayease2, stayease3],
-    liveUrl: "https://stayeasy-africa-peter-frontend.vercel.app"
-  },
+  
   {
     id: "apartment-booking-platform",
     translationKey: "projects.apartment",
@@ -115,7 +130,7 @@ const projects = [
     cover: apartmentcover,
     images: [apartment1, apartment2, apartment3],
     liveUrl: "https://www.figma.com/make/4CzOrrdoM90K2Tyb8cGSGo/Apartment-Website-UI-UX-Design?fullscreen=1&t=bPEyAiONp9sX1pZI-1&preview-route=%2Fservices"
-  }
+  },
 ];
 
 export default projects;

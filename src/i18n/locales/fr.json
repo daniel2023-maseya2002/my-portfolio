@@ -133,7 +133,13 @@
       "short": "Design UI/UX pour plateforme de réservation d'appartements adaptée au marché africain.",
       "role": "UX / UI",
       "longDescription": "Une plateforme de réservation d'appartements de luxe conçue pour le marché africain."
-    }
+    },
+    "salon": {
+    "title": "Nysha Hair Braiding – Plateforme de Réservation de Salon",
+    "short": "Plateforme complète de réservation de salon avec rendez-vous en ligne, paiements et tableau de bord administrateur.",
+    "role": "Développeur Full-Stack & Architecte Système",
+    "longDescription": "Un système complet de gestion de salon pour Nysha Hair Braiding, spécialisé dans les techniques de tressage africaines. La plateforme permet aux clients de réserver des rendez-vous en ligne, de payer des acomptes via Stripe et de gérer leurs réservations. Fonctionnalités : catalogue de services avec tarifs, affichage des horaires d'ouverture, gestion des rendez-vous, traitement des paiements et tableau de bord administrateur."
+  }
   },
   "experience": {
     "badge": "Parcours professionnel",

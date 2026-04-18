@@ -133,7 +133,13 @@
       "short": "A Ui Ux Design and prototype for a luxury apartment booking platform tailored for the African market, addressing unique housing and payment challenges.",
       "role": "UX / UI",
       "longDescription": "A luxury apartment booking platform designed for the African market, addressing unique housing and payment challenges. The design focuses on a seamless user experience, allowing users to easily discover, book, and manage apartments."
-    }
+    },
+    "salon": {
+    "title": "Nysha Hair Braiding – Salon Booking Platform",
+    "short": "Full-stack salon booking platform with online appointments, payments, and admin dashboard.",
+    "role": "Full-Stack Developer & System Architect",
+    "longDescription": "A complete salon management system for Nysha Hair Braiding, specializing in African braiding techniques. The platform allows customers to book appointments online, pay deposits via Stripe, and manage their reservations. Features include service catalog with pricing, working hours display, appointment management, payment processing, and an admin dashboard for salon owners to manage bookings and track revenue."
+  }
   },
   "experience": {
     "badge": "Work History",
