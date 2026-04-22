@@ -6,9 +6,9 @@ import figmaLogo from "../assets/logos/figma-logo.png";
 import freecodecamplogo from "../assets/logos/freecodecamp.jpg";
 import highschoolLogo from "../assets/logos/highschool-logo.png";
 
-import aucaTranscript from "../assets/transcripts/auca-transcript.pdf";
+import aucaTranscript from "../assets/transcripts/auca-transcript.jpeg";
 import figmaCertificate from "../assets/transcripts/figma-certificate.png";
-import highschoolTranscript from "../assets/transcripts/highschool-transcript.pdf";
+import highschoolTranscript from "../assets/transcripts/highschool-transcript.jpeg";
 import internet from "../assets/transcripts/internet-society.pdf";
 import javascript from "../assets/transcripts/javascript.png";
 import va from "../assets/transcripts/VA.png";

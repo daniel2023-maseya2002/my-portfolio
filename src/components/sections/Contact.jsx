@@ -1,5 +1,5 @@
 // src/components/sections/Contact.jsx
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
@@ -17,9 +17,33 @@ const Contact = () => {
   const [errorMsg, setErrorMsg] = useState("");
   const [focusedField, setFocusedField] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
+  
+  // State for dynamic location detection
+  const [detectedLocation, setDetectedLocation] = useState({ city: null, country: null });
+  const [locationLoading, setLocationLoading] = useState(true);
 
-  const successRef = useRef(null);
+  // Detect visitor's location via IP (same free API as in Hero/About)
+  useEffect(() => {
+    const detectLocation = async () => {
+      try {
+        const response = await fetch('https://ipapi.co/json/');
+        if (!response.ok) throw new Error('Location detection failed');
+        const data = await response.json();
+        setDetectedLocation({
+          city: data.city || null,
+          country: data.country_name || null,
+        });
+      } catch (error) {
+        console.warn('Location detection error:', error);
+        setDetectedLocation({ city: null, country: null });
+      } finally {
+        setLocationLoading(false);
+      }
+    };
+    detectLocation();
+  }, []);
 
+  // Intersection Observer for section visibility
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -114,6 +138,21 @@ const Contact = () => {
     }
   };
 
+  // Build the location string from detected data or fallback
+  const getLocationDisplay = () => {
+    if (!locationLoading && detectedLocation.city && detectedLocation.country) {
+      return `${detectedLocation.city}, ${detectedLocation.country}`;
+    }
+    if (!locationLoading && detectedLocation.city) {
+      return detectedLocation.city;
+    }
+    if (!locationLoading && detectedLocation.country) {
+      return detectedLocation.country;
+    }
+    // Fallback to static translation value (e.g., "Kigali, Rwanda")
+    return t("contact.locationFallback", "Kigali, Rwanda");
+  };
+
   const contactMethods = [
     {
       icon: (
@@ -133,7 +172,8 @@ const Contact = () => {
         </svg>
       ),
       titleKey: "contact.location",
-      value: "Kigali, Rwanda",
+      // Use dynamic display string instead of static value
+      dynamicValue: true,
       subtitleKey: "contact.openToRemote",
       link: null,
     },
@@ -218,7 +258,9 @@ const Contact = () => {
                       ) : (
                         <>
                           <p className="text-sm text-slate-800 dark:text-slate-200 font-medium">
-                            {method.valueKey ? t(method.valueKey) : method.value}
+                            {method.dynamicValue 
+                              ? getLocationDisplay() 
+                              : (method.valueKey ? t(method.valueKey) : method.value)}
                           </p>
                           {method.subtitleKey && (
                             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">

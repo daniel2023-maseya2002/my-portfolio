@@ -5,6 +5,29 @@ import { useTranslation } from 'react-i18next';
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { t } = useTranslation();
+  const [detectedLocation, setDetectedLocation] = useState({ city: null, country: null });
+  const [locationLoading, setLocationLoading] = useState(true);
+
+  // Detect visitor's location via IP
+  useEffect(() => {
+    const detectLocation = async () => {
+      try {
+        const response = await fetch('https://ipapi.co/json/');
+        if (!response.ok) throw new Error('Location detection failed');
+        const data = await response.json();
+        setDetectedLocation({
+          city: data.city || null,
+          country: data.country_name || null,
+        });
+      } catch (error) {
+        console.warn('Location detection error:', error);
+        setDetectedLocation({ city: null, country: null });
+      } finally {
+        setLocationLoading(false);
+      }
+    };
+    detectLocation();
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,6 +57,21 @@ const About = () => {
     { name: 'Figma', level: 88, color: 'from-purple-500 to-pink-600' }
   ];
 
+  // Determine location value and suffix for the stats card
+  const getLocationValue = () => {
+    if (!locationLoading && detectedLocation.city) {
+      return detectedLocation.city;
+    }
+    return "Kigali"; // fallback to default city
+  };
+
+  const getLocationSuffix = () => {
+    if (!locationLoading && detectedLocation.country) {
+      return detectedLocation.country;
+    }
+    return t("about.location"); // fallback to translation (e.g., "Rwanda")
+  };
+
   const stats = [
     {
       titleKey: "about.experience",
@@ -61,8 +99,9 @@ const About = () => {
     },
     {
       titleKey: "about.location",
-      value: "Kigali",
-      suffixKey: "about.location",
+      value: getLocationValue(),        // dynamic city
+      suffixKey: null,                  // will use dynamic suffix instead of translation key
+      dynamicSuffix: getLocationSuffix(), // dynamic country
       detailKey: "about.remote",
       icon: (
         <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -218,7 +257,10 @@ const About = () => {
                         {stat.value}
                       </p>
                       <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
-                        {t(stat.suffixKey)}
+                        {/* If dynamicSuffix exists, use it; otherwise translate suffixKey */}
+                        {stat.dynamicSuffix !== undefined 
+                          ? stat.dynamicSuffix 
+                          : (stat.suffixKey ? t(stat.suffixKey) : '')}
                       </p>
                     </div>
                     <p className="text-sm text-slate-600 dark:text-slate-400">

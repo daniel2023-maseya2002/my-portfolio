@@ -8,6 +8,54 @@ const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [detectedLocation, setDetectedLocation] = useState(null);
+  const [detectedTimezone, setDetectedTimezone] = useState(null);
+  const [locationLoading, setLocationLoading] = useState(true);
+  const [timezoneLoading, setTimezoneLoading] = useState(true);
+
+  // Detect visitor's location via IP
+  useEffect(() => {
+    const detectLocation = async () => {
+      try {
+        const response = await fetch('https://ipapi.co/json/');
+        if (!response.ok) throw new Error('Location detection failed');
+        const data = await response.json();
+        if (data.city && data.country_name) {
+          setDetectedLocation(`${data.city}, ${data.country_name}`);
+        } else if (data.country_name) {
+          setDetectedLocation(data.country_name);
+        } else {
+          throw new Error('Incomplete location data');
+        }
+      } catch (error) {
+        console.warn('Location detection error:', error);
+        setDetectedLocation(null);
+      } finally {
+        setLocationLoading(false);
+      }
+    };
+    detectLocation();
+  }, []);
+
+  // Detect visitor's timezone offset
+  useEffect(() => {
+    const detectTimezone = () => {
+      try {
+        const offsetMinutes = new Date().getTimezoneOffset();
+        const offsetHours = Math.abs(Math.floor(offsetMinutes / 60));
+        const offsetMins = Math.abs(offsetMinutes % 60);
+        const sign = offsetMinutes <= 0 ? '+' : '-';
+        const formattedOffset = `UTC${sign}${offsetHours.toString().padStart(2, '0')}:${offsetMins.toString().padStart(2, '0')}`;
+        setDetectedTimezone(formattedOffset);
+      } catch (error) {
+        console.warn('Timezone detection error:', error);
+        setDetectedTimezone(null);
+      } finally {
+        setTimezoneLoading(false);
+      }
+    };
+    detectTimezone();
+  }, []);
 
   useEffect(() => {
     setIsVisible(true);
@@ -38,6 +86,16 @@ const Hero = () => {
     { name: 'Tailwind', icon: '🎨', color: 'from-sky-400 to-blue-500' },
     { name: 'PostgreSQL', icon: '🐘', color: 'from-indigo-400 to-purple-500' }
   ];
+
+  // Determine location text to display
+  const displayLocation = !locationLoading && detectedLocation 
+    ? detectedLocation 
+    : t("hero.location");
+
+  // Determine timezone text to display
+  const displayTimezone = !timezoneLoading && detectedTimezone 
+    ? detectedTimezone 
+    : t("hero.timezone");
 
   return (
     <section
@@ -205,7 +263,7 @@ const Hero = () => {
               </a>
             </div>
 
-            {/* Location Info - REDUCED SIZE */}
+            {/* Location Info - now dynamic */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <div className="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 text-xs">
                 <div className="w-6 h-6 rounded-lg bg-slate-100 dark:bg-white/5 flex items-center justify-center">
@@ -214,7 +272,7 @@ const Hero = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <span className="font-medium">{t("hero.location")}</span>
+                <span className="font-medium">{displayLocation}</span>
               </div>
               
               <div className="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 text-xs">
@@ -232,7 +290,7 @@ const Hero = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <span className="font-medium">{t("hero.timezone")}</span>
+                <span className="font-medium">{displayTimezone}</span>
               </div>
             </div>
           </div>

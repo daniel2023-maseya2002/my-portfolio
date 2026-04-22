@@ -7,6 +7,31 @@ const Footer = () => {
   const year = new Date().getFullYear();
   const [hoveredSocial, setHoveredSocial] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
+  
+  // State for dynamic location detection
+  const [detectedLocation, setDetectedLocation] = useState({ city: null, country: null });
+  const [locationLoading, setLocationLoading] = useState(true);
+
+  // Detect visitor's location via IP (same free API as in other sections)
+  useEffect(() => {
+    const detectLocation = async () => {
+      try {
+        const response = await fetch('https://ipapi.co/json/');
+        if (!response.ok) throw new Error('Location detection failed');
+        const data = await response.json();
+        setDetectedLocation({
+          city: data.city || null,
+          country: data.country_name || null,
+        });
+      } catch (error) {
+        console.warn('Location detection error:', error);
+        setDetectedLocation({ city: null, country: null });
+      } finally {
+        setLocationLoading(false);
+      }
+    };
+    detectLocation();
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -25,6 +50,21 @@ const Footer = () => {
       if (footer) observer.unobserve(footer);
     };
   }, []);
+
+  // Build the location string from detected data or fallback
+  const getLocationDisplay = () => {
+    if (!locationLoading && detectedLocation.city && detectedLocation.country) {
+      return `${detectedLocation.city}, ${detectedLocation.country}`;
+    }
+    if (!locationLoading && detectedLocation.city) {
+      return detectedLocation.city;
+    }
+    if (!locationLoading && detectedLocation.country) {
+      return detectedLocation.country;
+    }
+    // Fallback to static value (Kigali, Rwanda)
+    return "Kigali, Rwanda";
+  };
 
   const socialLinks = [
     {
@@ -131,7 +171,7 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Location Badge */}
+            {/* Location Badge - Now dynamic */}
             <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
               <div className="relative">
                 <svg className="w-4 h-4 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -139,7 +179,7 @@ const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                 </svg>
               </div>
-              <span>{t("footer.basedIn")} <span className="font-medium text-teal-600 dark:text-teal-400">Kigali, Rwanda</span> • {t("footer.openToRemote")}</span>
+              <span>{t("footer.basedIn")} <span className="font-medium text-teal-600 dark:text-teal-400">{getLocationDisplay()}</span> • {t("footer.openToRemote")}</span>
             </div>
           </div>
 
