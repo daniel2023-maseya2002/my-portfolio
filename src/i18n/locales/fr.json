@@ -141,10 +141,10 @@
     "longDescription": "Un système complet de gestion de salon pour Nysha Hair Braiding, spécialisé dans les techniques de tressage africaines. La plateforme permet aux clients de réserver des rendez-vous en ligne, de payer des acomptes via Stripe et de gérer leurs réservations. Fonctionnalités : catalogue de services avec tarifs, affichage des horaires d'ouverture, gestion des rendez-vous, traitement des paiements et tableau de bord administrateur."
     },
     "manuella": {
-      "title": "Portfolio de Manuella – Professionnelle en Comptabilité et Finance",
-      "short": "Un site portfolio moderne pour une professionnelle en comptabilité et finance.",
-      "role": "Conceptrice UI/UX & Développeuse",
-      "longDescription": "Le portfolio de Manuella est un site web moderne et épuré qui présente son profil professionnel, ses services, son expérience et ses compétences en comptabilité, finance et administration d'entreprise."
+    "title": "Portfolio de Manuella – Professionnelle en Comptabilité et Finance",
+    "short": "Un site portfolio moderne pour une professionnelle en comptabilité et finance.",
+    "role": "DevOps, Architecture & Développeur",
+    "longDescription": "J'ai conçu et développé un site portfolio moderne pour Manuella, une professionnelle en comptabilité et finance. En tant qu'architecte DevOps, j'ai géré l'ensemble de la chaîne de déploiement sur Vercel, assuré des performances optimales et construit une interface responsive et conviviale avec React et Tailwind CSS."
     }
   },
   "experience": {

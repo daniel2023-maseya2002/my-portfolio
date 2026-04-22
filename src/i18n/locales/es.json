@@ -140,11 +140,11 @@
     "role": "Desarrollador Full-Stack & Arquitecto de Sistemas",
     "longDescription": "Un sistema completo de gestión de salón para Nysha Hair Braiding, especializado en técnicas africanas de trenzado. La plataforma permite a los clientes reservar citas en línea, pagar depósitos a través de Stripe y gestionar sus reservas. Características: catálogo de servicios con precios, visualización de horarios de atención, gestión de citas, procesamiento de pagos y panel de administración."
   },
-    "manuella": {
-      "title": "Portafolio de Manuella – Profesional en Contabilidad y Finanzas",
-      "short": "Un sitio web de portafolio moderno para una profesional en contabilidad y finanzas.",
-      "role": "Diseñadora UI/UX & Desarrolladora",
-      "longDescription": "El portafolio de Manuella es un sitio web moderno y limpio que muestra su perfil profesional, servicios, experiencia y habilidades en contabilidad, finanzas y administración de empresas."
+  "manuella": {
+    "title": "Portafolio de Manuella – Profesional en Contabilidad y Finanzas",
+    "short": "Un sitio web de portafolio moderno para una profesional en contabilidad y finanzas.",
+    "role": "DevOps, Arquitectura & Desarrollador",
+    "longDescription": "Diseñé y desarrollé un sitio web de portafolio moderno para Manuella, una profesional en contabilidad y finanzas. Como arquitecto DevOps, gestioné toda la tubería de despliegue en Vercel, aseguré un rendimiento óptimo y construí una interfaz responsive y fácil de usar con React y Tailwind CSS."
     }
   },
   "experience": {

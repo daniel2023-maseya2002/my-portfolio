@@ -141,10 +141,10 @@
     "longDescription": "A complete salon management system for Nysha Hair Braiding, specializing in African braiding techniques. The platform allows customers to book appointments online, pay deposits via Stripe, and manage their reservations. Features include service catalog with pricing, working hours display, appointment management, payment processing, and an admin dashboard for salon owners to manage bookings and track revenue."
     },
     "manuella": {
-      "title": "Manuella Portfolio – Accounting & Finance Professional",
-      "short": "A modern portfolio website for an Accounting and Finance professional.",
-      "role": "UI/UX Designer & Developer",
-      "longDescription": "Manuella's portfolio is a clean, modern website that showcases her professional profile, services, experience, and skills in accounting, finance, and business administration. The site includes sections for professional services, skills, experience, education, and contact information, all presented in a user-friendly and visually appealing layout."
+    "title": "Manuella Portfolio – Accounting & Finance Professional",
+    "short": "A modern portfolio website for an Accounting and Finance professional.",
+    "role": "DevOps, Architecture & Developer",
+    "longDescription": "I designed and developed a clean, modern portfolio website for Manuella, an Accounting and Finance professional. As the DevOps architect, I managed the full deployment pipeline on Vercel, ensured optimal performance, and built a responsive, user‑friendly interface using React and Tailwind CSS."
     }
   },
   "experience": {
