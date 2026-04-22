@@ -57,7 +57,7 @@ const projects = [
     {
     id: "manuella-portfolio",
     translationKey: "projects.manuella",
-    type: "ux",
+    type: "eng",
     tech: ["React", "Tailwind CSS", "Figma", "JavaScript"],
     cover: manuellaCover,
     images: [manuella1, manuella2, manuella3],
