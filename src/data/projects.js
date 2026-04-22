@@ -58,7 +58,7 @@ const projects = [
     id: "manuella-portfolio",
     translationKey: "projects.manuella",
     type: "eng",
-    tech: ["React", "Tailwind CSS", "Figma", "JavaScript"],
+    tech: ["React", "Tailwind CSS", "Figma", "JavaScript", "Vercel", "GitHub Pages", "Formspree"],
     cover: manuellaCover,
     images: [manuella1, manuella2, manuella3],
     liveUrl: "https://manuella-portfolio.vercel.app/"
