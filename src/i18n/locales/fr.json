@@ -139,7 +139,13 @@
     "short": "Plateforme complète de réservation de salon avec rendez-vous en ligne, paiements et tableau de bord administrateur.",
     "role": "Développeur Full-Stack & Architecte Système",
     "longDescription": "Un système complet de gestion de salon pour Nysha Hair Braiding, spécialisé dans les techniques de tressage africaines. La plateforme permet aux clients de réserver des rendez-vous en ligne, de payer des acomptes via Stripe et de gérer leurs réservations. Fonctionnalités : catalogue de services avec tarifs, affichage des horaires d'ouverture, gestion des rendez-vous, traitement des paiements et tableau de bord administrateur."
-  }
+    },
+    "manuella": {
+      "title": "Portfolio de Manuella – Professionnelle en Comptabilité et Finance",
+      "short": "Un site portfolio moderne pour une professionnelle en comptabilité et finance.",
+      "role": "Conceptrice UI/UX & Développeuse",
+      "longDescription": "Le portfolio de Manuella est un site web moderne et épuré qui présente son profil professionnel, ses services, son expérience et ses compétences en comptabilité, finance et administration d'entreprise."
+    }
   },
   "experience": {
     "badge": "Parcours professionnel",

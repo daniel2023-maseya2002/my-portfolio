@@ -38,6 +38,11 @@ import salon2 from "../assets/projects/salon2.png";
 import salon3 from "../assets/projects/salon3.png";
 import saloncover from "../assets/projects/saloncover.png";
 
+import manuella1 from "../assets/projects/manuella1.png";
+import manuella2 from "../assets/projects/manuella2.png";
+import manuella3 from "../assets/projects/manuella3.png";
+import manuellaCover from "../assets/projects/manuellacover.png";
+
 // Each project now uses translationKey instead of hardcoded text
 const projects = [
   {
@@ -48,6 +53,15 @@ const projects = [
     cover: saloncover,
     images: [salon1, salon2, salon3],
     liveUrl: "https://nysha-frontend.onrender.com/"
+  },
+    {
+    id: "manuella-portfolio",
+    translationKey: "projects.manuella",
+    type: "ux",
+    tech: ["React", "Tailwind CSS", "Figma", "JavaScript"],
+    cover: manuellaCover,
+    images: [manuella1, manuella2, manuella3],
+    liveUrl: "https://manuella-portfolio.vercel.app/"
   },
   {
     id: "stayease",
