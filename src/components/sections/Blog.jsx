@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import posts from "../../data/posts";
+import { EVENTS, trackEvent } from "../../utils/analytics";
 
 const BlogCard = ({ post, index, isVisible, isFeatured = false }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -52,12 +53,24 @@ const BlogCard = ({ post, index, isVisible, isFeatured = false }) => {
     return tagIcons["Case Study"];
   };
 
+  const handleArticleClick = (e) => {
+    e.stopPropagation();
+    trackEvent(EVENTS.PROJECT_VIEW, { 
+      type: 'blog',
+      title: title,
+      tag: tag
+    });
+    if (post.articleUrl) {
+      window.open(post.articleUrl, '_blank');
+    }
+  };
+
   return (
     <article
       className="group relative h-full cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={() => post.articleUrl && window.open(post.articleUrl, '_blank')}
+      onClick={handleArticleClick}
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
@@ -120,7 +133,14 @@ const BlogCard = ({ post, index, isVisible, isFeatured = false }) => {
                 href={post.articleUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  trackEvent(EVENTS.PROJECT_VIEW, { 
+                    type: 'blog-read',
+                    title: title,
+                    tag: tag
+                  });
+                }}
                 className="group/btn relative inline-flex items-center gap-2 text-sm font-bold text-teal-600 dark:text-teal-400 overflow-hidden"
               >
                 <span className="relative z-10 transition-transform duration-300 group-hover/btn:translate-x-1">
@@ -173,11 +193,31 @@ const Blog = ({ onViewAll }) => {
   }, []);
 
   const handleViewAll = () => {
+    trackEvent(EVENTS.NAVIGATION, { 
+      from: 'blog-section',
+      to: 'blog-page',
+      action: 'view-all'
+    });
     if (onViewAll) {
       onViewAll();
     } else {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+  };
+
+  const handleGetInTouch = () => {
+    trackEvent(EVENTS.NAVIGATION, {
+      from: 'blog-section',
+      to: 'contact-section',
+      action: 'cta-click'
+    });
+  };
+
+  const handleLearnMore = () => {
+    trackEvent(EVENTS.NAVIGATION, {
+      from: 'blog-section',
+      action: 'learn-more'
+    });
   };
 
   return (
@@ -278,6 +318,7 @@ const Blog = ({ onViewAll }) => {
               <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
                 <a
                   href="#contact"
+                  onClick={handleGetInTouch}
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white text-teal-600 font-bold hover:shadow-2xl hover:shadow-black/20 transition-all duration-300 hover:scale-105"
                 >
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -285,7 +326,10 @@ const Blog = ({ onViewAll }) => {
                   </svg>
                   {t("blog.getInTouch")}
                 </a>
-                <button className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border-2 border-white/30 backdrop-blur-sm text-white font-bold hover:bg-white/10 transition-all duration-300">
+                <button 
+                  onClick={handleLearnMore}
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border-2 border-white/30 backdrop-blur-sm text-white font-bold hover:bg-white/10 transition-all duration-300"
+                >
                   {t("blog.learnMore")}
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>

@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import education from "../../data/education";
+import { trackEvent } from "../../utils/analytics";
 import TranscriptModal from "../TranscriptModal";
 
 // Modern Stat Card Component
@@ -30,6 +31,23 @@ const EduCard = ({ item, onPreview, index, isVisible }) => {
   const location = t(`${item.translationKey}.location`);
   const honors = item.honors ? t(`${item.translationKey}.honors`) : null;
   const highlights = t(`${item.translationKey}.highlights`, { returnObjects: true });
+
+  const handlePreview = () => {
+    trackEvent('education-preview', {
+      institution: institution,
+      degree: degree,
+      type: item.type
+    });
+    onPreview(item);
+  };
+
+  const handleDownload = () => {
+    trackEvent('education-download', {
+      institution: institution,
+      degree: degree,
+      type: item.type
+    });
+  };
 
   return (
     <motion.div
@@ -189,7 +207,7 @@ const EduCard = ({ item, onPreview, index, isVisible }) => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => onPreview(item)}
+                    onClick={handlePreview}
                     className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-semibold hover:border-teal-500/50 transition-all duration-300"
                   >
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -203,6 +221,7 @@ const EduCard = ({ item, onPreview, index, isVisible }) => {
                     whileTap={{ scale: 0.95 }}
                     href={item.transcripts}
                     download
+                    onClick={handleDownload}
                     className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-500 text-white text-sm font-bold hover:shadow-xl hover:shadow-teal-500/30 transition-all duration-300"
                   >
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

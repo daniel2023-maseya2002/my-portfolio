@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import projectsData from "../../data/projects";
+import { EVENTS, trackEvent } from "../../utils/analytics";
 import ProjectModal from "../ProjectModal";
 
 const TabButton = ({ active, onClick, children, icon }) => (
@@ -27,6 +28,15 @@ const ProjectCard = ({ project, onOpen, index, isVisible, t }) => {
   const short = t(`${project.translationKey}.short`, project.short || '');
   const role = t(`${project.translationKey}.role`, project.role || '');
 
+  const handleProjectClick = () => {
+    trackEvent(EVENTS.PROJECT_VIEW, {
+      project: title,
+      type: project.type,
+      tech: project.tech.join(', ')
+    });
+    onOpen(project);
+  };
+
   return (
     <motion.div
       layout
@@ -35,7 +45,7 @@ const ProjectCard = ({ project, onOpen, index, isVisible, t }) => {
       exit={{ opacity: 0, y: 30 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
       className="group relative rounded-2xl overflow-hidden bg-white dark:bg-slate-800/50 backdrop-blur-sm border border-slate-200 dark:border-slate-700 hover:border-teal-500/50 dark:hover:border-teal-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/10 cursor-pointer"
-      onClick={() => onOpen(project)}
+      onClick={handleProjectClick}
     >
       {/* Image Container */}
       <div className="relative h-56 overflow-hidden">
@@ -140,6 +150,11 @@ const Projects = () => {
     };
   }, []);
 
+  const handleTabChange = (tabId) => {
+    trackEvent('projects-tab-change', { tab: tabId });
+    setTab(tabId);
+  };
+
   const filtered = tab === "all" 
     ? projectsData 
     : projectsData.filter((p) => p.type === tab);
@@ -184,7 +199,7 @@ const Projects = () => {
             <div className="flex gap-3">
               <TabButton 
                 active={tab === "all"} 
-                onClick={() => setTab("all")}
+                onClick={() => handleTabChange("all")}
                 icon={
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
@@ -195,7 +210,7 @@ const Projects = () => {
               </TabButton>
               <TabButton 
                 active={tab === "ux"} 
-                onClick={() => setTab("ux")}
+                onClick={() => handleTabChange("ux")}
                 icon={
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
@@ -206,7 +221,7 @@ const Projects = () => {
               </TabButton>
               <TabButton 
                 active={tab === "eng"} 
-                onClick={() => setTab("eng")}
+                onClick={() => handleTabChange("eng")}
                 icon={
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>

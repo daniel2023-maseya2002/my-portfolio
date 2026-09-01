@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import experience from "../../data/experience";
+import { EVENTS, trackEvent } from "../../utils/analytics";
 
 const ExperienceCard = ({ item, index, isVisible, t }) => {
   // Safely get translations
@@ -121,6 +122,9 @@ const Experience = () => {
   }, []);
 
   const handleDownloadResume = useCallback(async () => {
+    // Track resume download
+    trackEvent(EVENTS.RESUME_DOWNLOAD);
+    
     try {
       const res = await fetch("/resume.pdf");
       if (!res.ok) throw new Error(`Failed to fetch resume (${res.status})`);
@@ -227,6 +231,7 @@ const Experience = () => {
                   href="/resume.pdf"
                   target="_blank"
                   rel="noreferrer"
+                  onClick={() => trackEvent(EVENTS.CV_DOWNLOAD)}
                   className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-semibold hover:shadow-xl hover:shadow-teal-500/30 transition-all duration-300 hover:scale-105"
                 >
                   <svg className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">

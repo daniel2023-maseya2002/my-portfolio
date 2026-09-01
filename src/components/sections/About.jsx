@@ -1,6 +1,7 @@
 // src/components/sections/About.jsx
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { EVENTS, trackEvent } from '../../utils/analytics';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -70,6 +71,14 @@ const About = () => {
       return detectedLocation.country;
     }
     return t("about.location"); // fallback to translation (e.g., "Rwanda")
+  };
+
+  const handleCTAClick = () => {
+    trackEvent(EVENTS.NAVIGATION, { 
+      from: 'about-section',
+      to: 'contact-section',
+      action: 'cta-click'
+    });
   };
 
   const stats = [
@@ -276,7 +285,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Bottom CTA - Modern Design */}
+        {/* Bottom CTA - Modern Design with Analytics */}
         <div className={`mt-20 pt-12 border-t border-slate-200 dark:border-slate-800 transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="relative bg-gradient-to-r from-slate-100 to-slate-50 dark:from-slate-800/50 dark:to-slate-900/50 rounded-2xl p-8 md:p-10 overflow-hidden">
             {/* Background decoration */}
@@ -295,6 +304,7 @@ const About = () => {
               
               <a 
                 href="#contact" 
+                onClick={handleCTAClick}
                 className="group relative px-8 py-4 bg-gradient-to-r from-teal-500 to-emerald-500 text-white rounded-xl font-semibold text-base overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/30 hover:scale-105 flex items-center gap-2 flex-shrink-0"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-emerald-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300" />

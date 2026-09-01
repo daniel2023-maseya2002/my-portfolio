@@ -1,12 +1,21 @@
 // src/components/layout/Navbar.jsx
 import { AnimatePresence, motion } from "framer-motion";
-import { 
-  BookOpen, Code, FolderKanban, GraduationCap, Home, 
-  Languages, Mail, Menu, Moon, Sun, User, X, 
-  ChevronDown, Briefcase, LayoutDashboard, Sparkles
+import {
+  BookOpen,
+  Briefcase,
+  ChevronDown,
+  Code, FolderKanban, GraduationCap, Home,
+  Languages,
+  LayoutDashboard,
+  Mail, Menu,
+  MessageCircle,
+  Moon,
+  Sparkles,
+  Sun, User, X
 } from 'lucide-react';
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { EVENTS, trackEvent } from "../../utils/analytics";
 import LanguageSwitcher from "../LanguageSwitcher";
 
 const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
@@ -88,6 +97,10 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
+  };
+
+  const handleWhatsAppClick = () => {
+    trackEvent(EVENTS.WHATSAPP_CLICK, { platform: 'whatsapp', location: 'navbar' });
   };
 
   return (
@@ -218,6 +231,20 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
 
         {/* Right Side Actions - Condensed */}
         <div className="flex items-center gap-2 flex-shrink-0">
+          {/* WhatsApp Button - Desktop */}
+          <motion.a
+            href="https://wa.me/250792434027?text=Hi%20Daniel%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20collaborating%20with%20you.%20Let%27s%20connect!"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleWhatsAppClick}
+            className="hidden lg:flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <MessageCircle className="w-4 h-4" />
+            <span>Let's Chat</span>
+          </motion.a>
+
           {/* Language Switcher */}
           <LanguageSwitcher />
 
@@ -237,7 +264,7 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
             )}
           </motion.button>
 
-          {/* Contact Button - More subtle */}
+          {/* Contact Button */}
           <motion.a
             href="#contact"
             onClick={(e) => handleNavClick("#contact", e)}
@@ -293,6 +320,26 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
                   );
                 })}
               </div>
+
+              {/* Divider */}
+              <div className="h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-800 to-transparent my-4" />
+
+              {/* WhatsApp - Mobile */}
+              <motion.a
+                href="https://wa.me/250792434027?text=Hi%20Daniel%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20collaborating%20with%20you.%20Let%27s%20connect!"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  handleWhatsAppClick();
+                  setOpen(false);
+                }}
+                className="flex items-center justify-center gap-3 w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 text-white font-medium text-base hover:shadow-lg hover:shadow-green-500/30 transition-all duration-300"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <MessageCircle className="w-5 h-5" />
+                <span>Chat on WhatsApp</span>
+              </motion.a>
 
               {/* Divider */}
               <div className="h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-800 to-transparent my-4" />

@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import profilePicture from '../../assets/profile.jpeg';
+import { EVENTS, trackEvent } from '../../utils/analytics';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -79,6 +80,14 @@ const Hero = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const handleCTAClick = (destination) => {
+    trackEvent(EVENTS.NAVIGATION, {
+      from: 'hero-section',
+      to: destination,
+      action: 'cta-click'
+    });
+  };
 
   const technologies = [
     { name: 'React', icon: '⚛️', color: 'from-cyan-400 to-blue-500' },
@@ -239,6 +248,7 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4 pt-2">
               <a 
                 href="#projects" 
+                onClick={() => handleCTAClick('projects-section')}
                 className="group relative px-6 py-3 bg-gradient-to-r from-teal-500 to-emerald-500 text-white rounded-lg font-semibold text-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/30 hover:scale-105 active:scale-95"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-emerald-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
@@ -252,6 +262,7 @@ const Hero = () => {
               
               <a 
                 href="#contact" 
+                onClick={() => handleCTAClick('contact-section')}
                 className="group relative px-6 py-3 bg-white/5 dark:bg-white/5 bg-slate-100 backdrop-blur-sm text-slate-900 dark:text-white border border-teal-500/30 dark:border-teal-500/30 border-teal-500/20 rounded-lg font-semibold text-sm overflow-hidden transition-all duration-300 hover:bg-teal-500/10 hover:border-teal-400 hover:scale-105 active:scale-95"
               >
                 <span className="relative flex items-center gap-2">

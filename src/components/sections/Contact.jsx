@@ -1,10 +1,12 @@
 // src/components/sections/Contact.jsx
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from 'react-i18next';
+import { EVENTS, trackEvent } from "../../utils/analytics";
 
 const Contact = () => {
   const { t } = useTranslation();
   const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT || "";
+  const successRef = useRef(null);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -98,6 +100,12 @@ const Contact = () => {
       return;
     }
 
+    // Track form submission
+    trackEvent(EVENTS.CONTACT_SUBMIT, {
+      name: form.name,
+      email: form.email,
+    });
+
     if (!endpoint) {
       setErrorMsg(t("contact.endpointError"));
       setStatus("error");
@@ -163,6 +171,7 @@ const Contact = () => {
       titleKey: "contact.email",
       value: "maseyadaniel@gmail.com",
       link: "mailto:maseyadaniel@gmail.com",
+      onClick: () => trackEvent(EVENTS.EMAIL_CLICK),
     },
     {
       icon: (
@@ -172,7 +181,6 @@ const Contact = () => {
         </svg>
       ),
       titleKey: "contact.location",
-      // Use dynamic display string instead of static value
       dynamicValue: true,
       subtitleKey: "contact.openToRemote",
       link: null,
@@ -239,7 +247,10 @@ const Contact = () => {
                   transitionDelay: `${index * 100}ms`
                 }}
               >
-                <div className="relative p-5 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-teal-500/30 dark:hover:border-teal-500/30 transition-all duration-200 hover:shadow-md">
+                <div 
+                  className="relative p-5 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-teal-500/30 dark:hover:border-teal-500/30 transition-all duration-200 hover:shadow-md"
+                  onClick={method.onClick}
+                >
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-500 to-emerald-500 flex items-center justify-center text-white shadow-sm flex-shrink-0">
                       {method.icon}
@@ -252,6 +263,10 @@ const Contact = () => {
                         <a 
                           href={method.link}
                           className="text-sm text-teal-600 dark:text-teal-400 hover:underline break-all"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            method.onClick?.();
+                          }}
                         >
                           {method.value}
                         </a>
