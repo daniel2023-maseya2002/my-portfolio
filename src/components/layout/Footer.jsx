@@ -1,4 +1,5 @@
 // src/components/layout/Footer.jsx
+import { Cpu, Zap } from 'lucide-react';
 import { useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import { EVENTS, trackEvent } from "../../utils/analytics";
@@ -63,7 +64,6 @@ const Footer = () => {
     if (!locationLoading && detectedLocation.country) {
       return detectedLocation.country;
     }
-    // Fallback to static value (Kigali, Rwanda)
     return "Kigali, Rwanda";
   };
 
@@ -84,6 +84,35 @@ const Footer = () => {
       default:
         trackEvent('social-click', { platform, location: 'footer' });
     }
+  };
+
+  const handleLifeOSClick = (e) => {
+    e.preventDefault();
+    trackEvent('life-os-open', { source: 'footer' });
+    
+    // Check if we're already on the home page
+    const isHomePage = !window.location.hash || window.location.hash === '#home';
+    
+    if (isHomePage) {
+      // If on home page, scroll to LIFE OS section
+      const element = document.getElementById('lifeos');
+      if (element) {
+        const navbarHeight = 80;
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - navbarHeight,
+          behavior: "smooth"
+        });
+      }
+    } else {
+      // If on another page, navigate to home then scroll
+      window.dispatchEvent(new CustomEvent('navigate-to-lifeos'));
+    }
+  };
+
+  const handleHomeClick = (e) => {
+    e.preventDefault();
+    window.dispatchEvent(new CustomEvent('navigate-to-home'));
   };
 
   const socialLinks = [
@@ -185,7 +214,11 @@ const Footer = () => {
           {/* Brand Column */}
           <div className={`lg:col-span-2 space-y-5 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
             <div>
-              <a href="#home" className="group inline-block">
+              <a 
+                href="#home" 
+                onClick={handleHomeClick}
+                className="group inline-block"
+              >
                 <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-2 transition-all duration-300">
                   Daniel Maseya
                   <span className="text-teal-500 dark:text-teal-400">.</span>
@@ -217,6 +250,18 @@ const Footer = () => {
               </div>
               <span>{t("footer.basedIn")} <span className="font-medium text-teal-600 dark:text-teal-400">{getLocationDisplay()}</span> • {t("footer.openToRemote")}</span>
             </div>
+
+            {/* LIFE OS Badge - Added to brand column */}
+            <button
+              onClick={handleLifeOSClick}
+              className="group inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-gradient-to-r from-teal-500/10 to-emerald-500/10 border border-teal-500/30 hover:border-teal-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10"
+            >
+              <Cpu className="w-4 h-4 text-teal-500 group-hover:animate-pulse" />
+              <span className="text-sm font-semibold text-slate-700 dark:text-slate-300 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                Explore LIFE OS
+              </span>
+              <Zap className="w-3.5 h-3.5 text-teal-400 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" />
+            </button>
           </div>
 
           {/* Quick Links */}
@@ -241,6 +286,19 @@ const Footer = () => {
                   </a>
                 </li>
               ))}
+              {/* LIFE OS Quick Link */}
+              <li>
+                <button
+                  onClick={handleLifeOSClick}
+                  className="group inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-200"
+                >
+                  <Cpu className="w-3.5 h-3.5 transform group-hover:scale-110 transition-transform duration-200" />
+                  <span>LIFE OS</span>
+                  <span className="text-[8px] font-black tracking-widest px-1.5 py-0.5 rounded-full bg-teal-500/20 text-teal-500 group-hover:bg-teal-500 group-hover:text-white transition-colors">
+                    β
+                  </span>
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -340,8 +398,8 @@ const Footer = () => {
               <span>© {year} Daniel Maseya. {t("footer.rights")}</span>
             </div>
 
-            {/* Status Badge */}
-            <div className="flex items-center gap-2">
+            {/* Status Badge with LIFE OS indicator */}
+            <div className="flex items-center gap-3">
               <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-teal-50 dark:bg-teal-950/20 border border-teal-200 dark:border-teal-500/20">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-500 opacity-75"></span>
@@ -349,6 +407,15 @@ const Footer = () => {
                 </span>
                 <span className="text-xs font-medium text-teal-700 dark:text-teal-300">{t("footer.available")}</span>
               </div>
+              <div className="w-px h-4 bg-slate-300 dark:bg-slate-700" />
+              <button
+                onClick={handleLifeOSClick}
+                className="flex items-center gap-1.5 text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+              >
+                <Cpu className="w-3 h-3" />
+                <span>LIFE OS</span>
+                <span className="text-[7px] font-black tracking-widest px-1 py-0.5 rounded-full bg-teal-500/20 text-teal-500">β</span>
+              </button>
             </div>
           </div>
         </div>
@@ -357,6 +424,7 @@ const Footer = () => {
         <div className="absolute -top-5 right-6 lg:right-12">
           <a
             href="#home"
+            onClick={handleHomeClick}
             className="group flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-teal-500 to-emerald-500 text-white shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105"
             aria-label={t("footer.backToTop")}
           >

@@ -8,7 +8,9 @@
     "education": "Formation",
     "blog": "Blog",
     "contact": "Contact",
-    "letsTalk": "Discutons"
+    "letsTalk": "Discutons",
+    "lifeos": "LIFE OS",
+    "digitalTwin": "Jumeau Numérique"
   },
   "hero": {
     "status": "Disponible pour opportunités",
@@ -54,6 +56,285 @@
     "ctaTitle": "Prêt à concrétiser votre vision ?",
     "ctaDesc": "Collaborons sur des projets innovants, évolutifs et centrés sur l'utilisateur.",
     "ctaButton": "Commencer une conversation"
+  },
+  "digitalTwin": {
+    "title": "Jumeau Numérique",
+    "subtitle": "Représentation interactive des compétences, projets et capacités d'ingénierie",
+    "welcome": {
+      "title": "Jumeau Numérique",
+      "subtitle": "Explorez une représentation interactive de mes compétences, projets et capacités d'ingénierie.",
+      "cta": "Explorer le Jumeau",
+      "viewProfile": "Voir le Profil Traditionnel",
+      "badge": "REPRÉSENTATION NUMÉRIQUE INTERACTIVE",
+      "stats": {
+        "projects": "Projets",
+        "technologies": "Technologies",
+        "experience": "Ans d'expérience",
+        "status": "Ouvert au travail"
+      }
+    },
+    "modes": {
+      "recruiter": "Recruteur",
+      "client": "Client",
+      "developer": "Développeur",
+      "designer": "Designer",
+      "explore": "Explorer Librement",
+      "recruiterDesc": "Je cherche à comprendre les compétences, l'expérience et les capacités d'ingénierie.",
+      "clientDesc": "Je veux savoir ce qui peut être construit et comment les problèmes sont résolus.",
+      "developerDesc": "Je m'intéresse à la stack technique, l'architecture et les pratiques d'ingénierie.",
+      "designerDesc": "Je veux explorer le design thinking, l'approche UI/UX et les systèmes visuels.",
+      "exploreDesc": "Je veux explorer tout sans focus spécifique."
+    },
+    "sections": {
+      "twin": "Jumeau",
+      "technologies": "Technologies",
+      "projects": "Projets",
+      "engineering": "ADN d'Ingénierie",
+      "capabilities": "Ce Que Je Peux Construire",
+      "experience": "Expérience"
+    },
+    "twin": {
+      "title": "Jumeau Interactif",
+      "subtitle": "Cliquez sur un nœud pour explorer",
+      "legend": {
+        "selected": "Sélectionné",
+        "connected": "Connecté"
+      },
+      "nodes": {
+        "mind": "Esprit",
+        "development": "Développement",
+        "design": "Design",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "mobile": "Mobile",
+        "ai": "IA & Données",
+        "technologies": "Technologies",
+        "projects": "Projets",
+        "systemDesign": "Conception Système"
+      },
+      "emptyState": "Sélectionnez un nœud pour explorer",
+      "hint": "Cliquez sur un nœud pour explorer"
+    },
+    "context": {
+      "recruiterView": "Vue Recruteur",
+      "clientView": "Vue Client",
+      "developerView": "Vue Développeur",
+      "designerView": "Vue Designer",
+      "exploring": "Exploration",
+      "technologies": "Technologies",
+      "relatedProjects": "Projets Associés",
+      "capabilities": "Capacités",
+      "connectedNodes": "Nœuds Connectés",
+      "selectNode": "Sélectionnez un nœud pour explorer",
+      "selectNodeHint": "Cliquez sur n'importe quel nœud dans la visualisation"
+    },
+    "technologyExplorer": {
+      "title": "Explorateur de Technologies",
+      "subtitle": "Parcourez les technologies et découvrez les projets associés",
+      "searchPlaceholder": "Rechercher des technologies...",
+      "categories": {
+        "all": "Tous",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Base de données",
+        "mobile": "Mobile",
+        "ai": "IA",
+        "design": "Design",
+        "devops": "DevOps"
+      },
+      "relatedProjects": "projets associés",
+      "noResults": "Aucune technologie trouvée correspondant à votre recherche.",
+      "footer": {
+        "recruiter": "Ces technologies représentent les capacités d'ingénierie principales.",
+        "client": "Ces technologies permettent de construire des solutions modernes et évolutives.",
+        "developer": "Technologies utilisées dans les applications de production.",
+        "designer": "Technologies qui alimentent des interfaces belles et interactives."
+      }
+    },
+    "projectExplorer": {
+      "title": "Explorateur de Projets",
+      "subtitle": "Explorez les projets et découvrez les technologies derrière eux",
+      "searchPlaceholder": "Rechercher des projets...",
+      "types": {
+        "all": "Tous",
+        "engineering": "Ingénierie",
+        "ux": "UX/UI",
+        "mobile": "Mobile",
+        "ai": "IA"
+      },
+      "viewProject": "Voir le Projet",
+      "noResults": "Aucun projet trouvé correspondant à votre recherche.",
+      "recruiterView": "Vue Recruteur",
+      "clientView": "Vue Client",
+      "developerView": "Vue Développeur",
+      "designerView": "Vue Designer"
+    },
+    "engineeringDNA": {
+      "title": "Mon ADN d'Ingénierie",
+      "subtitle": "Comment j'aborde la construction de logiciels — de la compréhension à l'amélioration",
+      "steps": {
+        "understand": {
+          "title": "Comprendre",
+          "description": "Comprendre profondément le problème, les utilisateurs et les exigences avant d'écrire du code.",
+          "details": "Je commence par demander : Pour qui est-ce ? Quel problème résolvons-nous ? À quoi ressemble le succès ?"
+        },
+        "design": {
+          "title": "Concevoir",
+          "description": "Définir l'architecture système, l'expérience utilisateur et l'approche technique.",
+          "details": "Je crée des wireframes, des diagrammes système et des spécifications techniques."
+        },
+        "build": {
+          "title": "Construire",
+          "description": "Implémenter la solution avec un code propre, maintenable et bien testé.",
+          "details": "J'écris du code modulaire et réutilisable avec une documentation appropriée."
+        },
+        "test": {
+          "title": "Tester",
+          "description": "Valider la fonctionnalité, la performance et l'utilisabilité dans tous les scénarios.",
+          "details": "Je teste minutieusement, recueille des retours et assure que la solution fonctionne comme prévu."
+        },
+        "improve": {
+          "title": "Améliorer",
+          "description": "Itérer en fonction des retours, des métriques et de l'utilisation réelle.",
+          "details": "J'affine et optimise continuellement en fonction des retours utilisateurs et des données de performance."
+        }
+      },
+      "footer": "Ce processus guide mon approche de chaque projet — du concept à la livraison."
+    },
+    "whatICanBuild": {
+      "title": "Ce Que Je Peux Construire",
+      "subtitle": "Catégories de solutions que je peux livrer avec des exemples de projets réels",
+      "categories": {
+        "webApps": "Applications Web",
+        "mobileApps": "Applications Mobiles",
+        "intelligentSystems": "Systèmes Intelligents",
+        "businessSystems": "Systèmes d'Entreprise",
+        "digitalExperiences": "Expériences Digitales"
+      },
+      "technologies": "Technologies",
+      "exampleProjects": "Exemples de Projets",
+      "capabilities": "Capacités"
+    },
+    "experience": {
+      "title": "Chronologie d'Expérience",
+      "subtitle": "Parcours professionnel et contributions clés",
+      "technologies": "Technologies",
+      "keyHighlights": "Points Clés",
+      "relatedProjects": "Projets Associés"
+    },
+    "assistant": {
+      "title": "Assistant Jumeau Numérique",
+      "subtitle": "Posez-moi des questions sur les compétences, projets et capacités de Daniel",
+      "placeholder": "Interrogez le Jumeau Numérique...",
+      "suggestedQuestions": "Questions suggérées :",
+      "welcome": "Bonjour ! Je suis votre Assistant Jumeau Numérique. Je peux vous aider à en savoir plus sur les compétences, projets et capacités d'ingénierie de Daniel. Que voulez-vous savoir ?",
+      "defaultResponse": "Je ne suis pas sûr de cette question spécifique, mais je peux vous parler des technologies, projets, approche d'ingénierie de Daniel, ou de projets spécifiques comme LIFE OS et IMAS. Essayez de poser une des questions suggérées !"
+    },
+    "askTwin": "Interroger le Jumeau",
+    "closeAssistant": "Fermer l'Assistant",
+    "openAssistant": "Ouvrir l'Assistant Jumeau Numérique"
+  },
+  "lifeOS": {
+    "title": "LIFE OS",
+    "subtitle": "Navigateur de Carrière et Croissance Alimenté par l'IA",
+    "badge": "DÉMO CONCEPTUELLE IA",
+    "welcome": {
+      "title": "LIFE OS",
+      "subtitle": "Navigateur de Carrière et Croissance Alimenté par l'IA",
+      "description": "Comprenez où vous êtes. Découvrez où vous pouvez aller. Trouvez votre prochaine meilleure étape.",
+      "cta": "Commencez Votre Voyage",
+      "features": {
+        "goals": "Objectifs de Carrière",
+        "goalsDesc": "Définissez votre destination professionnelle",
+        "analysis": "Analyse des Compétences",
+        "analysisDesc": "Découvrez vos forces et lacunes",
+        "roadmap": "Feuille de Route Personnalisée",
+        "roadmapDesc": "Obtenez votre parcours d'apprentissage personnalisé"
+      }
+    },
+    "goalSelection": {
+      "title": "Choisissez Votre Objectif de Carrière",
+      "subtitle": "Sélectionnez le parcours professionnel que vous souhaitez poursuivre. LIFE OS vous aidera à y arriver.",
+      "back": "← Retour",
+      "continue": "Continuer",
+      "goals": {
+        "softwareEngineer": "Ingénieur Logiciel",
+        "softwareEngineerDesc": "Construire et maintenir des systèmes logiciels",
+        "fullstackDeveloper": "Développeur Full-Stack",
+        "fullstackDeveloperDesc": "Développement Frontend + Backend",
+        "frontendDeveloper": "Développeur Frontend",
+        "frontendDeveloperDesc": "Développement web axé sur l'UI/UX",
+        "backendDeveloper": "Développeur Backend",
+        "backendDeveloperDesc": "Développement côté serveur et bases de données",
+        "mobileDeveloper": "Développeur Mobile",
+        "mobileDeveloperDesc": "Développement d'applications iOS/Android",
+        "aiEngineer": "Ingénieur IA",
+        "aiEngineerDesc": "Systèmes d'apprentissage automatique et d'IA",
+        "dataAnalyst": "Analyste de Données",
+        "dataAnalystDesc": "Analyse et visualisation de données",
+        "uiUxDesigner": "Designer UI/UX",
+        "uiUxDesignerDesc": "Design d'expérience utilisateur et d'interfaces",
+        "cybersecurity": "Spécialiste en Cybersécurité",
+        "cybersecurityDesc": "Systèmes de sécurité et de protection"
+      }
+    },
+    "skillSelection": {
+      "title": "Quelles sont vos compétences actuelles ?",
+      "subtitle": "Sélectionnez les compétences que vous possédez déjà et votre niveau de maîtrise.",
+      "search": "Rechercher des compétences par nom ou catégorie...",
+      "levels": {
+        "beginner": "Débutant",
+        "intermediate": "Intermédiaire",
+        "advanced": "Avancé"
+      },
+      "back": "← Retour",
+      "analyze": "Analyser Mon Profil",
+      "selected": "compétences sélectionnées",
+      "noResults": "Aucune compétence trouvée correspondant à votre recherche."
+    },
+    "analysis": {
+      "badge": "ANALYSE DE CARRIÈRE TERMINÉE",
+      "title": "Votre Profil de Carrière",
+      "subtitle": "Basé sur votre objectif de devenir",
+      "readiness": "Préparation du Profil",
+      "strengths": "Vos Forces",
+      "gaps": "Domaines à Développer",
+      "noStrengths": "Aucune force identifiée pour l'instant.",
+      "noGaps": "Excellent ! Aucune lacune majeure identifiée.",
+      "nextAction": "Votre Prochaine Meilleure Action",
+      "difficulty": "Difficulté",
+      "roadmap": "Votre Feuille de Route Personnalisée",
+      "startOver": "Recommencer",
+      "continue": "Continuer vers le Tableau de Bord"
+    },
+    "dashboard": {
+      "currentGoal": "OBJECTIF ACTUEL",
+      "changeGoal": "Changer d'objectif",
+      "aiInsight": "PERSPECTIVE IA",
+      "conceptual": "Conceptuel",
+      "nextAction": "PROCHAINE MEILLEURE ACTION",
+      "recentActivity": "ACTIVITÉ RÉCENTE",
+      "status": "SYSTÈME EN LIGNE"
+    },
+    "metric": {
+      "fromLastWeek": "par rapport à la semaine dernière"
+    },
+    "assistant": {
+      "title": "Assistant LIFE OS",
+      "subtitle": "Centre de Commandement Intelligent",
+      "placeholder": "Demandez à LIFE OS...",
+      "close": "Fermer l'Assistant",
+      "open": "Ouvrir l'Assistant LIFE OS",
+      "suggestions": {
+        "next": "Sur quoi devrais-je travailler ensuite ?",
+        "skill": "Quelle compétence devrais-je améliorer ?",
+        "fullstack": "Comment puis-je devenir un meilleur développeur full-stack ?",
+        "project": "Quel projet démontre mes compétences les plus fortes ?",
+        "gap": "Quelle est ma plus grande lacune de compétences ?",
+        "learn": "Que devrais-je apprendre ensuite ?"
+      },
+      "welcome": "Posez-moi n'importe quelle question sur vos objectifs, compétences ou projets."
+    }
   },
   "projects": {
     "badge": "Travaux remarquables",
@@ -135,6 +416,60 @@
     "short": "Un site portfolio moderne pour une professionnelle en comptabilité et finance.",
     "role": "DevOps, Architecture & Développeur",
     "longDescription": "J'ai conçu et développé un site portfolio moderne pour Manuella, une professionnelle en comptabilité et finance. En tant qu'architecte DevOps, j'ai géré l'ensemble de la chaîne de déploiement sur Vercel, assuré des performances optimales et construit une interface responsive et conviviale avec React et Tailwind CSS."
+    },
+    "digital-twin": {
+      "title": "Visualiseur de Jumeau Numérique",
+      "short": "Une représentation numérique interactive des compétences, projets et capacités d'ingénierie.",
+      "role": "Développeur Full-Stack, Designer UI/UX & Architecte Système",
+      "longDescription": "Une représentation numérique interactive qui permet aux visiteurs d'explorer les compétences, les projets et les capacités d'ingénierie via une interface intelligente basée sur des nœuds.",
+      "problem": "Les portfolios traditionnels sont statiques et linéaires, forçant les visiteurs à faire défiler de longues pages de texte. Les recruteurs, clients et développeurs ont besoin d'une façon plus engageante de comprendre les capacités d'un ingénieur logiciel.",
+      "solution": "Construit un système de Jumeau Numérique interactif qui visualise les capacités professionnelles via une interface intelligente basée sur des nœuds avec plusieurs modes de visite.",
+      "features": [
+        "Visualisation interactive basée sur des nœuds des compétences et capacités",
+        "5 modes de visite : Recruteur, Client, Développeur, Designer, Explorer Librement",
+        "Explorateur de Technologies avec connexions aux projets",
+        "Explorateur de Projets avec filtrage technologique",
+        "Visualisation du processus ADN d'Ingénierie",
+        "Section Ce Que Je Peux Construire",
+        "Assistant Jumeau Numérique avec réponses basées sur des règles",
+        "Intégration Umami Analytics",
+        "Design entièrement responsive",
+        "Support des modes Clair/Sombre"
+      ],
+      "learnings": [
+        "Concevoir des expériences interactives qui servent plusieurs personas d'utilisateurs",
+        "Construire un assistant basé sur des règles sans backend",
+        "Créer des systèmes de nœuds visuels avec React et Framer Motion",
+        "Structurer les données pour une intégration future de l'IA",
+        "Équilibrer le design futuriste avec la fonctionnalité professionnelle"
+      ]
+    },
+    "lifeos": {
+      "title": "LIFE OS — Système d'Exploitation de Vie IA",
+      "short": "Navigateur de carrière et de croissance alimenté par l'IA qui aide les utilisateurs à identifier leurs lacunes de compétences et à découvrir leurs prochaines meilleures actions.",
+      "role": "Développeur Full-Stack, Designer UI/UX & Architecte Système",
+      "longDescription": "LIFE OS est un navigateur de carrière et de croissance alimenté par l'IA qui aide les utilisateurs à identifier les lacunes de compétences, explorer les parcours de carrière et découvrir leurs prochaines meilleures actions.",
+      "problem": "Les personnes ont du mal à naviguer dans leurs parcours de carrière, à identifier leurs lacunes de compétences et à prioriser leur apprentissage.",
+      "solution": "Construit un système de navigation de carrière intelligent qui analyse les compétences, recommande des parcours d'apprentissage et fournit des actions personnalisées.",
+      "features": [
+        "Tableau de bord de carrière personnalisé",
+        "Système de sélection d'objectifs interactif",
+        "Analyse des lacunes de compétences avec recommandations personnalisées",
+        "Moteur de prochaine meilleure action",
+        "Simulateur de scénarios \"Et si\"",
+        "Génération de feuille de route personnalisée",
+        "Assistant LIFE OS avec réponses basées sur des règles",
+        "Suivi des objectifs de carrière",
+        "Design entièrement responsive",
+        "Support des modes Clair/Sombre"
+      ],
+      "learnings": [
+        "Construire un moteur de recommandation basé sur des règles",
+        "Créer des expériences utilisateur personnalisées",
+        "Concevoir pour le développement et la croissance de carrière",
+        "Structurer les données pour une intégration future de l'IA",
+        "Construire des simulations et visualisations interactives"
+      ]
     }
   },
   "experience": {
@@ -500,7 +835,11 @@
       "apitesting": "Tests API",
       "fullstack": "Développement Full-Stack",
       "softwarearch": "Architecture Logicielle",
-      "systemdesign": "Conception Système"
+      "systemdesign": "Conception Système",
+      "framer-motion": "Framer Motion",
+      "lucide-react": "Lucide React",
+      "umami-analytics": "Umami Analytics",
+      "ai-integration": "Intégration IA"
     }
   }
 }

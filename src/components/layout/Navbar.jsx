@@ -4,21 +4,33 @@ import {
   BookOpen,
   Briefcase,
   ChevronDown,
-  Code, FolderKanban, GraduationCap, Home,
+  Code,
+  Cpu,
+  FolderKanban, GraduationCap, Home,
   Languages,
   LayoutDashboard,
   Mail, Menu,
   MessageCircle,
   Moon,
   Sparkles,
-  Sun, User, X
+  Sun, User, X,
+  Zap
 } from 'lucide-react';
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { EVENTS, trackEvent } from "../../utils/analytics";
 import LanguageSwitcher from "../LanguageSwitcher";
 
-const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
+const Navbar = ({ 
+  theme, 
+  onToggleTheme, 
+  currentPage, 
+  onNavigate, 
+  onNavigateToLifeOS, 
+  onNavigateToDigitalTwin,
+  showLifeOS,
+  showDigitalTwin
+}) => {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -31,16 +43,19 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
       
-      const sections = ["home", "about", "skills", "projects", "experience", "education", "blog", "contact"];
-      const scrollPosition = window.scrollY + 100;
-      
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
+      // Only track sections if on home page
+      if (currentPage === "home") {
+        const sections = ["home", "about", "skills", "projects", "experience", "education", "digital-twin", "lifeos", "blog", "contact"];
+        const scrollPosition = window.scrollY + 100;
+        
+        for (const section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const { offsetTop, offsetHeight } = element;
+            if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+              setActiveSection(section);
+              break;
+            }
           }
         }
       }
@@ -60,7 +75,7 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [currentPage]);
 
   // Main navigation items (visible always)
   const mainLinks = [
@@ -72,6 +87,8 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
 
   // Dropdown items (hidden in dropdown)
   const dropdownLinks = [
+    { href: "#digital-twin", label: "Digital Twin", icon: Zap },
+    { href: "#lifeos", label: "LIFE OS", icon: Cpu },
     { href: "#projects", label: t("navbar.projects"), icon: FolderKanban },
     { href: "#experience", label: t("navbar.experience"), icon: Briefcase },
     { href: "#education", label: t("navbar.education"), icon: GraduationCap },
@@ -83,25 +100,120 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
     setOpen(false);
     setDropdownOpen(false);
     
-    if ((href === "#blog" || href === "#education") && currentPage !== "home") {
-      if (onNavigate) onNavigate("home");
+    // If clicking LIFE OS link, use the dedicated handler
+    if (href === "#lifeos") {
+      if (onNavigateToLifeOS) {
+        onNavigateToLifeOS();
+      }
+      return;
+    }
+    
+    // If clicking Digital Twin link, use the dedicated handler
+    if (href === "#digital-twin") {
+      if (onNavigateToDigitalTwin) {
+        onNavigateToDigitalTwin();
+      }
+      return;
+    }
+    
+    // If we're on blog page, navigate to home first
+    if (currentPage === "blog") {
+      if (onNavigate) {
+        onNavigate("home");
+      }
       setTimeout(() => {
         const element = document.querySelector(href);
         if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
+          const navbarHeight = 80;
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: elementPosition - navbarHeight,
+            behavior: "smooth"
+          });
         }
-      }, 100);
-    } else {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 150);
+      return;
+    }
+    
+    // If we're on home page with LIFE OS showing, close it and scroll to section
+    if (showLifeOS && href !== "#lifeos") {
+      if (onNavigate) {
+        onNavigate("home");
       }
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          const navbarHeight = 80;
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: elementPosition - navbarHeight,
+            behavior: "smooth"
+          });
+        }
+      }, 150);
+      return;
+    }
+    
+    // If we're on home page with Digital Twin showing, close it and scroll to section
+    if (showDigitalTwin && href !== "#digital-twin") {
+      if (onNavigate) {
+        onNavigate("home");
+      }
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          const navbarHeight = 80;
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: elementPosition - navbarHeight,
+            behavior: "smooth"
+          });
+        }
+      }, 150);
+      return;
+    }
+    
+    // Normal scrolling on home page
+    if (href === "#home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+    
+    const element = document.querySelector(href);
+    if (element) {
+      const navbarHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: elementPosition - navbarHeight,
+        behavior: "smooth"
+      });
     }
   };
 
   const handleWhatsAppClick = () => {
     trackEvent(EVENTS.WHATSAPP_CLICK, { platform: 'whatsapp', location: 'navbar' });
   };
+
+  const handleLifeOSClick = () => {
+    trackEvent('life-os-open', { source: 'navbar' });
+    if (onNavigateToLifeOS) {
+      onNavigateToLifeOS();
+    }
+    setOpen(false);
+    setDropdownOpen(false);
+  };
+
+  const handleDigitalTwinClick = () => {
+    trackEvent('digital-twin-opened', { source: 'navbar' });
+    if (onNavigateToDigitalTwin) {
+      onNavigateToDigitalTwin();
+    }
+    setOpen(false);
+    setDropdownOpen(false);
+  };
+
+  const isLifeOSActive = showLifeOS || currentPage === "lifeos";
+  const isDigitalTwinActive = showDigitalTwin || currentPage === "digital-twin";
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -120,7 +232,6 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          {/* Animated gradient background */}
           <div className="absolute -inset-2 bg-gradient-to-r from-teal-500/20 to-emerald-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
           
           <div className="relative flex items-center gap-1">
@@ -134,13 +245,12 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
           </div>
         </motion.a>
 
-        {/* Desktop Navigation - Condensed */}
+        {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-2">
-          {/* Main Navigation Items */}
           <ul className="flex items-center gap-1 list-none">
             {mainLinks.map((link) => {
               const Icon = link.icon;
-              const isActive = activeSection === link.href.substring(1);
+              const isActive = activeSection === link.href.substring(1) && currentPage === "home" && !showLifeOS && !showDigitalTwin;
               
               return (
                 <li key={link.href}>
@@ -171,12 +281,12 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
             })}
           </ul>
 
-          {/* Dropdown Menu for remaining items */}
+          {/* Dropdown Menu */}
           <div className="relative" ref={dropdownRef}>
             <motion.button
               onClick={() => setDropdownOpen(!dropdownOpen)}
               className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-200 ${
-                dropdownOpen || dropdownLinks.some(link => activeSection === link.href.substring(1))
+                dropdownOpen || dropdownLinks.some(link => activeSection === link.href.substring(1) && currentPage === "home")
                   ? "text-teal-600 dark:text-teal-400 bg-gradient-to-r from-teal-500/10 to-emerald-500/10"
                   : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-slate-800/80"
               }`}
@@ -200,7 +310,9 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
                   <div className="py-2">
                     {dropdownLinks.map((link) => {
                       const Icon = link.icon;
-                      const isActive = activeSection === link.href.substring(1);
+                      const isActive = activeSection === link.href.substring(1) && currentPage === "home";
+                      const isDigitalTwin = link.href === "#digital-twin";
+                      const isLifeOSLink = link.href === "#lifeos";
                       
                       return (
                         <motion.a
@@ -210,14 +322,26 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
                           className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-all duration-200 ${
                             isActive
                               ? "text-teal-600 dark:text-teal-400 bg-gradient-to-r from-teal-500/5 to-emerald-500/5"
-                              : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800"
+                              : isDigitalTwin && isDigitalTwinActive
+                                ? "text-white bg-gradient-to-r from-purple-500 to-pink-500"
+                                : isLifeOSLink && isLifeOSActive
+                                  ? "text-white bg-gradient-to-r from-teal-500 to-emerald-500"
+                                  : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800"
                           }`}
                           whileHover={{ x: 4 }}
                         >
                           <Icon className="w-4 h-4" />
                           <span>{link.label}</span>
-                          {isActive && (
+                          {(isDigitalTwin && isDigitalTwinActive) && (
+                            <div className="ml-auto w-1.5 h-1.5 rounded-full bg-gradient-to-r from-purple-500 to-pink-500" />
+                          )}
+                          {(isLifeOSLink && isLifeOSActive) && (
                             <div className="ml-auto w-1.5 h-1.5 rounded-full bg-gradient-to-r from-teal-500 to-emerald-500" />
+                          )}
+                          {isDigitalTwin && (
+                            <span className="ml-auto text-[8px] font-black tracking-widest px-1.5 py-0.5 rounded-full bg-purple-500/20 text-purple-500">
+                              β
+                            </span>
                           )}
                         </motion.a>
                       );
@@ -229,9 +353,8 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
           </div>
         </div>
 
-        {/* Right Side Actions - Condensed */}
+        {/* Right Side Actions */}
         <div className="flex items-center gap-2 flex-shrink-0">
-          {/* WhatsApp Button - Desktop */}
           <motion.a
             href="https://wa.me/250792434027?text=Hi%20Daniel%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20collaborating%20with%20you.%20Let%27s%20connect!"
             target="_blank"
@@ -245,10 +368,8 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
             <span>Let's Chat</span>
           </motion.a>
 
-          {/* Language Switcher */}
           <LanguageSwitcher />
 
-          {/* Theme Toggle Button */}
           <motion.button
             type="button"
             onClick={onToggleTheme}
@@ -264,7 +385,6 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
             )}
           </motion.button>
 
-          {/* Contact Button */}
           <motion.a
             href="#contact"
             onClick={(e) => handleNavClick("#contact", e)}
@@ -275,7 +395,6 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
             {t("navbar.letsTalk")}
           </motion.a>
 
-          {/* Mobile Menu Toggle */}
           <motion.button
             type="button"
             onClick={() => setOpen(!open)}
@@ -289,7 +408,7 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
         </div>
       </nav>
 
-      {/* Mobile Menu Dropdown - Modern Design */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -300,31 +419,52 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
             className="lg:hidden overflow-hidden bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 shadow-2xl"
           >
             <div className="w-full px-6 py-6">
-              {/* All Mobile Navigation Links in one column */}
               <div className="space-y-1 mb-6">
                 {[...mainLinks, ...dropdownLinks].map((link, index) => {
                   const Icon = link.icon;
+                  const isDigitalTwin = link.href === "#digital-twin";
+                  const isLifeOSLink = link.href === "#lifeos";
+                  const isActive = isDigitalTwin ? isDigitalTwinActive : isLifeOSLink ? isLifeOSActive : false;
+                  
                   return (
                     <motion.a
                       key={link.href}
                       href={link.href}
                       onClick={(e) => handleNavClick(link.href, e)}
-                      className="flex items-center gap-3 w-full py-3.5 px-4 text-base font-medium text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-gradient-to-r hover:from-teal-500/10 hover:to-emerald-500/10 rounded-xl transition-all"
+                      className={`flex items-center gap-3 w-full py-3.5 px-4 text-base font-medium rounded-xl transition-all ${
+                        isActive && isDigitalTwin
+                          ? "text-white bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg shadow-purple-500/30"
+                          : isActive && isLifeOSLink
+                            ? "text-white bg-gradient-to-r from-teal-500 to-emerald-500 shadow-lg shadow-teal-500/30"
+                            : isDigitalTwin
+                              ? "text-slate-700 dark:text-slate-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500"
+                              : isLifeOSLink
+                                ? "text-slate-700 dark:text-slate-300 hover:text-white hover:bg-gradient-to-r hover:from-teal-500 hover:to-emerald-500"
+                                : "text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-gradient-to-r hover:from-teal-500/10 hover:to-emerald-500/10"
+                      }`}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.05 }}
+                      transition={{ delay: (index + 1) * 0.05 }}
                     >
                       <Icon className="w-5 h-5" />
                       <span>{link.label}</span>
+                      {isDigitalTwin && (
+                        <span className="ml-auto text-[8px] font-black tracking-widest px-2 py-0.5 rounded-full bg-white/20 text-white">
+                          β
+                        </span>
+                      )}
+                      {isLifeOSLink && (
+                        <span className="ml-auto text-[8px] font-black tracking-widest px-2 py-0.5 rounded-full bg-white/20 text-white">
+                          β
+                        </span>
+                      )}
                     </motion.a>
                   );
                 })}
               </div>
 
-              {/* Divider */}
               <div className="h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-800 to-transparent my-4" />
 
-              {/* WhatsApp - Mobile */}
               <motion.a
                 href="https://wa.me/250792434027?text=Hi%20Daniel%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20collaborating%20with%20you.%20Let%27s%20connect!"
                 target="_blank"
@@ -341,10 +481,8 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
                 <span>Chat on WhatsApp</span>
               </motion.a>
 
-              {/* Divider */}
               <div className="h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-800 to-transparent my-4" />
 
-              {/* Language Switcher in Mobile */}
               <div className="mb-4">
                 <div className="flex items-center gap-2 px-4 py-2 mb-2">
                   <Languages className="w-4 h-4 text-teal-500" />
@@ -357,7 +495,6 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
                 </div>
               </div>
 
-              {/* Theme Toggle in Mobile */}
               <button
                 type="button"
                 onClick={() => {
@@ -382,6 +519,18 @@ const Navbar = ({ theme, onToggleTheme, currentPage, onNavigate }) => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <style>{`
+        @keyframes gradient {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .animate-gradient {
+          background-size: 200% 100%;
+          animation: gradient 3s ease infinite;
+        }
+      `}</style>
     </header>
   );
 };

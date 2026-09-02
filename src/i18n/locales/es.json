@@ -8,7 +8,9 @@
     "education": "Educación",
     "blog": "Blog",
     "contact": "Contacto",
-    "letsTalk": "Hablemos"
+    "letsTalk": "Hablemos",
+    "lifeos": "LIFE OS",
+    "digitalTwin": "Gemelo Digital"
   },
   "hero": {
     "status": "Disponible para oportunidades",
@@ -174,7 +176,290 @@
       "apitesting": "Pruebas de API",
       "fullstack": "Desarrollo Full-Stack",
       "softwarearch": "Arquitectura de Software",
-      "systemdesign": "Diseño de Sistemas"
+      "systemdesign": "Diseño de Sistemas",
+      "framer-motion": "Framer Motion",
+      "lucide-react": "Lucide React",
+      "umami-analytics": "Umami Analytics",
+      "ai-integration": "Integración IA"
+    }
+  },
+  "digitalTwin": {
+    "title": "Gemelo Digital",
+    "subtitle": "Representación interactiva de habilidades, proyectos y capacidades de ingeniería",
+    "welcome": {
+      "title": "Gemelo Digital",
+      "subtitle": "Explore una representación interactiva de mis habilidades, proyectos y capacidades de ingeniería.",
+      "cta": "Explorar Gemelo",
+      "viewProfile": "Ver Perfil Tradicional",
+      "badge": "REPRESENTACIÓN DIGITAL INTERACTIVA",
+      "stats": {
+        "projects": "Proyectos",
+        "technologies": "Tecnologías",
+        "experience": "Años de Experiencia",
+        "status": "Abierto a Trabajar"
+      }
+    },
+    "modes": {
+      "recruiter": "Reclutador",
+      "client": "Cliente",
+      "developer": "Desarrollador",
+      "designer": "Diseñador",
+      "explore": "Explorar Libremente",
+      "recruiterDesc": "Busco entender habilidades, experiencia y capacidades de ingeniería.",
+      "clientDesc": "Quiero saber qué se puede construir y cómo se resuelven los problemas.",
+      "developerDesc": "Me interesa la stack técnica, arquitectura y prácticas de ingeniería.",
+      "designerDesc": "Quiero explorar el pensamiento de diseño, enfoque UI/UX y sistemas visuales.",
+      "exploreDesc": "Quiero explorar todo sin un enfoque específico."
+    },
+    "sections": {
+      "twin": "Gemelo",
+      "technologies": "Tecnologías",
+      "projects": "Proyectos",
+      "engineering": "ADN de Ingeniería",
+      "capabilities": "Lo Que Puedo Construir",
+      "experience": "Experiencia"
+    },
+    "twin": {
+      "title": "Gemelo Interactivo",
+      "subtitle": "Haga clic en un nodo para explorar",
+      "legend": {
+        "selected": "Seleccionado",
+        "connected": "Conectado"
+      },
+      "nodes": {
+        "mind": "Mente",
+        "development": "Desarrollo",
+        "design": "Diseño",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "mobile": "Móvil",
+        "ai": "IA y Datos",
+        "technologies": "Tecnologías",
+        "projects": "Proyectos",
+        "systemDesign": "Diseño de Sistemas"
+      },
+      "emptyState": "Seleccione un nodo para explorar",
+      "hint": "Haga clic en un nodo para explorar"
+    },
+    "context": {
+      "recruiterView": "Vista Reclutador",
+      "clientView": "Vista Cliente",
+      "developerView": "Vista Desarrollador",
+      "designerView": "Vista Diseñador",
+      "exploring": "Explorando",
+      "technologies": "Tecnologías",
+      "relatedProjects": "Proyectos Relacionados",
+      "capabilities": "Capacidades",
+      "connectedNodes": "Nodos Conectados",
+      "selectNode": "Seleccione un nodo para explorar",
+      "selectNodeHint": "Haga clic en cualquier nodo en la visualización"
+    },
+    "technologyExplorer": {
+      "title": "Explorador de Tecnologías",
+      "subtitle": "Explore tecnologías y descubra proyectos relacionados",
+      "searchPlaceholder": "Buscar tecnologías...",
+      "categories": {
+        "all": "Todos",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Base de Datos",
+        "mobile": "Móvil",
+        "ai": "IA",
+        "design": "Diseño",
+        "devops": "DevOps"
+      },
+      "relatedProjects": "proyectos relacionados",
+      "noResults": "No se encontraron tecnologías que coincidan con su búsqueda.",
+      "footer": {
+        "recruiter": "Estas tecnologías representan capacidades de ingeniería principales.",
+        "client": "Estas tecnologías permiten construir soluciones modernas y escalables.",
+        "developer": "Tecnologías utilizadas en aplicaciones de producción.",
+        "designer": "Tecnologías que potencian interfaces hermosas e interactivas."
+      }
+    },
+    "projectExplorer": {
+      "title": "Explorador de Proyectos",
+      "subtitle": "Explore proyectos y descubra las tecnologías detrás de ellos",
+      "searchPlaceholder": "Buscar proyectos...",
+      "types": {
+        "all": "Todos",
+        "engineering": "Ingeniería",
+        "ux": "UX/UI",
+        "mobile": "Móvil",
+        "ai": "IA"
+      },
+      "viewProject": "Ver Proyecto",
+      "noResults": "No se encontraron proyectos que coincidan con su búsqueda.",
+      "recruiterView": "Vista Reclutador",
+      "clientView": "Vista Cliente",
+      "developerView": "Vista Desarrollador",
+      "designerView": "Vista Diseñador"
+    },
+    "engineeringDNA": {
+      "title": "Mi ADN de Ingeniería",
+      "subtitle": "Cómo abordo la construcción de software — desde la comprensión hasta la mejora",
+      "steps": {
+        "understand": {
+          "title": "Comprender",
+          "description": "Comprender profundamente el problema, los usuarios y los requisitos antes de escribir código.",
+          "details": "Empiezo preguntando: ¿Para quién es esto? ¿Qué problema estamos resolviendo? ¿Cómo se ve el éxito?"
+        },
+        "design": {
+          "title": "Diseñar",
+          "description": "Definir la arquitectura del sistema, la experiencia de usuario y el enfoque técnico.",
+          "details": "Creo wireframes, diagramas de sistema y especificaciones técnicas que guían el desarrollo."
+        },
+        "build": {
+          "title": "Construir",
+          "description": "Implementar la solución con código limpio, mantenible y bien probado.",
+          "details": "Escribo código modular y reutilizable con documentación y prácticas de prueba adecuadas."
+        },
+        "test": {
+          "title": "Probar",
+          "description": "Validar la funcionalidad, el rendimiento y la usabilidad en todos los escenarios.",
+          "details": "Pruebo minuciosamente, recojo comentarios y aseguro que la solución funcione como se espera."
+        },
+        "improve": {
+          "title": "Mejorar",
+          "description": "Iterar basado en comentarios, métricas y uso en el mundo real.",
+          "details": "Refino y optimizo continuamente basado en comentarios de usuarios y datos de rendimiento."
+        }
+      },
+      "footer": "Este proceso guía cómo abordo cada proyecto — desde el concepto hasta la entrega."
+    },
+    "whatICanBuild": {
+      "title": "Lo Que Puedo Construir",
+      "subtitle": "Categorías de soluciones que puedo entregar con ejemplos de proyectos reales",
+      "categories": {
+        "webApps": "Aplicaciones Web",
+        "mobileApps": "Aplicaciones Móviles",
+        "intelligentSystems": "Sistemas Inteligentes",
+        "businessSystems": "Sistemas de Negocio",
+        "digitalExperiences": "Experiencias Digitales"
+      },
+      "technologies": "Tecnologías",
+      "exampleProjects": "Ejemplos de Proyectos",
+      "capabilities": "Capacidades"
+    },
+    "experience": {
+      "title": "Línea de Tiempo de Experiencia",
+      "subtitle": "Trayectoria profesional y contribuciones clave",
+      "technologies": "Tecnologías",
+      "keyHighlights": "Puntos Clave",
+      "relatedProjects": "Proyectos Relacionados"
+    },
+    "assistant": {
+      "title": "Asistente de Gemelo Digital",
+      "subtitle": "Pregúntame sobre las habilidades, proyectos y capacidades de Daniel",
+      "placeholder": "Pregunta al Gemelo Digital...",
+      "suggestedQuestions": "Preguntas sugeridas:",
+      "welcome": "¡Hola! Soy tu Asistente de Gemelo Digital. Puedo ayudarte a conocer las habilidades, proyectos y capacidades de ingeniería de Daniel. ¿Qué te gustaría saber?",
+      "defaultResponse": "No estoy seguro sobre esa pregunta específica, pero puedo hablarte sobre las tecnologías, proyectos, enfoque de ingeniería de Daniel, o proyectos específicos como LIFE OS e IMAS. ¡Prueba a hacer una de las preguntas sugeridas!"
+    },
+    "askTwin": "Preguntar al Gemelo",
+    "closeAssistant": "Cerrar Asistente",
+    "openAssistant": "Abrir Asistente de Gemelo Digital"
+  },
+  "lifeOS": {
+    "title": "LIFE OS",
+    "subtitle": "Navegador de Carrera y Crecimiento Impulsado por IA",
+    "badge": "DEMO CONCEPTUAL IA",
+    "welcome": {
+      "title": "LIFE OS",
+      "subtitle": "Navegador de Carrera y Crecimiento Impulsado por IA",
+      "description": "Comprende dónde estás. Descubre a dónde puedes ir. Encuentra tu próximo mejor paso.",
+      "cta": "Comienza Tu Viaje",
+      "features": {
+        "goals": "Objetivos de Carrera",
+        "goalsDesc": "Define tu destino profesional",
+        "analysis": "Análisis de Habilidades",
+        "analysisDesc": "Descubre tus fortalezas y brechas",
+        "roadmap": "Hoja de Ruta Personalizada",
+        "roadmapDesc": "Obtén tu ruta de aprendizaje personalizada"
+      }
+    },
+    "goalSelection": {
+      "title": "Elige Tu Objetivo de Carrera",
+      "subtitle": "Selecciona la trayectoria profesional que deseas seguir. LIFE OS te ayudará a llegar allí.",
+      "back": "← Atrás",
+      "continue": "Continuar",
+      "goals": {
+        "softwareEngineer": "Ingeniero de Software",
+        "softwareEngineerDesc": "Construir y mantener sistemas de software",
+        "fullstackDeveloper": "Desarrollador Full-Stack",
+        "fullstackDeveloperDesc": "Desarrollo Frontend + Backend",
+        "frontendDeveloper": "Desarrollador Frontend",
+        "frontendDeveloperDesc": "Desarrollo web enfocado en UI/UX",
+        "backendDeveloper": "Desarrollador Backend",
+        "backendDeveloperDesc": "Desarrollo del lado del servidor y bases de datos",
+        "mobileDeveloper": "Desarrollador Móvil",
+        "mobileDeveloperDesc": "Desarrollo de aplicaciones iOS/Android",
+        "aiEngineer": "Ingeniero de IA",
+        "aiEngineerDesc": "Sistemas de aprendizaje automático e IA",
+        "dataAnalyst": "Analista de Datos",
+        "dataAnalystDesc": "Análisis y visualización de datos",
+        "uiUxDesigner": "Diseñador UI/UX",
+        "uiUxDesignerDesc": "Diseño de experiencia de usuario e interfaces",
+        "cybersecurity": "Especialista en Ciberseguridad",
+        "cybersecurityDesc": "Sistemas de seguridad y protección"
+      }
+    },
+    "skillSelection": {
+      "title": "¿Cuáles son tus habilidades actuales?",
+      "subtitle": "Selecciona las habilidades que ya tienes y tu nivel de competencia.",
+      "search": "Buscar habilidades por nombre o categoría...",
+      "levels": {
+        "beginner": "Principiante",
+        "intermediate": "Intermedio",
+        "advanced": "Avanzado"
+      },
+      "back": "← Atrás",
+      "analyze": "Analizar Mi Perfil",
+      "selected": "habilidades seleccionadas",
+      "noResults": "No se encontraron habilidades que coincidan con tu búsqueda."
+    },
+    "analysis": {
+      "badge": "ANÁLISIS DE CARRERA COMPLETADO",
+      "title": "Tu Perfil de Carrera",
+      "subtitle": "Basado en tu objetivo de convertirte en",
+      "readiness": "Preparación del Perfil",
+      "strengths": "Tus Fortalezas",
+      "gaps": "Áreas a Desarrollar",
+      "noStrengths": "Aún no se han identificado fortalezas.",
+      "noGaps": "¡Excelente! No se identificaron brechas importantes.",
+      "nextAction": "Tu Próxima Mejor Acción",
+      "difficulty": "Dificultad",
+      "roadmap": "Tu Hoja de Ruta Personalizada",
+      "startOver": "Comenzar de Nuevo",
+      "continue": "Continuar al Tablero"
+    },
+    "dashboard": {
+      "currentGoal": "OBJETIVO ACTUAL",
+      "changeGoal": "Cambiar objetivo",
+      "aiInsight": "PERSPECTIVA IA",
+      "conceptual": "Conceptual",
+      "nextAction": "PRÓXIMA MEJOR ACCIÓN",
+      "recentActivity": "ACTIVIDAD RECIENTE",
+      "status": "SISTEMA EN LÍNEA"
+    },
+    "metric": {
+      "fromLastWeek": "respecto a la semana pasada"
+    },
+    "assistant": {
+      "title": "Asistente LIFE OS",
+      "subtitle": "Centro de Comandos Inteligente",
+      "placeholder": "Pregunta a LIFE OS...",
+      "close": "Cerrar Asistente",
+      "open": "Abrir Asistente LIFE OS",
+      "suggestions": {
+        "next": "¿En qué debería trabajar a continuación?",
+        "skill": "¿Qué habilidad debería mejorar?",
+        "fullstack": "¿Cómo puedo convertirme en un mejor desarrollador full-stack?",
+        "project": "¿Qué proyecto demuestra mis habilidades más fuertes?",
+        "gap": "¿Cuál es mi mayor brecha de habilidades?",
+        "learn": "¿Qué debería aprender a continuación?"
+      },
+      "welcome": "Pregúntame cualquier cosa sobre tus objetivos, habilidades o proyectos."
     }
   },
   "projects": {
@@ -257,6 +542,60 @@
     "short": "Un sitio web de portafolio moderno para una profesional en contabilidad y finanzas.",
     "role": "DevOps, Arquitectura & Desarrollador",
     "longDescription": "Diseñé y desarrollé un sitio web de portafolio moderno para Manuella, una profesional en contabilidad y finanzas. Como arquitecto DevOps, gestioné toda la tubería de despliegue en Vercel, aseguré un rendimiento óptimo y construí una interfaz responsive y fácil de usar con React y Tailwind CSS."
+    },
+    "digital-twin": {
+      "title": "Visor de Gemelo Digital",
+      "short": "Una representación digital interactiva de habilidades, proyectos y capacidades de ingeniería.",
+      "role": "Desarrollador Full-Stack, Diseñador UI/UX & Arquitecto de Sistemas",
+      "longDescription": "Una representación digital interactiva que permite a los visitantes explorar habilidades, proyectos y capacidades de ingeniería a través de una interfaz inteligente basada en nodos.",
+      "problem": "Los portafolios tradicionales son estáticos y lineales, obligando a los visitantes a desplazarse por largas páginas de texto. Los reclutadores, clientes y desarrolladores necesitan una forma más atractiva de entender las capacidades de un ingeniero de software.",
+      "solution": "Construí un sistema de Gemelo Digital interactivo que visualiza capacidades profesionales a través de una interfaz inteligente basada en nodos con múltiples modos de visitante.",
+      "features": [
+        "Visualización interactiva basada en nodos de habilidades y capacidades",
+        "5 modos de visitante: Reclutador, Cliente, Desarrollador, Diseñador, Explorar Libremente",
+        "Explorador de Tecnologías con conexiones a proyectos",
+        "Explorador de Proyectos con filtrado tecnológico",
+        "Visualización del proceso ADN de Ingeniería",
+        "Sección Lo Que Puedo Construir",
+        "Asistente de Gemelo Digital con respuestas basadas en reglas",
+        "Integración con Umami Analytics",
+        "Diseño completamente responsive",
+        "Soporte de modos Claro/Oscuro"
+      ],
+      "learnings": [
+        "Diseñar experiencias interactivas que sirvan a múltiples perfiles de usuario",
+        "Construir un asistente basado en reglas sin backend",
+        "Crear sistemas de nodos visuales con React y Framer Motion",
+        "Estructurar datos para una futura integración de IA",
+        "Equilibrar el diseño futurista con la funcionalidad profesional"
+      ]
+    },
+    "lifeos": {
+      "title": "LIFE OS — Sistema Operativo de Vida IA",
+      "short": "Navegador de carrera y crecimiento impulsado por IA que ayuda a los usuarios a identificar brechas de habilidades y descubrir sus próximas mejores acciones.",
+      "role": "Desarrollador Full-Stack, Diseñador UI/UX & Arquitecto de Sistemas",
+      "longDescription": "LIFE OS es un navegador de carrera y crecimiento impulsado por IA que ayuda a los usuarios a identificar brechas de habilidades, explorar trayectorias profesionales y descubrir sus próximas mejores acciones.",
+      "problem": "Las personas tienen dificultades para navegar sus trayectorias profesionales, identificar brechas de habilidades y priorizar su aprendizaje.",
+      "solution": "Construí un sistema de navegación de carrera inteligente que analiza habilidades, recomienda rutas de aprendizaje y proporciona acciones personalizadas.",
+      "features": [
+        "Panel de carrera personalizado",
+        "Sistema interactivo de selección de objetivos",
+        "Análisis de brechas de habilidades con recomendaciones personalizadas",
+        "Motor de próxima mejor acción",
+        "Simulador de escenarios \"Qué pasaría si\"",
+        "Generación de hoja de ruta personalizada",
+        "Asistente LIFE OS con respuestas basadas en reglas",
+        "Seguimiento de objetivos profesionales",
+        "Diseño completamente responsive",
+        "Soporte de modos Claro/Oscuro"
+      ],
+      "learnings": [
+        "Construir un motor de recomendación basado en reglas",
+        "Crear experiencias de usuario personalizadas",
+        "Diseñar para el desarrollo y crecimiento profesional",
+        "Estructurar datos para futura integración de IA",
+        "Construir simulaciones y visualizaciones interactivas"
+      ]
     }
   },
   "experience": {

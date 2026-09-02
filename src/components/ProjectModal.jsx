@@ -25,17 +25,31 @@ const ProjectModal = ({ project, onClose }) => {
   // Helper function to safely get translation
   const getTranslation = (key, defaultValue = '') => {
     const translated = t(key);
-    // If translation returns the key itself or is empty, use defaultValue
     if (translated === key || !translated) {
       return defaultValue;
     }
     return translated;
   };
 
-  const title = getTranslation(`${project.translationKey}.title`, project.title || 'Project');
-  const short = getTranslation(`${project.translationKey}.short`, project.short || '');
-  const role = getTranslation(`${project.translationKey}.role`, project.role || '');
-  const longDescription = getTranslation(`${project.translationKey}.longDescription`, project.longDescription || '');
+  // Check if this is the Digital Twin project
+  const isDigitalTwin = project.id === 'digital-twin';
+
+  // For Digital Twin, use direct project fields instead of translations
+  const title = isDigitalTwin 
+    ? project.title || 'Digital Twin'
+    : getTranslation(`${project.translationKey}.title`, project.title || 'Digital Twin');
+  
+  const short = isDigitalTwin 
+    ? project.description || ''
+    : getTranslation(`${project.translationKey}.short`, project.short || '');
+  
+  const role = isDigitalTwin 
+    ? project.role || ''
+    : getTranslation(`${project.translationKey}.role`, project.role || '');
+  
+  const longDescription = isDigitalTwin 
+    ? project.solution || project.description || ''
+    : getTranslation(`${project.translationKey}.longDescription`, project.longDescription || '');
 
   return (
     <AnimatePresence>
@@ -84,6 +98,10 @@ const ProjectModal = ({ project, onClose }) => {
                   src={project.cover}
                   alt={title}
                   className="w-full h-80 object-cover"
+                  onError={(e) => {
+                    e.target.src = ''; // Fallback if image fails
+                    e.target.style.display = 'none';
+                  }}
                 />
                 
                 {/* Type Badge on Image */}
@@ -121,6 +139,9 @@ const ProjectModal = ({ project, onClose }) => {
                         src={img}
                         alt={`${title} screenshot ${idx + 1}`}
                         className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                        }}
                       />
                     </div>
                   ))}
@@ -141,12 +162,53 @@ const ProjectModal = ({ project, onClose }) => {
                 </p>
               </div>
 
-              {/* Long Description */}
-              <div className="py-4 border-y border-slate-200 dark:border-slate-800">
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                  {longDescription}
-                </p>
-              </div>
+              {/* Problem & Solution for Digital Twin */}
+              {isDigitalTwin && project.problem && project.solution && (
+                <div className="py-4 border-y border-slate-200 dark:border-slate-800">
+                  <div className="mb-3">
+                    <p className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
+                      Problem
+                    </p>
+                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                      {project.problem}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
+                      Solution
+                    </p>
+                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                      {project.solution}
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Long Description (for non-Digital Twin) */}
+              {!isDigitalTwin && longDescription && (
+                <div className="py-4 border-y border-slate-200 dark:border-slate-800">
+                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                    {longDescription}
+                  </p>
+                </div>
+              )}
+
+              {/* Key Features for Digital Twin */}
+              {isDigitalTwin && project.keyFeatures && project.keyFeatures.length > 0 && (
+                <div>
+                  <p className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">
+                    Key Features
+                  </p>
+                  <ul className="space-y-1">
+                    {project.keyFeatures.map((feature, index) => (
+                      <li key={index} className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-300">
+                        <span className="text-teal-500 mt-0.5">▹</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Role */}
               <div>
@@ -174,7 +236,7 @@ const ProjectModal = ({ project, onClose }) => {
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
+                  {project.tech && project.tech.map((tech) => (
                     <span
                       key={tech}
                       className="px-3 py-1.5 text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300"
@@ -187,7 +249,7 @@ const ProjectModal = ({ project, onClose }) => {
 
               {/* CTA Buttons */}
               <div className="mt-auto pt-6 space-y-3">
-                {project.liveUrl && (
+                {project.liveUrl && project.liveUrl !== '#digital-twin' && (
                   <a
                     href={project.liveUrl}
                     target="_blank"
@@ -198,6 +260,33 @@ const ProjectModal = ({ project, onClose }) => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                     </svg>
                     {t("projects.viewLive")}
+                  </a>
+                )}
+                
+                {/* For Digital Twin, show Explore Demo button */}
+                {isDigitalTwin && (
+                  <a
+                    href="#digital-twin"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onClose();
+                      // Scroll to Digital Twin section
+                      const element = document.getElementById('digital-twin');
+                      if (element) {
+                        const navbarHeight = 80;
+                        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                        window.scrollTo({
+                          top: elementPosition - navbarHeight,
+                          behavior: "smooth"
+                        });
+                      }
+                    }}
+                    className="group flex items-center justify-center gap-2 w-full px-6 py-4 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:shadow-xl hover:shadow-purple-500/30 transition-all duration-300 hover:scale-105"
+                  >
+                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    Explore Digital Twin
                   </a>
                 )}
                 

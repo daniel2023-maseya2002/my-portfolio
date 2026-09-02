@@ -8,7 +8,9 @@
     "education": "Education",
     "blog": "Blog",
     "contact": "Contact",
-    "letsTalk": "Let's Talk"
+    "letsTalk": "Let's Talk",
+    "lifeos": "LIFE OS",
+    "digitalTwin": "Digital Twin"
   },
   "hero": {
     "status": "Available for Opportunities",
@@ -54,6 +56,285 @@
     "ctaTitle": "Ready to transform your vision?",
     "ctaDesc": "Let's collaborate on innovative, scalable, and user-centered projects.",
     "ctaButton": "Start a Conversation"
+  },
+  "digitalTwin": {
+    "title": "Digital Twin",
+    "subtitle": "Interactive representation of skills, projects, and engineering capabilities",
+    "welcome": {
+      "title": "Digital Twin",
+      "subtitle": "Explore an interactive representation of my skills, projects, and engineering capabilities.",
+      "cta": "Explore Twin",
+      "viewProfile": "View Traditional Profile",
+      "badge": "INTERACTIVE DIGITAL REPRESENTATION",
+      "stats": {
+        "projects": "Projects",
+        "technologies": "Technologies",
+        "experience": "Years Experience",
+        "status": "Open to Work"
+      }
+    },
+    "modes": {
+      "recruiter": "Recruiter",
+      "client": "Client",
+      "developer": "Developer",
+      "designer": "Designer",
+      "explore": "Explore Freely",
+      "recruiterDesc": "I'm looking to understand skills, experience, and engineering capabilities.",
+      "clientDesc": "I want to know what can be built and how problems are solved.",
+      "developerDesc": "I'm interested in the technical stack, architecture, and engineering practices.",
+      "designerDesc": "I want to explore the design thinking, UI/UX approach, and visual systems.",
+      "exploreDesc": "I want to explore everything without any specific focus."
+    },
+    "sections": {
+      "twin": "Twin",
+      "technologies": "Technologies",
+      "projects": "Projects",
+      "engineering": "Engineering DNA",
+      "capabilities": "What I Can Build",
+      "experience": "Experience"
+    },
+    "twin": {
+      "title": "Interactive Twin",
+      "subtitle": "Click a node to explore",
+      "legend": {
+        "selected": "Selected",
+        "connected": "Connected"
+      },
+      "nodes": {
+        "mind": "Mind",
+        "development": "Development",
+        "design": "Design",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "mobile": "Mobile",
+        "ai": "AI & Data",
+        "technologies": "Technologies",
+        "projects": "Projects",
+        "systemDesign": "System Design"
+      },
+      "emptyState": "Select a node to explore",
+      "hint": "Click a node to explore"
+    },
+    "context": {
+      "recruiterView": "Recruiter View",
+      "clientView": "Client View",
+      "developerView": "Developer View",
+      "designerView": "Designer View",
+      "exploring": "Exploring",
+      "technologies": "Technologies",
+      "relatedProjects": "Related Projects",
+      "capabilities": "Capabilities",
+      "connectedNodes": "Connected Nodes",
+      "selectNode": "Select a node to explore",
+      "selectNodeHint": "Click any node in the twin visualization"
+    },
+    "technologyExplorer": {
+      "title": "Technology Explorer",
+      "subtitle": "Browse technologies and discover related projects",
+      "searchPlaceholder": "Search technologies...",
+      "categories": {
+        "all": "All",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Database",
+        "mobile": "Mobile",
+        "ai": "AI",
+        "design": "Design",
+        "devops": "DevOps"
+      },
+      "relatedProjects": "related projects",
+      "noResults": "No technologies found matching your search.",
+      "footer": {
+        "recruiter": "These technologies represent core engineering capabilities.",
+        "client": "These technologies enable building modern, scalable solutions.",
+        "developer": "Technologies used in production-grade applications.",
+        "designer": "Technologies that power beautiful, interactive interfaces."
+      }
+    },
+    "projectExplorer": {
+      "title": "Project Explorer",
+      "subtitle": "Explore projects and discover the technologies behind them",
+      "searchPlaceholder": "Search projects...",
+      "types": {
+        "all": "All",
+        "engineering": "Engineering",
+        "ux": "UX/UI",
+        "mobile": "Mobile",
+        "ai": "AI"
+      },
+      "viewProject": "View Project",
+      "noResults": "No projects found matching your search.",
+      "recruiterView": "Recruiter View",
+      "clientView": "Client View",
+      "developerView": "Developer View",
+      "designerView": "Designer View"
+    },
+    "engineeringDNA": {
+      "title": "My Engineering DNA",
+      "subtitle": "How I approach building software — from understanding to improvement",
+      "steps": {
+        "understand": {
+          "title": "Understand",
+          "description": "Deeply understand the problem, users, and requirements before writing any code.",
+          "details": "I start by asking: Who is this for? What problem are we solving? What does success look like?"
+        },
+        "design": {
+          "title": "Design",
+          "description": "Define the system architecture, user experience, and technical approach.",
+          "details": "I create wireframes, system diagrams, and technical specifications that guide development."
+        },
+        "build": {
+          "title": "Build",
+          "description": "Implement the solution with clean, maintainable, and well-tested code.",
+          "details": "I write modular, reusable code with proper documentation and testing practices."
+        },
+        "test": {
+          "title": "Test",
+          "description": "Validate functionality, performance, and usability across all scenarios.",
+          "details": "I test thoroughly, gather feedback, and ensure the solution works as intended."
+        },
+        "improve": {
+          "title": "Improve",
+          "description": "Iterate based on feedback, metrics, and real-world usage.",
+          "details": "I continuously refine and optimize based on user feedback and performance data."
+        }
+      },
+      "footer": "This process guides how I approach every project — from concept to delivery."
+    },
+    "whatICanBuild": {
+      "title": "What I Can Build",
+      "subtitle": "Categories of solutions I can deliver with real project examples",
+      "categories": {
+        "webApps": "Web Applications",
+        "mobileApps": "Mobile Applications",
+        "intelligentSystems": "Intelligent Systems",
+        "businessSystems": "Business Systems",
+        "digitalExperiences": "Digital Experiences"
+      },
+      "technologies": "Technologies",
+      "exampleProjects": "Example Projects",
+      "capabilities": "Capabilities"
+    },
+    "experience": {
+      "title": "Experience Timeline",
+      "subtitle": "Professional journey and key contributions",
+      "technologies": "Technologies",
+      "keyHighlights": "Key Highlights",
+      "relatedProjects": "Related Projects"
+    },
+    "assistant": {
+      "title": "Digital Twin Assistant",
+      "subtitle": "Ask me about Daniel's skills, projects, and capabilities",
+      "placeholder": "Ask the Digital Twin...",
+      "suggestedQuestions": "Suggested questions:",
+      "welcome": "Hello! I'm your Digital Twin Assistant. I can help you learn about Daniel's skills, projects, and engineering capabilities. What would you like to know?",
+      "defaultResponse": "I'm not sure about that specific question, but I can tell you about Daniel's technologies, projects, engineering approach, or specific projects like LIFE OS and IMAS. Try asking one of the suggested questions!"
+    },
+    "askTwin": "Ask Twin",
+    "closeAssistant": "Close Assistant",
+    "openAssistant": "Open LIFE OS Assistant"
+  },
+  "lifeOS": {
+    "title": "LIFE OS",
+    "subtitle": "AI-Powered Career & Growth Navigator",
+    "badge": "CONCEPTUAL AI DEMO",
+    "metric": {
+      "fromLastWeek": "from last week"
+    },
+    "welcome": {
+      "title": "LIFE OS",
+      "subtitle": "AI-Powered Career & Growth Navigator",
+      "description": "Understand where you are. Discover where you can go. Find your next best step.",
+      "cta": "Start Your Journey",
+      "features": {
+        "goals": "Career Goals",
+        "goalsDesc": "Define your career destination",
+        "analysis": "Skill Analysis",
+        "analysisDesc": "Discover your strengths & gaps",
+        "roadmap": "Personalized Roadmap",
+        "roadmapDesc": "Get your custom learning path"
+      }
+    },
+    "goalSelection": {
+      "title": "Choose Your Career Goal",
+      "subtitle": "Select the career path you want to pursue. LIFE OS will help you get there.",
+      "back": "← Back",
+      "continue": "Continue",
+      "goals": {
+        "softwareEngineer": "Software Engineer",
+        "softwareEngineerDesc": "Build and maintain software systems",
+        "fullstackDeveloper": "Full-Stack Developer",
+        "fullstackDeveloperDesc": "Frontend + Backend development",
+        "frontendDeveloper": "Frontend Developer",
+        "frontendDeveloperDesc": "UI/UX focused web development",
+        "backendDeveloper": "Backend Developer",
+        "backendDeveloperDesc": "Server-side & database development",
+        "mobileDeveloper": "Mobile Developer",
+        "mobileDeveloperDesc": "iOS/Android app development",
+        "aiEngineer": "AI Engineer",
+        "aiEngineerDesc": "Machine learning & AI systems",
+        "dataAnalyst": "Data Analyst",
+        "dataAnalystDesc": "Data analysis & visualization",
+        "uiUxDesigner": "UI/UX Designer",
+        "uiUxDesignerDesc": "User experience & interface design",
+        "cybersecurity": "Cybersecurity Specialist",
+        "cybersecurityDesc": "Security & protection systems"
+      }
+    },
+    "skillSelection": {
+      "title": "What are your current skills?",
+      "subtitle": "Select the skills you already have and your proficiency level.",
+      "search": "Search skills by name or category...",
+      "levels": {
+        "beginner": "Beginner",
+        "intermediate": "Intermediate",
+        "advanced": "Advanced"
+      },
+      "back": "← Back",
+      "analyze": "Analyze My Profile",
+      "selected": "skills selected",
+      "noResults": "No skills found matching your search."
+    },
+    "analysis": {
+      "badge": "CAREER ANALYSIS COMPLETE",
+      "title": "Your Career Profile",
+      "subtitle": "Based on your goal to become a",
+      "readiness": "Profile Readiness",
+      "strengths": "Your Strengths",
+      "gaps": "Areas to Develop",
+      "noStrengths": "No strengths identified yet.",
+      "noGaps": "Great! No major gaps identified.",
+      "nextAction": "Your Next Best Action",
+      "difficulty": "Difficulty",
+      "roadmap": "Your Personalized Roadmap",
+      "startOver": "Start Over",
+      "continue": "Continue to Dashboard"
+    },
+    "dashboard": {
+      "currentGoal": "CURRENT GOAL",
+      "changeGoal": "Change goal",
+      "aiInsight": "AI INSIGHT",
+      "conceptual": "Conceptual",
+      "nextAction": "NEXT BEST ACTION",
+      "recentActivity": "RECENT ACTIVITY",
+      "status": "SYSTEM ONLINE"
+    },
+    "assistant": {
+      "title": "LIFE OS Assistant",
+      "subtitle": "Intelligent Command Center",
+      "placeholder": "Ask LIFE OS...",
+      "close": "Close Assistant",
+      "open": "Open LIFE OS Assistant",
+      "suggestions": {
+        "next": "What should I work on next?",
+        "skill": "Which skill should I improve?",
+        "fullstack": "How can I become a stronger full-stack developer?",
+        "project": "Which project demonstrates my strongest skills?",
+        "gap": "What is my biggest skill gap?",
+        "learn": "What should I learn next?"
+      },
+      "welcome": "Ask me anything about your goals, skills, or projects."
+    }
   },
   "projects": {
     "badge": "Featured Work",
@@ -135,6 +416,60 @@
     "short": "A modern portfolio website for an Accounting and Finance professional.",
     "role": "DevOps, Architecture & Developer",
     "longDescription": "I designed and developed a clean, modern portfolio website for Manuella, an Accounting and Finance professional. As the DevOps architect, I managed the full deployment pipeline on Vercel, ensured optimal performance, and built a responsive, user‑friendly interface using React and Tailwind CSS."
+    },
+    "digital-twin": {
+      "title": "Digital Twin Viewer",
+      "short": "An interactive digital representation of skills, projects, and engineering capabilities.",
+      "role": "Full-Stack Developer, UI/UX Designer & System Architect",
+      "longDescription": "An interactive digital representation that lets visitors explore skills, projects, and engineering capabilities through an intelligent node-based interface.",
+      "problem": "Traditional portfolios are static and linear, forcing visitors to scroll through long pages of text. Recruiters, clients, and developers need a more engaging way to understand a software engineer's capabilities.",
+      "solution": "Built an interactive Digital Twin system that visualizes professional capabilities through an intelligent node-based interface with multiple visitor modes.",
+      "features": [
+        "Interactive node-based visualization of skills and capabilities",
+        "5 visitor modes: Recruiter, Client, Developer, Designer, Explore Freely",
+        "Technology Explorer with project connections",
+        "Project Explorer with tech filtering",
+        "Engineering DNA process visualization",
+        "What I Can Build section",
+        "Digital Twin Assistant with rule-based responses",
+        "Umami Analytics integration",
+        "Fully responsive design",
+        "Dark/Light mode support"
+      ],
+      "learnings": [
+        "Designing interactive experiences that serve multiple user personas",
+        "Building a rule-based assistant without a backend",
+        "Creating visual node systems with React and Framer Motion",
+        "Structuring data for flexible, future-AI integration",
+        "Balancing futuristic design with professional functionality"
+      ]
+    },
+    "lifeos": {
+      "title": "LIFE OS — AI Life Operating System",
+      "short": "AI-powered career and growth navigator that helps users identify skill gaps and discover their next best actions.",
+      "role": "Full-Stack Developer, UI/UX Designer & System Architect",
+      "longDescription": "LIFE OS is an AI-powered career and growth navigator that helps users identify skill gaps, explore career paths, and discover their next best actions. It features a personalized dashboard, goal tracking, skill analysis, and an intelligent assistant.",
+      "problem": "People struggle to navigate their career paths, identify skill gaps, and prioritize their learning. Most career tools are either too generic or require expensive coaching.",
+      "solution": "Built an intelligent career navigation system that analyzes skills, recommends learning paths, and provides personalized next actions using a rule-based engine.",
+      "features": [
+        "Personalized career dashboard",
+        "Interactive goal selection system",
+        "Skill gap analysis with personalized recommendations",
+        "Next Best Action engine",
+        "What-If simulator for scenario planning",
+        "Personalized roadmap generation",
+        "LIFE OS Assistant with rule-based responses",
+        "Career goal tracking and progress monitoring",
+        "Fully responsive design",
+        "Dark/Light mode support"
+      ],
+      "learnings": [
+        "Building a rule-based recommendation engine",
+        "Creating personalized user experiences",
+        "Designing for career development and growth",
+        "Structuring data for future AI integration",
+        "Building interactive simulations and visualizations"
+      ]
     }
   },
   "experience": {
@@ -508,7 +843,11 @@
       "apitesting": "API Testing",
       "fullstack": "Full-Stack Development",
       "softwarearch": "Software Architecture",
-      "systemdesign": "System Design"
+      "systemdesign": "System Design",
+      "framer-motion": "Framer Motion",
+      "lucide-react": "Lucide React",
+      "umami-analytics": "Umami Analytics",
+      "ai-integration": "AI Integration"
     }
   }
 }
