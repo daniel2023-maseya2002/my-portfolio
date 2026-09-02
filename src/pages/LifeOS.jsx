@@ -45,6 +45,8 @@ const LifeOS = () => {
 
   const [isAssistantOpen, setIsAssistantOpenLocal] = useState(false);
   const [onboardingStep, setOnboardingStep] = useState(0);
+  // Store the selected goal locally to prevent it from being lost
+  const [selectedGoal, setSelectedGoal] = useState(null);
 
   const handleAssistantToggle = () => {
     setIsAssistantOpenLocal(!isAssistantOpen);
@@ -64,6 +66,8 @@ const LifeOS = () => {
         return (
           <GoalSelection 
             onSelect={(goal) => {
+              // Store goal locally and in the hook
+              setSelectedGoal(goal);
               selectGoal(goal.id);
               setOnboardingStep(2);
             }}
@@ -74,9 +78,18 @@ const LifeOS = () => {
         return (
           <SkillSelection 
             onComplete={(skills) => {
+              // Use the locally stored goal first, fallback to visitorGoal
+              const goal = selectedGoal || visitorGoal;
+              
+              if (!goal || !goal.id) {
+                console.warn('No goal selected, redirecting to goal selection');
+                setOnboardingStep(1);
+                return;
+              }
+              
               // Run the analysis engine with the selected goal and skills
-              const analysis = runAnalysis(visitorGoal, skills);
-              completeOnboarding(visitorGoal, skills, analysis);
+              const analysis = runAnalysis(goal, skills);
+              completeOnboarding(goal, skills, analysis);
               setOnboardingStep(3);
             }}
             onBack={() => setOnboardingStep(1)}
@@ -86,10 +99,12 @@ const LifeOS = () => {
       case 3:
         return (
           <AnalysisResults 
-            goal={visitorGoal}
+            goal={visitorGoal || selectedGoal}
             skills={visitorSkills}
+            analysis={analysisResult}
             onRestart={() => {
               setOnboardingStep(0);
+              setSelectedGoal(null);
             }}
             onContinue={() => {
               setOnboardingStep(0);
@@ -170,6 +185,7 @@ const LifeOS = () => {
           isOpen={isAssistantOpen}
           onAskQuestion={askAssistant}
           response={assistantResponse}
+          onClose={() => setIsAssistantOpenLocal(false)}
         />
       </div>
     </div>

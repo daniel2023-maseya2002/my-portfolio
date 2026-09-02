@@ -1,5 +1,5 @@
 // src/hooks/useLifeOS.js
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { getAllGoals, getGoalById } from '../data/goals';
 import { insights, recentActivities, userProfile } from '../data/lifeOSData';
 import projects from '../data/projects';
@@ -23,7 +23,11 @@ export const useLifeOS = () => {
   const [isAssistantOpen, setIsAssistantOpen] = useState(false);
   const [assistantQuestion, setAssistantQuestion] = useState('');
 
-  const currentGoal = visitorGoal || getGoalById('fullstack-developer');
+  // Use ref to track if recommendation has been set
+  const hasSetRecommendation = useRef(false);
+
+  const DEFAULT_GOAL_ID = 'fullstack-engineer';
+  const currentGoal = visitorGoal || getGoalById(DEFAULT_GOAL_ID);
   const allGoals = getAllGoals();
   const currentSkills = visitorSkills.length > 0 ? visitorSkills : skillsData;
 
@@ -32,32 +36,51 @@ export const useLifeOS = () => {
     trackEvent('life-os-opened', {});
   }, []);
 
-  // Update recommendation when goal or skills change
+  // Update recommendation when goal or skills change - FIXED infinite loop
   useEffect(() => {
-    if (currentGoal) {
-      const recommendation = getNextBestAction(currentGoal.id, currentSkills);
-      setRecommendation(recommendation);
+    // Check if currentGoal exists and has an id before using it
+    if (currentGoal && currentGoal.id && !hasSetRecommendation.current) {
+      const rec = getNextBestAction(currentGoal.id, currentSkills);
+      setRecommendation(rec);
       trackEvent('recommendation-viewed', { goal: currentGoal.id });
+      hasSetRecommendation.current = true;
     }
-  }, [currentGoal, currentSkills]);
+  }, [currentGoal, currentSkills]); // Dependencies are fine, the ref prevents re-runs
+
+  // Reset recommendation flag when goal or skills change significantly
+  useEffect(() => {
+    hasSetRecommendation.current = false;
+  }, [currentGoal?.id, visitorSkills.length]);
 
   const startOnboarding = useCallback(() => {
     setIsOnboarding(true);
     trackEvent('life-os-started', {});
   }, []);
 
-  // FIXED: Complete onboarding with analysis
   const completeOnboarding = useCallback((goal, skills, analysis) => {
+    if (!goal || !goal.id) {
+      console.warn('Cannot complete onboarding: No valid goal selected');
+      const defaultGoal = getGoalById(DEFAULT_GOAL_ID);
+      setVisitorGoal(defaultGoal);
+      setVisitorSkills(skills || []);
+      setAnalysisResult(analysis || null);
+      setIsOnboarding(false);
+      trackEvent('analysis-completed', { goal: 'default', skillCount: skills?.length || 0 });
+      return;
+    }
+    
     setVisitorGoal(goal);
-    setVisitorSkills(skills);
-    setAnalysisResult(analysis);
+    setVisitorSkills(skills || []);
+    setAnalysisResult(analysis || null);
     setIsOnboarding(false);
-    trackEvent('analysis-completed', { goal: goal.id, skillCount: skills.length });
+    hasSetRecommendation.current = false; // Reset to trigger new recommendation
+    trackEvent('analysis-completed', { goal: goal.id, skillCount: skills?.length || 0 });
   }, []);
 
   const selectGoal = useCallback((goalId) => {
     const goal = getGoalById(goalId);
     setVisitorGoal(goal);
+    hasSetRecommendation.current = false; // Reset to trigger new recommendation
     trackEvent('career-goal-selected', { goal: goalId, category: goal?.category });
   }, []);
 
@@ -84,15 +107,31 @@ export const useLifeOS = () => {
     return result;
   }, []);
 
-  // FIXED: Run analysis with proper return
   const runAnalysis = useCallback((goal, skills) => {
+    if (!goal || !goal.id) {
+      console.warn('No valid goal selected for analysis');
+      const fallbackResult = {
+        strengths: [],
+        gaps: ['Please select a career goal first'],
+        summary: 'Select a career goal to get personalized analysis.',
+        nextAction: { 
+          action: 'Select a career goal', 
+          reason: 'You need to define your career direction.', 
+          difficulty: 'N/A' 
+        },
+        roadmap: ['Select a career goal to generate a roadmap'],
+        progress: 0
+      };
+      setAnalysisResult(fallbackResult);
+      return fallbackResult;
+    }
+    
     const result = analyzeCareerProfile(goal, skills);
     setAnalysisResult(result);
-    trackEvent('analysis-run', { goal: goal.id, skillCount: skills.length });
+    trackEvent('analysis-run', { goal: goal.id, skillCount: skills?.length || 0 });
     return result;
   }, []);
 
-  // FIXED: Assistant uses analysis result
   const askAssistant = useCallback((question) => {
     setAssistantQuestion(question);
     trackEvent('assistant-used', { question: question.substring(0, 50) });
@@ -146,7 +185,7 @@ export const useLifeOS = () => {
         answer = 'Complete your profile analysis first to generate a personalized roadmap.';
       }
     } else if (lowerQuestion.includes('goal') || lowerQuestion.includes('career')) {
-      if (currentGoal) {
+      if (currentGoal && currentGoal.name) {
         answer = `Your current goal is: ${currentGoal.name}. ${currentGoal.description || ''}`;
         type = 'career';
       } else {
@@ -163,7 +202,6 @@ export const useLifeOS = () => {
   }, [currentGoal, currentSkills, recommendation, analysisResult]);
 
   return {
-    // Onboarding state
     isOnboarding,
     visitorGoal,
     visitorSkills,
@@ -172,7 +210,6 @@ export const useLifeOS = () => {
     completeOnboarding,
     runAnalysis,
     
-    // Data
     user: userProfile,
     currentGoal,
     allGoals,
@@ -188,7 +225,6 @@ export const useLifeOS = () => {
     recentActivities,
     projects,
 
-    // Actions
     selectGoal,
     selectSkill,
     selectProject,

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import GlassCard from '../Shared/GlassCard';
 
-const LifeOSAssistant = ({ onAskQuestion, response, isOpen }) => {
+const LifeOSAssistant = ({ onAskQuestion, response, isOpen, onClose }) => {
   const { t } = useTranslation();
   const [question, setQuestion] = useState('');
 
