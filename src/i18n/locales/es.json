@@ -13,6 +13,9 @@
     "digitalTwin": "Gemelo Digital"
   },
   "hero": {
+    "positioning": "Diseño, ingenio y construyo soluciones digitales desde aplicaciones web y sistemas backend hasta APIs, experiencias impulsadas por IA y productos digitales centrados en el usuario.",
+    "availabilityLine": "Abierto a oportunidades · Remoto y presencial",
+    "locationFallback": "Kigali, Ruanda",
     "status": "Disponible para oportunidades",
     "name": "DANIEL MASEYA",
     "title": "Construyendo",
@@ -34,12 +37,19 @@
     "scroll": "DESPLAZAR"
   },
   "about": {
+    "label": "Sobre mí",
+    "heading": "Una breve introducción.",
+    "p1": "Soy ingeniero de software, trabajo principalmente con Python y React, con experiencia en ingeniería backend, diseño de APIs, bases de datos e IA aplicada. Estudié Tecnología de la Información en la AUCA en Kigali, y he pasado los últimos años construyendo sistemas de producción para clientes en fintech, movilidad, educación y agricultura.",
+    "p2": "Me importa la claridad en el código y la claridad en las interfaces. La mayor parte de lo que construyo empieza como un problema real que alguien me trae un flujo de registro, un sistema de reservas, un producto de ahorro y trato de entregarlo en una forma que siga funcionando mucho después de la entrega.",
+    "recent": "apoyo voluntario a la campaña de sensibilización sobre el código digital en el PNUD RDC.",
+    "resumeTitle": "CV",
+    "resumeDesc": "Descarga mi CV completo en formato PDF.",
     "badge": "Sobre mí",
     "title": "Creando",
     "titleHighlight": "Soluciones",
     "titleEnd": "Digitales con Propósito",
-    "description1": "Soy ingeniero full-stack y entusiasta de UX, apasionado por convertir desafíos complejos en productos digitales intuitivos y hermosos. Disfruto unir el pensamiento de diseño con una infraestructura backend robusta.",
-    "description2": "Mi experiencia abarca diversos dominios, incluyendo fintech, plataformas de movilidad y sistemas críticos de salud. Estoy profundamente comprometido con la claridad, el rendimiento y el impacto en el usuario en cada proyecto.",
+    "description1": "Soy ingeniero full-stack y entusiasta de UX, apasionado por convertir desafíos complejos en productos digitales intuitivos y hermosos.",
+    "description2": "Mi experiencia abarca diversos dominios, incluyendo fintech, plataformas de movilidad y sistemas críticos de salud.",
     "coreTech": "Tecnologías principales",
     "proficiency": "Dominio",
     "experience": "Experiencia",
@@ -55,9 +65,15 @@
     "impact": "Impacto real",
     "ctaTitle": "¿Listo para transformar tu visión?",
     "ctaDesc": "Colaboremos en proyectos innovadores, escalables y centrados en el usuario.",
-    "ctaButton": "Iniciar conversación"
+    "ctaButton": "Iniciar conversación",
+    "recentlyLabel": "Recientemente:",
+    "view": "Ver",
+    "download": "Descargar CV"
   },
-    "skills": {
+  "skills": {
+    "label": "Stack",
+    "heading": "Herramientas que uso para construir.",
+    "subheading": "Un conjunto enfocado de tecnologías sin muros de insignias, solo la stack que realmente uso.",
     "badge": "Habilidades y experiencia",
     "title": "Habilidades Técnicas",
     "titleHighlight": "& Profesionales",
@@ -69,6 +85,7 @@
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
+      "database": "Base de Datos",
       "mobile": "Móvil",
       "ai": "IA & Automatización",
       "design": "Diseño UX/UI",
@@ -94,6 +111,7 @@
       "sql": "SQL",
       "postgresql": "PostgreSQL",
       "restapi": "Desarrollo API REST",
+      "restapis": "APIs REST",
       "apiintegration": "Integración API",
       "json": "JSON",
       "axios": "Axios",
@@ -140,6 +158,7 @@
       "gitlab": "GitLab",
       "ssh": "SSH",
       "vercel": "Vercel",
+      "render": "Render",
       "infinityfree": "InfinityFree",
       "androidstudio": "Android Studio",
       "vscode": "VS Code",
@@ -297,7 +316,7 @@
     },
     "engineeringDNA": {
       "title": "Mi ADN de Ingeniería",
-      "subtitle": "Cómo abordo la construcción de software — desde la comprensión hasta la mejora",
+      "subtitle": "Cómo abordo la construcción de software desde la comprensión hasta la mejora",
       "steps": {
         "understand": {
           "title": "Comprender",
@@ -325,7 +344,7 @@
           "details": "Refino y optimizo continuamente basado en comentarios de usuarios y datos de rendimiento."
         }
       },
-      "footer": "Este proceso guía cómo abordo cada proyecto — desde el concepto hasta la entrega."
+      "footer": "Este proceso guía cómo abordo cada proyecto desde el concepto hasta la entrega."
     },
     "whatICanBuild": {
       "title": "Lo Que Puedo Construir",
@@ -364,6 +383,9 @@
     "title": "LIFE OS",
     "subtitle": "Navegador de Carrera y Crecimiento Impulsado por IA",
     "badge": "DEMO CONCEPTUAL IA",
+    "metric": {
+      "fromLastWeek": "respecto a la semana pasada"
+    },
     "welcome": {
       "title": "LIFE OS",
       "subtitle": "Navegador de Carrera y Crecimiento Impulsado por IA",
@@ -442,9 +464,6 @@
       "recentActivity": "ACTIVIDAD RECIENTE",
       "status": "SISTEMA EN LÍNEA"
     },
-    "metric": {
-      "fromLastWeek": "respecto a la semana pasada"
-    },
     "assistant": {
       "title": "Asistente LIFE OS",
       "subtitle": "Centro de Comandos Inteligente",
@@ -463,6 +482,9 @@
     }
   },
   "projects": {
+    "label": "Trabajo Seleccionado",
+    "heading": "Problemas reales, software funcional.",
+    "subheading": "Una selección de productos full-stack, APIs e interfaces. Cada uno fue construido para resolver un problema específico, desde sistemas de reservas hasta herramientas agronómicas.",
     "badge": "Trabajos destacados",
     "title": "Proyectos",
     "titleHighlight": "Seleccionados",
@@ -477,8 +499,11 @@
     "discussSimilar": "Discutir proyecto similar",
     "close": "Cerrar",
     "noProjects": "No se encontraron proyectos en esta categoría.",
+    "notFound": "Proyecto no encontrado",
+    "allProjects": "Todos los proyectos",
+    "exploreAll": "Explorar todos los proyectos",
     "imas": {
-      "title": "IMAS — Sistema Inteligente de Asistencia a la Movilidad",
+      "title": "IMAS Sistema Inteligente de Asistencia a la Movilidad",
       "short": "Plataforma de movilidad para mejorar experiencias de viaje en Kinshasa.",
       "role": "UX / UI / Frontend",
       "longDescription": "IMAS ayuda a los pasajeros a solicitar viajes, rastrear vehículos y calificar conductores. Lideré el flujo de producto, wireframes, diseño UI y construí el prototipo React."
@@ -515,9 +540,9 @@
     },
     "bisman": {
       "title": "Domina los mercados con precisión institucional - BismanFX Académique",
-      "short": "Academia de trading profesional.",
+      "short": "Academia de trading profesional. Estrategias institucionales para resultados consistentes.",
       "role": "Desarrollador y Colaborador",
-      "longDescription": "BismanFx Academy es una plataforma educativa de trading profesional."
+      "longDescription": "BismanFx Academy es una plataforma educativa de trading profesional fundada por Matthieu Bisimwa."
     },
     "stayease": {
       "title": "StayEase Africa – Plataforma de Reserva de Apartamentos",
@@ -532,24 +557,35 @@
       "longDescription": "Una plataforma de reserva de apartamentos de lujo diseñada para el mercado africano."
     },
     "salon": {
-    "title": "Nysha Hair Braiding – Plataforma de Reserva de Salón",
-    "short": "Plataforma completa de reserva de salón con citas en línea, pagos y panel de administración.",
-    "role": "Desarrollador Full-Stack & Arquitecto de Sistemas",
-    "longDescription": "Un sistema completo de gestión de salón para Nysha Hair Braiding, especializado en técnicas africanas de trenzado. La plataforma permite a los clientes reservar citas en línea, pagar depósitos a través de Stripe y gestionar sus reservas. Características: catálogo de servicios con precios, visualización de horarios de atención, gestión de citas, procesamiento de pagos y panel de administración."
-  },
-  "manuella": {
-    "title": "Portafolio de Manuella – Profesional en Contabilidad y Finanzas",
-    "short": "Un sitio web de portafolio moderno para una profesional en contabilidad y finanzas.",
-    "role": "DevOps, Arquitectura & Desarrollador",
-    "longDescription": "Diseñé y desarrollé un sitio web de portafolio moderno para Manuella, una profesional en contabilidad y finanzas. Como arquitecto DevOps, gestioné toda la tubería de despliegue en Vercel, aseguré un rendimiento óptimo y construí una interfaz responsive y fácil de usar con React y Tailwind CSS."
+      "title": "Nysha Hair Braiding – Plataforma de Reserva de Salón",
+      "short": "Plataforma completa de reserva de salón con citas en línea, pagos y panel de administración.",
+      "role": "Desarrollador Full-Stack & Arquitecto de Sistemas",
+      "longDescription": "Un sistema completo de gestión de salón para Nysha Hair Braiding, especializado en técnicas africanas de trenzado."
+    },
+    "mabele": {
+      "title": "MABELE Smart",
+      "short": "Un concepto de agricultura inteligente mobile-first para pequeños agricultores en la RDC monitoreo de humedad del suelo, detección de enfermedades de cultivos asistida por cámara, riego informado por el clima y guía de cosecha.",
+      "role": "Concepto de producto, UI/UX & modelo de negocio",
+      "longDescription": "Un asistente mobile-first construido alrededor de tres pilares: Observar, Comprender, Actuar.",
+      "problem": "Los pequeños agricultores en la RDC a menudo carecen de acceso a herramientas agronómicas asequibles y mobile-first.",
+      "solution": "Un asistente mobile-first construido alrededor de tres pilares Observar, Comprender, Actuar.",
+      "contribution": "Concepto de producto, maquetas UI móviles y diseño del modelo de negocio presentados en el marco del track Défis Urbains del Hackathon de IA de Kinshasa 2026.",
+      "achievement": "Hackathon de IA de Kinshasa 2026 Finalista (track Défis Urbains)",
+      "disclaimer": "Nota de estado: MABELE Smart es un concepto y prototipo de diseño. Las pantallas mostradas son maquetas."
+    },
+    "manuella": {
+      "title": "Portafolio de Manuella Profesional en Contabilidad y Finanzas",
+      "short": "Un sitio web de portafolio moderno para una profesional en contabilidad y finanzas.",
+      "role": "DevOps, Arquitectura & Desarrollador",
+      "longDescription": "Diseñé y desarrollé un sitio web de portafolio moderno para Manuella, una profesional en contabilidad y finanzas."
     },
     "digital-twin": {
       "title": "Visor de Gemelo Digital",
       "short": "Una representación digital interactiva de habilidades, proyectos y capacidades de ingeniería.",
       "role": "Desarrollador Full-Stack, Diseñador UI/UX & Arquitecto de Sistemas",
       "longDescription": "Una representación digital interactiva que permite a los visitantes explorar habilidades, proyectos y capacidades de ingeniería a través de una interfaz inteligente basada en nodos.",
-      "problem": "Los portafolios tradicionales son estáticos y lineales, obligando a los visitantes a desplazarse por largas páginas de texto. Los reclutadores, clientes y desarrolladores necesitan una forma más atractiva de entender las capacidades de un ingeniero de software.",
-      "solution": "Construí un sistema de Gemelo Digital interactivo que visualiza capacidades profesionales a través de una interfaz inteligente basada en nodos con múltiples modos de visitante.",
+      "problem": "Los portafolios tradicionales son estáticos y lineales.",
+      "solution": "Construí un sistema de Gemelo Digital interactivo.",
       "features": [
         "Visualización interactiva basada en nodos de habilidades y capacidades",
         "5 modos de visitante: Reclutador, Cliente, Desarrollador, Diseñador, Explorar Libremente",
@@ -571,12 +607,12 @@
       ]
     },
     "lifeos": {
-      "title": "LIFE OS — Sistema Operativo de Vida IA",
+      "title": "LIFE OS Sistema Operativo de Vida IA",
       "short": "Navegador de carrera y crecimiento impulsado por IA que ayuda a los usuarios a identificar brechas de habilidades y descubrir sus próximas mejores acciones.",
       "role": "Desarrollador Full-Stack, Diseñador UI/UX & Arquitecto de Sistemas",
-      "longDescription": "LIFE OS es un navegador de carrera y crecimiento impulsado por IA que ayuda a los usuarios a identificar brechas de habilidades, explorar trayectorias profesionales y descubrir sus próximas mejores acciones.",
-      "problem": "Las personas tienen dificultades para navegar sus trayectorias profesionales, identificar brechas de habilidades y priorizar su aprendizaje.",
-      "solution": "Construí un sistema de navegación de carrera inteligente que analiza habilidades, recomienda rutas de aprendizaje y proporciona acciones personalizadas.",
+      "longDescription": "LIFE OS es un navegador de carrera y crecimiento impulsado por IA.",
+      "problem": "Las personas tienen dificultades para navegar sus trayectorias profesionales.",
+      "solution": "Construí un sistema de navegación de carrera inteligente.",
       "features": [
         "Panel de carrera personalizado",
         "Sistema interactivo de selección de objetivos",
@@ -598,28 +634,90 @@
       ]
     }
   },
+  "projectDetail": {
+    "problem": "Problema",
+    "approach": "Enfoque",
+    "keyFeatures": "Características clave",
+    "contribution": "Mi contribución",
+    "recognition": "Reconocimiento",
+    "screens": "Pantallas",
+    "stack": "Stack",
+    "status": "Estado",
+    "live": "En vivo",
+    "repository": "Repositorio",
+    "openLive": "Abrir proyecto en vivo",
+    "viewGithub": "Ver en GitHub"
+  },
+  "projectsPage": {
+    "meta": "Todo el trabajo",
+    "title": "Proyectos",
+    "description": "Todo lo que he entregado, prototipado o diseñado  ordenado del más reciente al más antiguo.",
+    "view": "Ver"
+  },
   "experience": {
+    "label": "Experiencia",
+    "heading": "Dónde he trabajado.",
+    "subheading": "Una línea de tiempo de mis roles profesionales, pasantías y trabajo voluntario.",
     "badge": "Historial laboral",
     "title": "Experiencia",
     "titleHighlight": "Profesional",
-    "description": "Mi trayectoria a través de roles profesionales, pasantías y contribuciones importantes — organizada como una línea de tiempo clara.",
+    "description": "Mi trayectoria a través de roles profesionales, pasantías y contribuciones importantes organizada como una línea de tiempo clara.",
     "wantMore": "¿Quieres saber más?",
     "downloadResume": "Descarga mi CV completo o contáctame para discutir oportunidades",
     "resume": "CV",
     "openResume": "Abrir CV",
-    "freelance": {
-      "role": "Ingeniero de Software Freelance & Diseñador UI/UX",
-      "org": "Freelance / Proyectos Personales",
-      "location": "Kigali, Ruanda",
+    "pnudDrc": {
+      "role": "Voluntario de sensibilización sobre el código digital",
+      "org": "PNUD RDC",
+      "location": "República Democrática del Congo",
+      "kind": "Voluntariado",
       "bullets": [
-        "Diseñé e implementé la interfaz de usuario y prototipo de IMAS; construí prototipos React y coordiné el diseño de API.",
-        "Construí características principales para SavingDm (CreditJambo) incluyendo flujos de ahorro e interfaz de transacciones.",
-        "Colaboré con stakeholders para definir flujos de producto y convertí diseños de Figma en componentes React de producción."
-      ],
-      "tag": "Auto-iniciado"
+        "Apoyando actividades de sensibilización relacionadas con el código digital en la República Democrática del Congo."
+      ]
+    },
+    "freelance": {
+      "role": "Desarrollador de Software Freelance",
+      "org": "Independiente",
+      "location": "Remoto",
+      "kind": "Freelance",
+      "bullets": [
+        "Diseñé y entregué productos full-stack para clientes en fintech, movilidad, hotelería y educación.",
+        "Construí y desplegué aplicaciones React + Django + PostgreSQL con autenticación, pagos y paneles admin.",
+        "Trabajé directamente con stakeholders para definir funcionalidades, flujos y entregar a producción."
+      ]
+    },
+    "aucaContract": {
+      "role": "Desarrollador de Software",
+      "org": "Universidad Adventista de África Central (AUCA)",
+      "location": "Kigali, Ruanda",
+      "kind": "Contrato",
+      "bullets": [
+        "Construí el módulo de impresión de certificados para los niveles 1 y 2 de Inglés Profesional de AUCA.",
+        "Implementé el registro basado en procedimientos almacenados y paneles basados en roles."
+      ]
+    },
+    "tost": {
+      "role": "Pasante en Ingeniería de Software",
+      "org": "Tost Group",
+      "location": "Kigali, Ruanda",
+      "kind": "Pasantía",
+      "bullets": [
+        "Trabajé en funcionalidades frontend y corrección de errores con React y Tailwind CSS.",
+        "Participé en pruebas de usuario e iteré la UI basada en comentarios."
+      ]
+    },
+    "bittwok": {
+      "role": "Diseñador UI/UX",
+      "org": "Bittwok",
+      "location": "Kigali, Ruanda",
+      "kind": "Diseño",
+      "bullets": [
+        "Diseñé flujos de producto e interfaces para funcionalidades en etapa inicial.",
+        "Produje wireframes y prototipos que alimentaron directamente el trabajo de ingeniería."
+      ]
     },
     "eyecare": {
-      "role": "Desarrollador Fullstack — Sistema de Gestión de Cuidado Ocular",
+      "role": "Desarrollador Fullstack  Sistema de Gestión de Cuidado Ocular",
       "org": "Proyecto Universitario / Cliente",
       "location": "Remoto",
       "bullets": [
@@ -630,7 +728,7 @@
       "tag": "HealthTech"
     },
     "auca": {
-      "role": "Backend & Frontend — Registro AUCA",
+      "role": "Backend & Frontend Registro AUCA",
       "org": "Universidad Adventista de África Central (AUCA)",
       "location": "Kigali, Ruanda",
       "bullets": [
@@ -651,6 +749,9 @@
     }
   },
   "education": {
+    "label": "Educación",
+    "heading": "Formación académica.",
+    "subheading": "Títulos y certificaciones que dan forma a cómo construyo.",
     "badge": "Trayectoria académica",
     "title": "Educación &",
     "titleHighlight": "Certificaciones",
@@ -670,6 +771,8 @@
     "loading": "Cargando documento...",
     "toClose": "para cerrar",
     "toDownload": "para descargar",
+    "viewTranscript": "Ver expediente",
+    "viewCertificate": "Ver certificado",
     "auca": {
       "institution": "Universidad Adventista de África Central (AUCA)",
       "degree": "Licenciatura en Ciencias",
@@ -678,7 +781,7 @@
       "honors": "Lista del Decano (2025)",
       "highlights": [
         "Cursos relevantes: Estructuras de Datos, Java, Desarrollo Web, Linux",
-        "Proyecto: Sistema de Registro Master AUCA — trabajo backend & UI"
+        "Proyecto: Sistema de Registro Master AUCA trabajo backend & UI"
       ]
     },
     "highschool": {
@@ -742,13 +845,18 @@
     }
   },
   "blog": {
+    "label": "Escritos",
+    "heading": "Notas sobre ingeniería y diseño.",
+    "subheading": "Escritos ocasionales sobre las decisiones detrás de los proyectos elecciones técnicas, pensamiento de producto y lecciones de entrega.",
+    "viewAll": "Ver todos los artículos",
+    "readArticle": "Leer artículo",
     "badge": "Escritos y perspectivas",
     "title": "Últimos",
     "titleHighlight": "Artículos",
-    "description": "Inmersiones profundas en pensamiento de diseño, arquitectura de sistemas y desarrollo de productos — compartiendo lecciones de proyectos reales.",
-    "viewAll": "Ver todos los artículos",
+    "description": "Inmersiones profundas en pensamiento de diseño, arquitectura de sistemas y desarrollo de productos compartiendo lecciones de proyectos reales.",
+    "pageHeading": "Escritos & Notas.",
+    "pageSubheading": "Una colección de artículos, estudios de caso, notas de libros y escritura técnica.",
     "featured": "Destacado",
-    "readArticle": "Leer artículo",
     "comingSoon": "Próximamente",
     "newsletterTitle": "Mantente actualizado",
     "newsletterDesc": "Recibe notificaciones cuando publique nuevos estudios de caso, tutoriales y perspectivas.",
@@ -763,32 +871,40 @@
     "articles": "artículos",
     "noArticles": "No se encontraron artículos que coincidan con sus criterios.",
     "clearFilters": "Limpiar filtros",
+    "allFilter": "Todos",
+    "noPosts": "No se encontraron artículos que coincidan con sus criterios.",
     "posts": {
-    "imas": {
-      "title": "Diseñando IMAS: Una Experiencia de Movilidad para Kinshasa",
-      "tag": "Estudio de Caso",
-      "summary": "Cómo abordé la UX para una plataforma de movilidad: mapeo de flujos, definición de personas y conversión de problemas reales en interfaces claras.",
-      "readingTime": "6 min de lectura"
-    },
-    "savingdm": {
-      "title": "De la Idea a la Arquitectura: SavingDm",
-      "tag": "Ingeniería",
-      "summary": "Desglosando el modelo de datos y el diseño de API para una aplicación de ahorros y microcréditos.",
-      "readingTime": "5 min de lectura"
-    },
-    "eyecare": {
-      "title": "Lecciones de la Construcción de un Sistema de Gestión de Cuidado Ocular",
-      "tag": "Producto",
-      "summary": "Lo que aprendí sobre flujos de trabajo, paneles basados en roles y flujos centrados en el paciente.",
-      "readingTime": "4 min de lectura"
+      "imas": {
+        "title": "Diseñando IMAS: Una Experiencia de Movilidad para Kinshasa",
+        "tag": "Estudio de Caso",
+        "summary": "Cómo abordé la UX para una plataforma de movilidad: mapeo de flujos, definición de personas y conversión de problemas reales en interfaces claras.",
+        "readingTime": "6 min de lectura"
+      },
+      "savingdm": {
+        "title": "De la Idea a la Arquitectura: SavingDm",
+        "tag": "Ingeniería",
+        "summary": "Desglosando el modelo de datos y el diseño de API para una aplicación de ahorros y microcréditos.",
+        "readingTime": "5 min de lectura"
+      },
+      "eyecare": {
+        "title": "Lecciones de la Construcción de un Sistema de Gestión de Cuidado Ocular",
+        "tag": "Producto",
+        "summary": "Lo que aprendí sobre flujos de trabajo, paneles basados en roles y flujos centrados en el paciente.",
+        "readingTime": "4 min de lectura"
+      }
     }
-  }
+  },
+  "blogPost": {
+    "contentComingSoon": "El contenido del artículo llegará en una fase posterior."
   },
   "contact": {
+    "label": "Contacto",
+    "heading": "¿Tienes algo en mente? Hablemos.",
+    "subheading": "Freelance, tiempo completo o colaboraciones no dudes en contactarme. Normalmente respondo en 24 horas.",
     "badge": "Ponte en contacto",
     "title": "Trabajemos",
     "titleHighlight": "Juntos",
-    "description": "¿Tienes un proyecto, oportunidad laboral o solo quieres saludar? Envíame un mensaje — te responderé en 24 horas.",
+    "description": "¿Tienes un proyecto, oportunidad laboral o solo quieres saludar? Envíame un mensaje te responderé en 24 horas.",
     "email": "Correo electrónico",
     "location": "Ubicación",
     "quickResponse": "Respuesta rápida",
@@ -814,32 +930,66 @@
     "networkError": "Error de red. Verifique su conexión y vuelva a intentarlo."
   },
   "footer": {
+    "quickLinks": "Enlaces rápidos",
+    "elsewhere": "En otros lugares",
     "designedBy": "Diseñado y construido por",
     "basedIn": "Basado en",
     "openToRemote": "Abierto a remoto",
-    "quickLinks": "Enlaces rápidos",
     "connect": "Conectar",
     "followMe": "Sígueme en redes sociales",
     "available": "Disponible para oportunidades",
     "rights": "Todos los derechos reservados.",
     "backToTop": "Volver arriba",
     "description": "Desarrollador full-stack y diseñador UI/UX creando experiencias digitales hermosas y centradas en el usuario en plataformas web y móviles.",
-    "contact": "Contacto",
-  "home": "Inicio",
-  "about": "Sobre mí",
-  "skills": "Habilidades",
-  "projects": "Proyectos",
-  "experience": "Experiencia",
-  "education": "Educación",
-  "blog": "Blog",
-  "linkedin": "LinkedIn",
-  "github": "GitHub",
-  "twitter": "Twitter",
-  "email": "Correo",
-  "location": "Kigali, Ruanda",
-  "remote": "Remoto Mundial",
-  "timezone": "UTC+2",
-  "status": "Disponible para oportunidades",
-  "scroll": "DESPLAZAR"
+    "contact": "Contacto"
+  },
+    "groups": {
+    "softwareEngineering": {
+      "label": "Ingeniería de Software",
+      "subtitle": "Sistemas backend y web de nivel producción"
+    },
+    "aiData": {
+      "label": "IA, Q&A y Datos",
+      "subtitle": "IA aplicada, integración de LLM y flujos conscientes de los datos"
+    },
+    "productUx": {
+      "label": "Producto & UI/UX",
+      "subtitle": "Diseño centrado en el usuario, del wireframe al prototipo"
+    },
+    "innovation": {
+      "label": "Innovación & Emprendimiento",
+      "subtitle": "Identificación de problemas, diseño de soluciones y pensamiento de negocio · Finalista de hackathon, MABELE Smart (Hackathon de IA de Kinshasa 2026)",
+      "items": {
+        "problemIdentification": "Identificación de problemas",
+        "solutionDesign": "Diseño de soluciones",
+        "productThinking": "Pensamiento de producto",
+        "businessModels": "Exploración de modelos de negocio",
+        "pitching": "Pitch y presentación",
+        "rapidPrototyping": "Prototipado rápido"
+      }
+    },
+    "digitalSolutions": {
+      "label": "Soluciones Digitales",
+      "subtitle": "Entrega de extremo a extremo de productos digitales prácticos",
+      "items": {
+        "webApps": "Aplicaciones web",
+        "bookingSystems": "Sistemas de reservas",
+        "dashboards": "Paneles administrativos",
+        "apiIntegration": "Integración de API",
+        "cloudDeployment": "Despliegue en la nube"
+      }
+    },
+    "digitalOps": {
+      "label": "Operaciones Digitales & Asistencia Virtual",
+      "subtitle": "Apoyo a flujos de trabajo, documentación y entrega remota",
+      "items": {
+        "workflowAutomation": "Automatización de flujos",
+        "techdocs": "Documentación técnica",
+        "remotecollab": "Colaboración remota",
+        "projectmanagement": "Gestión de proyectos",
+        "datamanagement": "Gestión de datos",
+        "virtualAssistance": "Asistencia virtual"
+      }
+    }
   }
 }

@@ -13,6 +13,9 @@
     "digitalTwin": "Jumeau Numérique"
   },
   "hero": {
+    "positioning": "Je conçois, développe et construis des solutions numériques des applications web aux systèmes backend, en passant par les API, les expériences propulsées par l'IA et les produits numériques centrés sur l'utilisateur.",
+    "availabilityLine": "Ouvert aux opportunités · À distance et sur site",
+    "locationFallback": "Kigali, Rwanda",
     "status": "Disponible pour opportunités",
     "name": "DANIEL MASEYA",
     "title": "Construire des",
@@ -34,12 +37,19 @@
     "scroll": "DÉFILER"
   },
   "about": {
+    "label": "À propos",
+    "heading": "Une brève introduction.",
+    "p1": "Je suis ingénieur logiciel, travaillant principalement avec Python et React, avec de l'expérience en ingénierie backend, conception d'API, bases de données et IA appliquée. J'ai étudié les technologies de l'information à l'AUCA à Kigali, et j'ai passé ces dernières années à construire des systèmes de production pour des clients dans la fintech, la mobilité, l'éducation et l'agriculture.",
+    "p2": "Je tiens à la clarté du code et à la clarté des interfaces. La plupart de ce que je construis part d'un problème réel qu'on m'a apporté un parcours d'inscription, un système de réservation, un produit d'épargne et je m'efforce de le livrer sous une forme qui continue de fonctionner longtemps après la remise.",
+    "recent": "soutien bénévole à la campagne de sensibilisation au code numérique au PNUD RDC.",
+    "resumeTitle": "CV",
+    "resumeDesc": "Téléchargez mon CV complet au format PDF.",
     "badge": "À propos de moi",
     "title": "Créer des",
     "titleHighlight": "Solutions",
     "titleEnd": "Numériques avec Objectif",
-    "description1": "Je suis un ingénieur full-stack et passionné d'UX, déterminé à transformer les défis complexes en produits digitaux intuitifs et esthétiques. J'aime combiner le design thinking avec une infrastructure backend robuste.",
-    "description2": "Mon expérience couvre divers domaines, y compris la fintech, les plateformes de mobilité et les systèmes de santé critiques. Je m'engage profondément pour la clarté, la performance et l'impact utilisateur dans chaque projet.",
+    "description1": "Je suis un ingénieur full-stack et passionné d'UX, déterminé à transformer les défis complexes en produits digitaux intuitifs et esthétiques.",
+    "description2": "Mon expérience couvre divers domaines, y compris la fintech, les plateformes de mobilité et les systèmes de santé critiques.",
     "coreTech": "Technologies clés",
     "proficiency": "Maîtrise",
     "experience": "Expérience",
@@ -55,7 +65,142 @@
     "impact": "Impact réel",
     "ctaTitle": "Prêt à concrétiser votre vision ?",
     "ctaDesc": "Collaborons sur des projets innovants, évolutifs et centrés sur l'utilisateur.",
-    "ctaButton": "Commencer une conversation"
+    "ctaButton": "Commencer une conversation",
+    "recentlyLabel": "Récemment :",
+    "view": "Voir",
+    "download": "Télécharger le CV"
+  },
+  "skills": {
+    "label": "Stack",
+    "heading": "Les outils que j'utilise pour construire.",
+    "subheading": "Un ensemble ciblé de technologies pas de mur de badges, juste la stack que j'utilise réellement.",
+    "badge": "Compétences & Expertise",
+    "title": "Compétences Techniques",
+    "titleHighlight": "& Professionnelles",
+    "description": "Une collection complète des technologies, outils et capacités professionnelles avec lesquels je travaille.",
+    "engineering": "Ingénierie",
+    "engineeringDesc": "Expertise full-stack",
+    "ux": "Design UX/UI",
+    "uxDesc": "Approche centrée utilisateur",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Base de données",
+      "mobile": "Mobile",
+      "ai": "IA & Automatisation",
+      "design": "Design UX/UI",
+      "devops": "DevOps & Outils",
+      "professional": "Professionnel"
+    },
+    "skillsList": {
+      "javascript": "JavaScript",
+      "react": "React.js",
+      "html5": "HTML5",
+      "css3": "CSS3",
+      "tailwind": "Tailwind CSS",
+      "materialui": "Material UI",
+      "vite": "Vite",
+      "responsive": "Design Responsive",
+      "webui": "Design UI Web",
+      "python": "Python",
+      "java": "Java",
+      "springboot": "Spring Boot",
+      "django": "Django",
+      "djangorest": "Django REST",
+      "php": "PHP",
+      "sql": "SQL",
+      "postgresql": "PostgreSQL",
+      "restapi": "Développement API REST",
+      "restapis": "API REST",
+      "apiintegration": "Intégration API",
+      "json": "JSON",
+      "axios": "Axios",
+      "auth": "Authentification & Autorisation",
+      "databasedesign": "Conception de Bases de Données",
+      "crud": "Développement CRUD",
+      "dart": "Dart",
+      "flutter": "Flutter",
+      "android": "Développement Android",
+      "mobileui": "Design UI Mobile",
+      "aiintegration": "Intégration IA",
+      "generativeai": "IA Générative",
+      "aiassistants": "Assistants IA",
+      "aiagents": "Agents IA",
+      "virtualassistants": "Assistants Virtuels",
+      "aichatbots": "Chatbots IA",
+      "conversationalai": "IA Conversationnelle",
+      "promptengineering": "Ingénierie des Prompts",
+      "openai": "API OpenAI",
+      "dialogflow": "Dialogflow",
+      "nlp": "Traitement du Langage Naturel",
+      "speechrecognition": "Reconnaissance Vocale",
+      "speechtotext": "Synthèse Vocale",
+      "texttospeech": "Texte-à-Parole",
+      "voiceassistants": "Assistants Vocaux",
+      "intelligentautomation": "Automatisation Intelligente",
+      "aiworkflow": "Intégration de Flux IA",
+      "virtualassistantdev": "Développement d'Assistants Virtuels",
+      "aivirtualassistant": "Assistant Virtuel IA",
+      "chatbotdev": "Développement de Chatbots",
+      "automatedcomms": "Communication Automatisée",
+      "workflowautomation": "Automatisation des Flux",
+      "conversationalworkflow": "Flux Conversationnels",
+      "aicustomerservice": "Service Client IA",
+      "uidesign": "Design UI/UX",
+      "figma": "Figma",
+      "wireframing": "Wireframing",
+      "prototyping": "Prototypage",
+      "designsystems": "Systèmes de Design",
+      "userflow": "Flux Utilisateur",
+      "interactiveprototyping": "Prototypage Interactif",
+      "git": "Git",
+      "github": "GitHub",
+      "gitlab": "GitLab",
+      "ssh": "SSH",
+      "vercel": "Vercel",
+      "render": "Render",
+      "infinityfree": "InfinityFree",
+      "androidstudio": "Android Studio",
+      "vscode": "VS Code",
+      "firebase": "Firebase",
+      "stripe": "Stripe",
+      "twilio": "Twilio",
+      "sendgrid": "SendGrid",
+      "formspree": "Formspree",
+      "jotform": "Jotform",
+      "systeme": "Systeme.io",
+      "googleanalytics": "Google Analytics",
+      "umami": "Umami Analytics",
+      "dns": "Configuration DNS",
+      "spf": "SPF",
+      "dkim": "DKIM",
+      "dmarc": "DMARC",
+      "techsupport": "Support Technique",
+      "itsupport": "Support Informatique",
+      "troubleshooting": "Dépannage Logiciel",
+      "customersupport": "Support Client",
+      "digitalcomms": "Communication Digitale",
+      "techdocs": "Documentation Technique",
+      "datamanagement": "Gestion des Données",
+      "research": "Recherche",
+      "projectmanagement": "Gestion de Projet",
+      "productdev": "Développement Produit",
+      "digitalproduct": "Design de Produit Digital",
+      "businessautomation": "Automatisation des Processus",
+      "remotecollab": "Collaboration à Distance",
+      "problemsolving": "Résolution de Problèmes",
+      "techresearch": "Recherche Technique",
+      "requirements": "Analyse des Exigences",
+      "testing": "Tests & Débogage",
+      "apitesting": "Tests API",
+      "fullstack": "Développement Full-Stack",
+      "softwarearch": "Architecture Logicielle",
+      "systemdesign": "Conception Système",
+      "framer-motion": "Framer Motion",
+      "lucide-react": "Lucide React",
+      "umami-analytics": "Umami Analytics",
+      "ai-integration": "Intégration IA"
+    }
   },
   "digitalTwin": {
     "title": "Jumeau Numérique",
@@ -171,7 +316,7 @@
     },
     "engineeringDNA": {
       "title": "Mon ADN d'Ingénierie",
-      "subtitle": "Comment j'aborde la construction de logiciels — de la compréhension à l'amélioration",
+      "subtitle": "Comment j'aborde la construction de logiciels de la compréhension à l'amélioration",
       "steps": {
         "understand": {
           "title": "Comprendre",
@@ -199,7 +344,7 @@
           "details": "J'affine et optimise continuellement en fonction des retours utilisateurs et des données de performance."
         }
       },
-      "footer": "Ce processus guide mon approche de chaque projet — du concept à la livraison."
+      "footer": "Ce processus guide mon approche de chaque projet du concept à la livraison."
     },
     "whatICanBuild": {
       "title": "Ce Que Je Peux Construire",
@@ -238,6 +383,9 @@
     "title": "LIFE OS",
     "subtitle": "Navigateur de Carrière et Croissance Alimenté par l'IA",
     "badge": "DÉMO CONCEPTUELLE IA",
+    "metric": {
+      "fromLastWeek": "par rapport à la semaine dernière"
+    },
     "welcome": {
       "title": "LIFE OS",
       "subtitle": "Navigateur de Carrière et Croissance Alimenté par l'IA",
@@ -316,9 +464,6 @@
       "recentActivity": "ACTIVITÉ RÉCENTE",
       "status": "SYSTÈME EN LIGNE"
     },
-    "metric": {
-      "fromLastWeek": "par rapport à la semaine dernière"
-    },
     "assistant": {
       "title": "Assistant LIFE OS",
       "subtitle": "Centre de Commandement Intelligent",
@@ -337,6 +482,9 @@
     }
   },
   "projects": {
+    "label": "Travaux choisis",
+    "heading": "De vrais problèmes, du logiciel qui fonctionne.",
+    "subheading": "Une sélection de produits full-stack, d'API et d'interfaces. Chacun a été construit pour résoudre un problème précis, des systèmes de réservation aux outils agronomiques.",
     "badge": "Travaux remarquables",
     "title": "Projets",
     "titleHighlight": "Sélectionnés",
@@ -351,8 +499,11 @@
     "discussSimilar": "Discuter d'un projet similaire",
     "close": "Fermer",
     "noProjects": "Aucun projet trouvé dans cette catégorie.",
+    "notFound": "Projet introuvable",
+    "allProjects": "Tous les projets",
+    "exploreAll": "Explorer tous les projets",
     "imas": {
-      "title": "IMAS — Système Intelligent d'Assistance à la Mobilité",
+      "title": "IMAS: Système Intelligent d'Assistance à la Mobilité",
       "short": "Plateforme de mobilité améliorant l'expérience de transport à Kinshasa.",
       "role": "UX / UI / Frontend",
       "longDescription": "IMAS aide les passagers à demander des trajets, suivre les véhicules et évaluer les conducteurs. J'ai dirigé le flux produit, les wireframes, la conception UI et construit le prototype React qui communique avec les API backend."
@@ -367,29 +518,29 @@
       "title": "Système de Gestion des Soins Oculaires",
       "short": "Système de santé pour la gestion des patients et commandes de lunettes.",
       "role": "Architecture / UI",
-      "longDescription": "Un système hospitalier gérant les rendez-vous, prescriptions et inventaire des lunettes — construit comme un produit complet avec tableaux de bord basés sur les rôles."
+      "longDescription": "Un système hospitalier gérant les rendez-vous, prescriptions et inventaire des lunettes construit comme un produit complet avec tableaux de bord basés sur les rôles."
     },
     "auca": {
       "title": "Certificat d'Anglais Professionnel AUCA",
       "short": "Université imprimant le certificat d'anglais professionnel niveaux 1 & 2.",
       "role": "Backend / DB / UI",
-      "longDescription": "Un système de gestion de certificats pour les niveaux 1 et 2 d'Anglais Professionnel AUCA; implémentation des flux backend pour la génération de certificats, validation basée sur base de données et interface utilisateur conviviale."
+      "longDescription": "Un système de gestion de certificats pour les niveaux 1 et 2 d'Anglais Professionnel AUCA."
     },
     "cassie": {
       "title": "Cassie Posh Events",
       "short": "Site web de planification de mariages et événements de luxe.",
       "role": "Développeur / DevOps",
-      "longDescription": "Un site web sophistiqué et moderne pour Cassie Posh Events, LLC, une entreprise de planification de mariages et événements de luxe basée à Philadelphie."
+      "longDescription": "Un site web sophistiqué et moderne pour Cassie Posh Events, LLC."
     },
     "jeremie": {
       "title": "Portfolio de Jeremy Nze",
       "short": "Site web portfolio personnel présentant projets et compétences.",
       "role": "Développeur / DevOps",
-      "longDescription": "Un portfolio professionnel moderne construit avec React.js pour présenter les compétences, l'expérience, les projets et les certifications."
+      "longDescription": "Un portfolio professionnel moderne construit avec React.js."
     },
     "bisman": {
       "title": "Maîtrisez les marchés avec la précision d'un institutionnel - BismanFX Académique",
-      "short": "Académie de trading professionnelle.",
+      "short": "Académie de trading professionnelle. Des stratégies institutionnelles pour des résultats consistants.",
       "role": "Développeur et Collaborateur",
       "longDescription": "BismanFx Academy est une plateforme éducative de trading professionnelle fondée par Matthieu Bisimwa."
     },
@@ -406,24 +557,35 @@
       "longDescription": "Une plateforme de réservation d'appartements de luxe conçue pour le marché africain."
     },
     "salon": {
-    "title": "Nysha Hair Braiding – Plateforme de Réservation de Salon",
-    "short": "Plateforme complète de réservation de salon avec rendez-vous en ligne, paiements et tableau de bord administrateur.",
-    "role": "Développeur Full-Stack & Architecte Système",
-    "longDescription": "Un système complet de gestion de salon pour Nysha Hair Braiding, spécialisé dans les techniques de tressage africaines. La plateforme permet aux clients de réserver des rendez-vous en ligne, de payer des acomptes via Stripe et de gérer leurs réservations. Fonctionnalités : catalogue de services avec tarifs, affichage des horaires d'ouverture, gestion des rendez-vous, traitement des paiements et tableau de bord administrateur."
+      "title": "Nysha Hair Braiding – Plateforme de Réservation de Salon",
+      "short": "Plateforme complète de réservation de salon avec rendez-vous en ligne, paiements et tableau de bord administrateur.",
+      "role": "Développeur Full-Stack & Architecte Système",
+      "longDescription": "Un système complet de gestion de salon pour Nysha Hair Braiding, spécialisé dans les techniques de tressage africaines."
+    },
+    "mabele": {
+      "title": "MABELE Smart",
+      "short": "Un concept mobile-first d'agriculture intelligente pour les petits exploitants en RDC surveillance de l'humidité du sol, détection des maladies des cultures assistée par caméra, irrigation informée par la météo et conseils de récolte.",
+      "role": "Concept produit, UI/UX & modèle économique",
+      "longDescription": "Un assistant mobile-first construit autour de trois piliers : Observer, Comprendre, Agir.",
+      "problem": "Les petits exploitants en RDC manquent souvent d'outils agronomiques abordables et mobiles.",
+      "solution": "Un assistant mobile-first construit autour de trois piliers Observer, Comprendre, Agir.",
+      "contribution": "Concept produit, maquettes UI mobiles et conception du modèle économique présentés dans le cadre du parcours Défis Urbains du Hackathon IA de Kinshasa 2026.",
+      "achievement": "Hackathon IA de Kinshasa 2026 Finaliste (parcours Défis Urbains)",
+      "disclaimer": "Note de statut : MABELE Smart est un concept et un prototype de conception. Les écrans montrés sont des maquettes."
     },
     "manuella": {
-    "title": "Portfolio de Manuella – Professionnelle en Comptabilité et Finance",
-    "short": "Un site portfolio moderne pour une professionnelle en comptabilité et finance.",
-    "role": "DevOps, Architecture & Développeur",
-    "longDescription": "J'ai conçu et développé un site portfolio moderne pour Manuella, une professionnelle en comptabilité et finance. En tant qu'architecte DevOps, j'ai géré l'ensemble de la chaîne de déploiement sur Vercel, assuré des performances optimales et construit une interface responsive et conviviale avec React et Tailwind CSS."
+      "title": "Portfolio de Manuella Professionnelle en Comptabilité et Finance",
+      "short": "Un site portfolio moderne pour une professionnelle en comptabilité et finance.",
+      "role": "DevOps, Architecture & Développeur",
+      "longDescription": "J'ai conçu et développé un site portfolio moderne pour Manuella, une professionnelle en comptabilité et finance."
     },
     "digital-twin": {
       "title": "Visualiseur de Jumeau Numérique",
       "short": "Une représentation numérique interactive des compétences, projets et capacités d'ingénierie.",
       "role": "Développeur Full-Stack, Designer UI/UX & Architecte Système",
       "longDescription": "Une représentation numérique interactive qui permet aux visiteurs d'explorer les compétences, les projets et les capacités d'ingénierie via une interface intelligente basée sur des nœuds.",
-      "problem": "Les portfolios traditionnels sont statiques et linéaires, forçant les visiteurs à faire défiler de longues pages de texte. Les recruteurs, clients et développeurs ont besoin d'une façon plus engageante de comprendre les capacités d'un ingénieur logiciel.",
-      "solution": "Construit un système de Jumeau Numérique interactif qui visualise les capacités professionnelles via une interface intelligente basée sur des nœuds avec plusieurs modes de visite.",
+      "problem": "Les portfolios traditionnels sont statiques et linéaires.",
+      "solution": "Construit un système de Jumeau Numérique interactif.",
       "features": [
         "Visualisation interactive basée sur des nœuds des compétences et capacités",
         "5 modes de visite : Recruteur, Client, Développeur, Designer, Explorer Librement",
@@ -445,12 +607,12 @@
       ]
     },
     "lifeos": {
-      "title": "LIFE OS — Système d'Exploitation de Vie IA",
+      "title": "LIFE OS Système d'Exploitation de Vie IA",
       "short": "Navigateur de carrière et de croissance alimenté par l'IA qui aide les utilisateurs à identifier leurs lacunes de compétences et à découvrir leurs prochaines meilleures actions.",
       "role": "Développeur Full-Stack, Designer UI/UX & Architecte Système",
-      "longDescription": "LIFE OS est un navigateur de carrière et de croissance alimenté par l'IA qui aide les utilisateurs à identifier les lacunes de compétences, explorer les parcours de carrière et découvrir leurs prochaines meilleures actions.",
-      "problem": "Les personnes ont du mal à naviguer dans leurs parcours de carrière, à identifier leurs lacunes de compétences et à prioriser leur apprentissage.",
-      "solution": "Construit un système de navigation de carrière intelligent qui analyse les compétences, recommande des parcours d'apprentissage et fournit des actions personnalisées.",
+      "longDescription": "LIFE OS est un navigateur de carrière et de croissance alimenté par l'IA.",
+      "problem": "Les personnes ont du mal à naviguer dans leurs parcours de carrière.",
+      "solution": "Construit un système de navigation de carrière intelligent.",
       "features": [
         "Tableau de bord de carrière personnalisé",
         "Système de sélection d'objectifs interactif",
@@ -472,28 +634,90 @@
       ]
     }
   },
+  "projectDetail": {
+    "problem": "Problème",
+    "approach": "Approche",
+    "keyFeatures": "Fonctionnalités clés",
+    "contribution": "Ma contribution",
+    "recognition": "Distinction",
+    "screens": "Écrans",
+    "stack": "Stack",
+    "status": "Statut",
+    "live": "En ligne",
+    "repository": "Dépôt",
+    "openLive": "Ouvrir le projet en ligne",
+    "viewGithub": "Voir sur GitHub"
+  },
+  "projectsPage": {
+    "meta": "Tous les travaux",
+    "title": "Projets",
+    "description": "Tout ce que j'ai livré, prototypé ou conçu trié du plus récent au plus ancien.",
+    "view": "Voir"
+  },
   "experience": {
+    "label": "Expérience",
+    "heading": "Où j'ai travaillé.",
+    "subheading": "Une chronologie de mes rôles professionnels, stages et engagements bénévoles.",
     "badge": "Parcours professionnel",
     "title": "Expérience",
     "titleHighlight": "Professionnelle",
-    "description": "Mon parcours à travers différents rôles professionnels, stages et contributions majeures — organisé en chronologie claire.",
+    "description": "Mon parcours à travers différents rôles professionnels, stages et contributions majeures organisé en chronologie claire.",
     "wantMore": "Vous voulez en savoir plus ?",
     "downloadResume": "Téléchargez mon CV complet ou contactez-moi pour discuter des opportunités",
     "resume": "CV",
     "openResume": "Ouvrir le CV",
-    "freelance": {
-      "role": "Ingénieur Logiciel Freelance & Designer UI/UX",
-      "org": "Freelance / Projets Personnels",
-      "location": "Kigali, Rwanda",
+    "pnudDrc": {
+      "role": "Bénévole en sensibilisation au code numérique",
+      "org": "PNUD RDC",
+      "location": "République Démocratique du Congo",
+      "kind": "Bénévolat",
       "bullets": [
-        "Conception et implémentation de l'interface UI et prototype IMAS ; construction de prototypes React et coordination de la conception API.",
-        "Développement des fonctionnalités principales pour SavingDm (CreditJambo) incluant les flux d'épargne et l'interface de transaction.",
-        "Collaboration avec les parties prenantes pour définir les flux produits et conversion des designs Figma en composants React de production."
-      ],
-      "tag": "Auto-initié"
+        "Soutien aux activités de sensibilisation liées au code numérique en République Démocratique du Congo."
+      ]
+    },
+    "freelance": {
+      "role": "Développeur Logiciel Freelance",
+      "org": "Indépendant",
+      "location": "Distanciel",
+      "kind": "Freelance",
+      "bullets": [
+        "Conçu et livré des produits full-stack pour des clients en fintech, mobilité, hôtellerie et éducation.",
+        "Construit et déployé des applications React + Django + PostgreSQL avec authentification, paiements et tableaux de bord admin.",
+        "Travaillé directement avec les parties prenantes pour définir les fonctionnalités, les flux et livrer en production."
+      ]
+    },
+    "aucaContract": {
+      "role": "Développeur Logiciel",
+      "org": "Université Adventiste d'Afrique Centrale (AUCA)",
+      "location": "Kigali, Rwanda",
+      "kind": "Contrat",
+      "bullets": [
+        "Construit le module d'impression de certificats pour les niveaux 1 et 2 d'Anglais Professionnel de l'AUCA.",
+        "Implémenté l'inscription pilotée par procédures stockées et des tableaux de bord basés sur les rôles."
+      ]
+    },
+    "tost": {
+      "role": "Stagiaire en Ingénierie Logicielle",
+      "org": "Tost Group",
+      "location": "Kigali, Rwanda",
+      "kind": "Stage",
+      "bullets": [
+        "Travaillé sur les fonctionnalités frontend et corrections de bugs avec React et Tailwind CSS.",
+        "Participé aux tests utilisateurs et itéré l'interface basée sur les retours."
+      ]
+    },
+    "bittwok": {
+      "role": "Designer UI/UX",
+      "org": "Bittwok",
+      "location": "Kigali, Rwanda",
+      "kind": "Design",
+      "bullets": [
+        "Conçu les flux produits et interfaces pour des fonctionnalités en phase de démarrage.",
+        "Produit des wireframes et prototypes qui ont alimenté directement le travail d'ingénierie."
+      ]
     },
     "eyecare": {
-      "role": "Développeur Fullstack — Système de Gestion des Soins Oculaires",
+      "role": "Développeur Fullstack Système de Gestion des Soins Oculaires",
       "org": "Projet Universitaire / Client",
       "location": "Distanciel",
       "bullets": [
@@ -504,7 +728,7 @@
       "tag": "HealthTech"
     },
     "auca": {
-      "role": "Backend & Frontend — Enregistrement AUCA",
+      "role": "Backend & Frontend Enregistrement AUCA",
       "org": "Université Adventiste d'Afrique Centrale (AUCA)",
       "location": "Kigali, Rwanda",
       "bullets": [
@@ -525,6 +749,9 @@
     }
   },
   "education": {
+    "label": "Formation",
+    "heading": "Parcours académique.",
+    "subheading": "Diplômes et certifications qui façonnent ma façon de construire.",
     "badge": "Parcours académique",
     "title": "Formation &",
     "titleHighlight": "Certifications",
@@ -544,6 +771,8 @@
     "loading": "Chargement du document...",
     "toClose": "pour fermer",
     "toDownload": "pour télécharger",
+    "viewTranscript": "Voir le relevé",
+    "viewCertificate": "Voir le certificat",
     "auca": {
       "institution": "Université Adventiste d'Afrique Centrale (AUCA)",
       "degree": "Licence en Sciences",
@@ -552,7 +781,7 @@
       "honors": "Liste du Doyen (2025)",
       "highlights": [
         "Cours pertinents : Structures de Données, Java, Développement Web, Linux",
-        "Projet : Système d'Enregistrement Master AUCA — travail backend & UI"
+        "Projet : Système d'Enregistrement Master AUCA travail backend & UI"
       ]
     },
     "highschool": {
@@ -616,13 +845,18 @@
     }
   },
   "blog": {
+    "label": "Écrits",
+    "heading": "Notes sur l'ingénierie et le design.",
+    "subheading": "Écrits occasionnels sur les décisions derrière les projets choix techniques, réflexion produit et leçons de livraison.",
+    "viewAll": "Voir tous les articles",
+    "readArticle": "Lire l'article",
     "badge": "Écrits & Perspectives",
     "title": "Derniers",
     "titleHighlight": "Articles",
-    "description": "Analyses approfondies du design thinking, de l'architecture système et du développement produit — partage de leçons tirées de projets réels.",
-    "viewAll": "Voir tous les articles",
+    "description": "Analyses approfondies du design thinking, de l'architecture système et du développement produit partage de leçons tirées de projets réels.",
+    "pageHeading": "Écrits & Notes.",
+    "pageSubheading": "Une collection d'articles, d'études de cas, de notes de lecture et d'écrits techniques.",
     "featured": "À la une",
-    "readArticle": "Lire l'article",
     "comingSoon": "Bientôt disponible",
     "newsletterTitle": "Restez informé",
     "newsletterDesc": "Recevez une notification lors de la publication de nouvelles études de cas, tutoriels et perspectives.",
@@ -637,32 +871,40 @@
     "articles": "articles",
     "noArticles": "Aucun article trouvé correspondant à vos critères.",
     "clearFilters": "Effacer les filtres",
+    "allFilter": "Tous",
+    "noPosts": "Aucun article trouvé correspondant à vos critères.",
     "posts": {
-    "imas": {
-      "title": "Conception d'IMAS : Une Expérience de Mobilité pour Kinshasa",
-      "tag": "Étude de Cas",
-      "summary": "Comment j'ai abordé l'UX pour une plateforme de mobilité : cartographie des flux, définition des personas et transformation des problèmes réels en interfaces claires.",
-      "readingTime": "6 min de lecture"
-    },
-    "savingdm": {
-      "title": "De l'Idée à l'Architecture : SavingDm",
-      "tag": "Ingénierie",
-      "summary": "Analyse du modèle de données et de la conception API pour une application d'épargne et microcrédit.",
-      "readingTime": "5 min de lecture"
-    },
-    "eyecare": {
-      "title": "Leçons de la Construction d'un Système de Gestion des Soins Oculaires",
-      "tag": "Produit",
-      "summary": "Ce que j'ai appris sur les flux de travail, les tableaux de bord basés sur les rôles et les flux centrés sur le patient.",
-      "readingTime": "4 min de lecture"
+      "imas": {
+        "title": "Conception d'IMAS : Une Expérience de Mobilité pour Kinshasa",
+        "tag": "Étude de Cas",
+        "summary": "Comment j'ai abordé l'UX pour une plateforme de mobilité : cartographie des flux, définition des personas et transformation des problèmes réels en interfaces claires.",
+        "readingTime": "6 min de lecture"
+      },
+      "savingdm": {
+        "title": "De l'Idée à l'Architecture : SavingDm",
+        "tag": "Ingénierie",
+        "summary": "Analyse du modèle de données et de la conception API pour une application d'épargne et microcrédit.",
+        "readingTime": "5 min de lecture"
+      },
+      "eyecare": {
+        "title": "Leçons de la Construction d'un Système de Gestion des Soins Oculaires",
+        "tag": "Produit",
+        "summary": "Ce que j'ai appris sur les flux de travail, les tableaux de bord basés sur les rôles et les flux centrés sur le patient.",
+        "readingTime": "4 min de lecture"
+      }
     }
-  }
+  },
+  "blogPost": {
+    "contentComingSoon": "Le contenu de l'article arrive dans une phase ultérieure."
   },
   "contact": {
+    "label": "Contact",
+    "heading": "Vous avez quelque chose en tête ? Discutons.",
+    "subheading": "Freelance, CDI ou collaborations n'hésitez pas à me contacter. Je réponds généralement sous 24 heures.",
     "badge": "Contactez-moi",
     "title": "Travaillons",
     "titleHighlight": "Ensemble",
-    "description": "Vous avez un projet, une opportunité d'emploi ou simplement envie de dire bonjour ? Envoyez-moi un message — je vous répondrai sous 24 heures.",
+    "description": "Vous avez un projet, une opportunité d'emploi ou simplement envie de dire bonjour ? Envoyez-moi un message je vous répondrai sous 24 heures.",
     "email": "Email",
     "location": "Localisation",
     "quickResponse": "Réponse rapide",
@@ -688,158 +930,66 @@
     "networkError": "Erreur réseau. Vérifiez votre connexion et réessayez."
   },
   "footer": {
+    "quickLinks": "Liens rapides",
+    "elsewhere": "Ailleurs",
     "designedBy": "Conçu et développé par",
     "basedIn": "Basé à",
     "openToRemote": "Ouvert au distanciel",
-    "quickLinks": "Liens rapides",
     "connect": "Connectez-vous",
     "followMe": "Suivez-moi sur les réseaux",
     "available": "Disponible pour opportunités",
     "rights": "Tous droits réservés.",
     "backToTop": "Retour en haut",
     "description": "Développeur full-stack et designer UI/UX créant des expériences numériques magnifiques et centrées sur l'utilisateur sur les plateformes web et mobiles.",
-    "contact": "Contact",
-  "home": "Accueil",
-  "about": "À propos",
-  "skills": "Compétences",
-  "projects": "Projets",
-  "experience": "Expérience",
-  "education": "Formation",
-  "blog": "Blog",
-  "linkedin": "LinkedIn",
-  "github": "GitHub",
-  "twitter": "Twitter",
-  "email": "Email",
-  "location": "Kigali, Rwanda",
-  "remote": "Distanciel Mondial",
-  "timezone": "UTC+2",
-  "status": "Disponible pour opportunités",
-  "scroll": "DÉFILER"
+    "contact": "Contact"
   },
-  "skills": {
-    "badge": "Compétences & Expertise",
-    "title": "Compétences Techniques",
-    "titleHighlight": "& Professionnelles",
-    "description": "Une collection complète des technologies, outils et capacités professionnelles avec lesquels je travaille.",
-    "engineering": "Ingénierie",
-    "engineeringDesc": "Expertise full-stack",
-    "ux": "Design UX/UI",
-    "uxDesc": "Approche centrée utilisateur",
-    "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "mobile": "Mobile",
-      "ai": "IA & Automatisation",
-      "design": "Design UX/UI",
-      "devops": "DevOps & Outils",
-      "professional": "Professionnel"
+    "groups": {
+    "softwareEngineering": {
+      "label": "Ingénierie Logicielle",
+      "subtitle": "Systèmes backend et web de niveau production"
     },
-    "skillsList": {
-      "javascript": "JavaScript",
-      "react": "React.js",
-      "html5": "HTML5",
-      "css3": "CSS3",
-      "tailwind": "Tailwind CSS",
-      "materialui": "Material UI",
-      "vite": "Vite",
-      "responsive": "Design Responsive",
-      "webui": "Design UI Web",
-      "python": "Python",
-      "java": "Java",
-      "springboot": "Spring Boot",
-      "django": "Django",
-      "djangorest": "Django REST",
-      "php": "PHP",
-      "sql": "SQL",
-      "postgresql": "PostgreSQL",
-      "restapi": "Développement API REST",
-      "apiintegration": "Intégration API",
-      "json": "JSON",
-      "axios": "Axios",
-      "auth": "Authentification & Autorisation",
-      "databasedesign": "Conception de Bases de Données",
-      "crud": "Développement CRUD",
-      "dart": "Dart",
-      "flutter": "Flutter",
-      "android": "Développement Android",
-      "mobileui": "Design UI Mobile",
-      "aiintegration": "Intégration IA",
-      "generativeai": "IA Générative",
-      "aiassistants": "Assistants IA",
-      "aiagents": "Agents IA",
-      "virtualassistants": "Assistants Virtuels",
-      "aichatbots": "Chatbots IA",
-      "conversationalai": "IA Conversationnelle",
-      "promptengineering": "Ingénierie des Prompts",
-      "openai": "API OpenAI",
-      "dialogflow": "Dialogflow",
-      "nlp": "Traitement du Langage Naturel",
-      "speechrecognition": "Reconnaissance Vocale",
-      "speechtotext": "Synthèse Vocale",
-      "texttospeech": "Texte-à-Parole",
-      "voiceassistants": "Assistants Vocaux",
-      "intelligentautomation": "Automatisation Intelligente",
-      "aiworkflow": "Intégration de Flux IA",
-      "virtualassistantdev": "Développement d'Assistants Virtuels",
-      "aivirtualassistant": "Assistant Virtuel IA",
-      "chatbotdev": "Développement de Chatbots",
-      "automatedcomms": "Communication Automatisée",
-      "workflowautomation": "Automatisation des Flux",
-      "conversationalworkflow": "Flux Conversationnels",
-      "aicustomerservice": "Service Client IA",
-      "uidesign": "Design UI/UX",
-      "figma": "Figma",
-      "wireframing": "Wireframing",
-      "prototyping": "Prototypage",
-      "designsystems": "Systèmes de Design",
-      "userflow": "Flux Utilisateur",
-      "interactiveprototyping": "Prototypage Interactif",
-      "git": "Git",
-      "github": "GitHub",
-      "gitlab": "GitLab",
-      "ssh": "SSH",
-      "vercel": "Vercel",
-      "infinityfree": "InfinityFree",
-      "androidstudio": "Android Studio",
-      "vscode": "VS Code",
-      "firebase": "Firebase",
-      "stripe": "Stripe",
-      "twilio": "Twilio",
-      "sendgrid": "SendGrid",
-      "formspree": "Formspree",
-      "jotform": "Jotform",
-      "systeme": "Systeme.io",
-      "googleanalytics": "Google Analytics",
-      "umami": "Umami Analytics",
-      "dns": "Configuration DNS",
-      "spf": "SPF",
-      "dkim": "DKIM",
-      "dmarc": "DMARC",
-      "techsupport": "Support Technique",
-      "itsupport": "Support Informatique",
-      "troubleshooting": "Dépannage Logiciel",
-      "customersupport": "Support Client",
-      "digitalcomms": "Communication Digitale",
-      "techdocs": "Documentation Technique",
-      "datamanagement": "Gestion des Données",
-      "research": "Recherche",
-      "projectmanagement": "Gestion de Projet",
-      "productdev": "Développement Produit",
-      "digitalproduct": "Design de Produit Digital",
-      "businessautomation": "Automatisation des Processus",
-      "remotecollab": "Collaboration à Distance",
-      "problemsolving": "Résolution de Problèmes",
-      "techresearch": "Recherche Technique",
-      "requirements": "Analyse des Exigences",
-      "testing": "Tests & Débogage",
-      "apitesting": "Tests API",
-      "fullstack": "Développement Full-Stack",
-      "softwarearch": "Architecture Logicielle",
-      "systemdesign": "Conception Système",
-      "framer-motion": "Framer Motion",
-      "lucide-react": "Lucide React",
-      "umami-analytics": "Umami Analytics",
-      "ai-integration": "Intégration IA"
+    "aiData": {
+      "label": "IA, Q&R & Données",
+      "subtitle": "IA appliquée, intégration de LLM et flux conscients des données"
+    },
+    "productUx": {
+      "label": "Produit & UI/UX",
+      "subtitle": "Conception centrée utilisateur, du wireframe au prototype"
+    },
+    "innovation": {
+      "label": "Innovation & Entrepreneuriat",
+      "subtitle": "Identification de problèmes, conception de solutions et réflexion business · Finaliste hackathon, MABELE Smart (Hackathon IA de Kinshasa 2026)",
+      "items": {
+        "problemIdentification": "Identification de problèmes",
+        "solutionDesign": "Conception de solutions",
+        "productThinking": "Réflexion produit",
+        "businessModels": "Exploration de modèles économiques",
+        "pitching": "Pitch & présentation",
+        "rapidPrototyping": "Prototypage rapide"
+      }
+    },
+    "digitalSolutions": {
+      "label": "Solutions Numériques",
+      "subtitle": "Livraison de bout en bout de produits numériques pratiques",
+      "items": {
+        "webApps": "Applications web",
+        "bookingSystems": "Systèmes de réservation",
+        "dashboards": "Tableaux de bord admin",
+        "apiIntegration": "Intégration API",
+        "cloudDeployment": "Déploiement cloud"
+      }
+    },
+    "digitalOps": {
+      "label": "Opérations Numériques & Assistance Virtuelle",
+      "subtitle": "Soutien aux flux de travail, documentation et livraison à distance",
+      "items": {
+        "workflowAutomation": "Automatisation des flux",
+        "techdocs": "Documentation technique",
+        "remotecollab": "Collaboration à distance",
+        "projectmanagement": "Gestion de projet",
+        "datamanagement": "Gestion des données",
+        "virtualAssistance": "Assistance virtuelle"
+      }
     }
   }
 }

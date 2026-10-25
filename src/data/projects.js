@@ -1,6 +1,6 @@
 // src/data/projects.js
 
-// Import images (Vite will bundle them and return correct URLs)
+// Existing image imports — unchanged
 import imas1 from "../assets/projects/imas-1.jpg";
 import imas2 from "../assets/projects/imas-2.jpg";
 import imasCover from "../assets/projects/imas-cover.jpg";
@@ -15,7 +15,6 @@ import eyecareCover from "../assets/projects/eyecare-cover.jpg";
 import auca1 from "../assets/projects/auca-1.jpg";
 import aucaCover from "../assets/projects/auca-cover.jpg";
 
-// Import images for Cassie Posh Events
 import cassie1 from "../assets/projects/cassie1.png";
 import cassieCover from "../assets/projects/cassiecover.png";
 
@@ -26,8 +25,10 @@ import apartment1 from "../assets/projects/apartment1.png";
 import apartment2 from "../assets/projects/apartment2.png";
 import apartment3 from "../assets/projects/apartment3.png";
 import apartmentcover from "../assets/projects/apartmentcover.png";
+
 import bisman1 from "../assets/projects/bisman1.png";
 import bismanCover from "../assets/projects/bismancover.png";
+
 import stayease1 from "../assets/projects/stayease1.png";
 import stayease2 from "../assets/projects/stayease2.png";
 import stayease3 from "../assets/projects/stayease3.png";
@@ -48,9 +49,92 @@ import digital2 from "../assets/projects/digital2.png";
 import digital3 from "../assets/projects/digital3.png";
 import digitalcover from "../assets/projects/digitalcover.png";
 
-// All projects including Digital Twin
+// NEW — MABELE Smart images (drop these two into src/assets/projects/)
+import mabele1 from "../assets/projects/mabele-1.png";
+import mabele2 from "../assets/projects/mabele-2.png";
+import mabele3 from "../assets/projects/mabele-3.png";
+import mabeleCover from "../assets/projects/mabele-cover.png";
+
 const projects = [
-  // DIGITAL TWIN - Featured Project (Excluded from Projects section but used by Digital Twin section)
+  
+  {
+    id: "salon-booking-platform",
+    slug: "nysha-salon",
+    translationKey: "projects.salon",
+    type: "eng",
+    tech: ["Django", "React.js", "Tailwind CSS", "JWT Authentication", "Google OAuth", "PostgreSQL", "Render", "Vercel", "Stripe API"],
+    cover: saloncover,
+    images: [salon1, salon2, salon3],
+    liveUrl: "https://nysha-frontend.onrender.com/",
+    status: "Active",
+    category: "Booking System",
+    skills: ["react", "django", "postgresql", "tailwind", "uidesign", "stripe", "oauth"],
+    goals: ["fullstack-engineer", "build-saas"],
+    progress: 70,
+    role: "Full-Stack Developer & System Architect",
+    description: "A complete salon management system for Nysha Hair Braiding, specializing in African braiding techniques.",
+    problem: "Salon owners struggle with managing appointments, payments, and customer relationships manually.",
+    solution: "Built a comprehensive booking platform with service catalog, online appointment scheduling, deposit payments via Stripe, and an admin dashboard.",
+    keyFeatures: [
+      "Service catalog with pricing and descriptions",
+      "Online appointment booking with availability checking",
+      "Stripe payment integration for deposits",
+      "Google OAuth authentication",
+      "Admin dashboard for booking management",
+      "JWT authentication for secure API access"
+    ]
+  },
+  // ---------------------------------------------------------------------------
+  // MABELE SMART — prototype / hackathon finalist (featured)
+  // ---------------------------------------------------------------------------
+  {
+    id: "mabele",
+    slug: "mabele-smart",
+    featured: true,
+    featuredOrder: 1,
+    translationKey: "projects.mabele",
+    type: "eng",
+    status: "Prototype · Hackathon finalist",
+    title: "MABELE Smart",
+    short:
+      "A mobile-first smart-agriculture concept for smallholder farmers in the DRC  designed around soil-moisture monitoring, camera-assisted crop-disease detection, weather-informed irrigation, and harvest guidance.",
+    problem:
+      "Smallholder farmers in the DRC often lack access to affordable, mobile-first agronomic tooling. Advice is scarce, irrigation is manual and reactive, and early signs of crop disease are usually identified too late to act on.",
+    solution:
+      "A mobile-first assistant built around three pillars Observer, Understand, Act. The concept treats the smartphone as the primary interface, so technology reaches farmers without tractors or desktop computers. A free entry tier is designed to let smallholder farmers adopt the core features, with premium tiers and connected kits introduced progressively as needs grow.",
+    features: [
+      "Soil-moisture monitoring and weather-informed irrigation (design)",
+      "Camera-assisted crop-disease detection with recommendations (design)",
+      "Harvest-timing and yield guidance (design)",
+      "Multilingual interface (French / Lingala) designed",
+      "Mobile dashboard for crops, irrigation status, and daily advice",
+      "Six-tier freemium and B2B business model (Basic, Plus, Kit, Pro, NGO, Marketplace)",
+    ],
+    contribution:
+      "Product concept, mobile UI mock-ups, prototype screens, and business-model design contributed to a team submission in the Défis Urbains track of the Kinshasa AI Hackathon 2026.",
+    achievement: "Kinshasa AI Hackathon 2026 — Finalist (Défis Urbains track)",
+    disclaimer:
+      "Status note: MABELE Smart is a concept and design prototype. The screens shown are mock-ups. AI models, sensor hardware, and a production application are part of the roadmap — not the shipped product. The scan-diagnosis feature is designed as decision support, not a replacement for agronomic expertise.",
+    tech: [
+      "Mobile-first UI design",
+      "Camera-assisted detection (design)",
+      "Weather-informed irrigation (design)",
+      "Freemium business model",
+    ],
+    cover: mabeleCover,
+    images: [mabele1, mabele2, mabele3], // Placeholder for additional images
+    liveUrl: null,
+    repoUrl: null,
+    category: "AgriTech",
+    skills: ["uidesign", "aiintegration"],
+    goals: [],
+    progress: 40,
+    role: "Product concept, UI/UX & business model",
+  },
+
+  // ---------------------------------------------------------------------------
+  // EXISTING PROJECTS — unchanged
+  // ---------------------------------------------------------------------------
   {
     id: "digital-twin",
     translationKey: "projects.digital-twin",
@@ -88,34 +172,10 @@ const projects = [
       "Balancing futuristic design with professional functionality"
     ]
   },
-  {
-    id: "salon-booking-platform",
-    translationKey: "projects.salon",
-    type: "eng",
-    tech: ["Django", "React.js", "Tailwind CSS", "JWT Authentication", "Google OAuth", "PostgreSQL", "Render", "Vercel", "Stripe API"],
-    cover: saloncover,
-    images: [salon1, salon2, salon3],
-    liveUrl: "https://nysha-frontend.onrender.com/",
-    status: "Active",
-    category: "Booking System",
-    skills: ["react", "django", "postgresql", "tailwind", "uidesign", "stripe", "oauth"],
-    goals: ["fullstack-engineer", "build-saas"],
-    progress: 70,
-    role: "Full-Stack Developer & System Architect",
-    description: "A complete salon management system for Nysha Hair Braiding, specializing in African braiding techniques.",
-    problem: "Salon owners struggle with managing appointments, payments, and customer relationships manually.",
-    solution: "Built a comprehensive booking platform with service catalog, online appointment scheduling, deposit payments via Stripe, and an admin dashboard.",
-    keyFeatures: [
-      "Service catalog with pricing and descriptions",
-      "Online appointment booking with availability checking",
-      "Stripe payment integration for deposits",
-      "Google OAuth authentication",
-      "Admin dashboard for booking management",
-      "JWT authentication for secure API access"
-    ]
-  },
+  
   {
     id: "manuella-portfolio",
+    slug: "manuella-portfolio",
     translationKey: "projects.manuella",
     type: "eng",
     tech: ["React", "Tailwind CSS", "Figma", "JavaScript", "Vercel", "GitHub Pages", "Formspree"],
@@ -141,13 +201,14 @@ const projects = [
   },
   {
     id: "stayease",
+    slug: "stayease-africa",
     translationKey: "projects.stayease",
     type: "eng",
     tech: ["React.js (Vite)", "JavaScript", "Tailwind CSS", "Django REST Framework", "PostgreSQL (Neon)", "Render", "Vercel", "JWT Authentication", "Google OAuth"],
     cover: stayeaseCover,
     images: [stayease1, stayease2, stayease3],
     liveUrl: "https://stayeasy-africa-peter-frontend.vercel.app",
-    status: "In Development",
+    status: "completed",
     category: "Real Estate",
     skills: ["react", "django", "postgresql", "tailwind", "restapis", "oauth", "render", "vercel"],
     goals: ["fullstack-engineer", "build-saas", "master-django"],
@@ -167,6 +228,7 @@ const projects = [
   },
   {
     id: "imas",
+    slug: "imas",
     translationKey: "projects.imas",
     type: "ux",
     tech: ["Figma", "React", "Tailwind", "Spring Boot"],
@@ -192,6 +254,7 @@ const projects = [
   },
   {
     id: "savingdm",
+    slug: "savingdm",
     translationKey: "projects.savingdm",
     type: "eng",
     tech: ["React", "Expo", "Django REST", "PostgreSQL"],
@@ -217,13 +280,14 @@ const projects = [
   },
   {
     id: "eyecare",
+    slug: "eye-care-system",
     translationKey: "projects.eyecare",
     type: "eng",
     tech: ["ASP.NET", "C#", "SQL"],
     cover: eyecareCover,
     images: [eyecare1],
     liveUrl: "https://github.com/nestormuk/EyeCareMGT.git",
-    status: "Completed",
+    status: "Design Phase",
     category: "HealthTech",
     skills: ["csharp", "aspnet"],
     goals: ["fullstack-engineer"],
@@ -242,6 +306,7 @@ const projects = [
   },
   {
     id: "auca",
+    slug: "auca-certificates",
     translationKey: "projects.auca",
     type: "eng",
     tech: ["ASP.NET", "SQL Server", "Stored Procedures"],
@@ -267,6 +332,7 @@ const projects = [
   },
   {
     id: "cassieposhevents",
+    slug: "cassie-posh-events",
     translationKey: "projects.cassie",
     type: "eng",
     tech: ["HTML", "Tailwind CSS", "JavaScript"],
@@ -292,6 +358,7 @@ const projects = [
   },
   {
     id: "jeremienze-portfolio",
+    slug: "jeremy-portfolio",
     translationKey: "projects.jeremie",
     type: "eng",
     tech: ["React.js", "Plain CSS", "JavaScript", "Vite", "React Router DOM", "Framer Motion", "Formspree", "GitHub Pages", "Andasy Dev"],
@@ -317,6 +384,7 @@ const projects = [
   },
   {
     id: "bismanfx-acadmique",
+    slug: "bismanfx",
     translationKey: "projects.bisman",
     type: "eng",
     tech: ["HTML", "Tailwind CDN", "JavaScript", "React.js", "Formspree", "GitHub Pages", "Render Dev", "GoDaddy"],
@@ -342,13 +410,14 @@ const projects = [
   },
   {
     id: "apartment-booking-platform",
+    slug: "apartment-ux",
     translationKey: "projects.apartment",
     type: "ux",
     tech: ["Figma", "AI Powered Design"],
     cover: apartmentcover,
     images: [apartment1, apartment2, apartment3],
     liveUrl: "https://www.figma.com/make/4CzOrrdoM90K2Tyb8cGSGo/Apartment-Website-UI-UX-Design?fullscreen=1&t=bPEyAiONp9sX1pZI-1&preview-route=%2Fservices",
-    status: "Design Phase",
+    status: "In Development",
     category: "Design",
     skills: ["uidesign", "figma"],
     goals: ["improve-ux"],
@@ -367,20 +436,19 @@ const projects = [
   },
 ];
 
-// Helper functions
+// Helper functions — unchanged
 export const getProjectById = (id) => projects.find(p => p.id === id);
 
-export const getProjectsBySkill = (skillId) => 
+export const getProjectsBySkill = (skillId) =>
   projects.filter(p => p.skills && p.skills.includes(skillId));
 
-export const getProjectsByGoal = (goalId) => 
+export const getProjectsByGoal = (goalId) =>
   projects.filter(p => p.goals && p.goals.includes(goalId));
 
-export const getProjectsByCategory = (category) => 
+export const getProjectsByCategory = (category) =>
   projects.filter(p => p.category === category);
 
-export const getProjectsByStatus = (status) => 
+export const getProjectsByStatus = (status) =>
   projects.filter(p => p.status === status);
 
-// Export all projects (including Digital Twin for the Digital Twin section)
 export default projects;

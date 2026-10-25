@@ -1,536 +1,241 @@
 // src/components/layout/Navbar.jsx
-import { AnimatePresence, motion } from "framer-motion";
-import {
-  BookOpen,
-  Briefcase,
-  ChevronDown,
-  Code,
-  Cpu,
-  FolderKanban, GraduationCap, Home,
-  Languages,
-  LayoutDashboard,
-  Mail, Menu,
-  MessageCircle,
-  Moon,
-  Sparkles,
-  Sun, User, X,
-  Zap
-} from 'lucide-react';
-import { useEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
-import { EVENTS, trackEvent } from "../../utils/analytics";
-import LanguageSwitcher from "../LanguageSwitcher";
+import { Menu, MessageCircle, Moon, Sun, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'react-router-dom';
+import { EVENTS, trackEvent } from '../../utils/analytics';
+import LanguageSwitcher from '../LanguageSwitcher';
 
-const Navbar = ({ 
-  theme, 
-  onToggleTheme, 
-  currentPage, 
-  onNavigate, 
-  onNavigateToLifeOS, 
-  onNavigateToDigitalTwin,
-  showLifeOS,
-  showDigitalTwin
-}) => {
+const GITHUB_URL = 'https://github.com/daniel2023-maseya2002';
+const WHATSAPP_URL =
+  'https://wa.me/250791434027?text=Hi%20Daniel%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20collaborating%20with%20you.%20Let%27s%20connect!';
+
+const Navbar = ({ theme, onToggleTheme }) => {
   const { t } = useTranslation();
+  const location = useLocation();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const [activeSection, setActiveSection] = useState('home');
 
-  // Handle scroll effects
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-      
-      // Only track sections if on home page
-      if (currentPage === "home") {
-        const sections = ["home", "about", "skills", "projects", "experience", "education", "digital-twin", "lifeos", "blog", "contact"];
-        const scrollPosition = window.scrollY + 100;
-        
-        for (const section of sections) {
-          const element = document.getElementById(section);
-          if (element) {
-            const { offsetTop, offsetHeight } = element;
-            if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-              setActiveSection(section);
-              break;
-            }
-          }
+      setScrolled(window.scrollY > 8);
+      if (location.pathname !== '/') return;
+      const sections = ['about', 'skills', 'projects', 'experience', 'education', 'contact'];
+      const pos = window.scrollY + 100;
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const { offsetTop, offsetHeight } = el;
+        if (pos >= offsetTop && pos < offsetTop + offsetHeight) {
+          setActiveSection(id);
+          return;
         }
       }
+      setActiveSection('home');
     };
-    
-    // Close dropdown when clicking outside
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpen(false);
-      }
-    };
-    
-    window.addEventListener("scroll", handleScroll);
-    document.addEventListener("mousedown", handleClickOutside);
-    
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [currentPage]);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [location.pathname]);
 
-  // Main navigation items (visible always)
-  const mainLinks = [
-    { href: "#home", label: t("navbar.home"), icon: Home },
-    { href: "#about", label: t("navbar.about"), icon: User },
-    { href: "#skills", label: t("navbar.skills"), icon: Code },
-    { href: "#contact", label: t("navbar.contact"), icon: Mail },
+  useEffect(() => setOpen(false), [location.pathname]);
+
+  const links = [
+    { href: '#home', label: t('navbar.home') },
+    { href: '#about', label: t('navbar.about') },
+    { href: '#skills', label: t('navbar.skills') },
+    { href: '#projects', label: t('navbar.projects') },
+    { href: '#experience', label: t('navbar.experience') },
+    { href: '#education', label: t('navbar.education') },
+    { href: '#blog', label: t('navbar.blog') },
+    { href: '#contact', label: t('navbar.contact') },
   ];
 
-  // Dropdown items (hidden in dropdown)
-  const dropdownLinks = [
-    { href: "#digital-twin", label: "Digital Twin", icon: Zap },
-    { href: "#lifeos", label: "LIFE OS", icon: Cpu },
-    { href: "#projects", label: t("navbar.projects"), icon: FolderKanban },
-    { href: "#experience", label: t("navbar.experience"), icon: Briefcase },
-    { href: "#education", label: t("navbar.education"), icon: GraduationCap },
-    { href: "#blog", label: t("navbar.blog"), icon: BookOpen },
-  ];
-
-  const handleNavClick = (href, e) => {
+  const handleNavClick = (e, href) => {
     e.preventDefault();
     setOpen(false);
-    setDropdownOpen(false);
-    
-    // If clicking LIFE OS link, use the dedicated handler
-    if (href === "#lifeos") {
-      if (onNavigateToLifeOS) {
-        onNavigateToLifeOS();
-      }
+
+    if (location.pathname !== '/') {
+      window.location.assign('/' + href);
       return;
     }
-    
-    // If clicking Digital Twin link, use the dedicated handler
-    if (href === "#digital-twin") {
-      if (onNavigateToDigitalTwin) {
-        onNavigateToDigitalTwin();
-      }
+    if (href === '#home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
-    
-    // If we're on blog page, navigate to home first
-    if (currentPage === "blog") {
-      if (onNavigate) {
-        onNavigate("home");
-      }
-      setTimeout(() => {
-        const element = document.querySelector(href);
-        if (element) {
-          const navbarHeight = 80;
-          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-          window.scrollTo({
-            top: elementPosition - navbarHeight,
-            behavior: "smooth"
-          });
-        }
-      }, 150);
-      return;
-    }
-    
-    // If we're on home page with LIFE OS showing, close it and scroll to section
-    if (showLifeOS && href !== "#lifeos") {
-      if (onNavigate) {
-        onNavigate("home");
-      }
-      setTimeout(() => {
-        const element = document.querySelector(href);
-        if (element) {
-          const navbarHeight = 80;
-          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-          window.scrollTo({
-            top: elementPosition - navbarHeight,
-            behavior: "smooth"
-          });
-        }
-      }, 150);
-      return;
-    }
-    
-    // If we're on home page with Digital Twin showing, close it and scroll to section
-    if (showDigitalTwin && href !== "#digital-twin") {
-      if (onNavigate) {
-        onNavigate("home");
-      }
-      setTimeout(() => {
-        const element = document.querySelector(href);
-        if (element) {
-          const navbarHeight = 80;
-          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-          window.scrollTo({
-            top: elementPosition - navbarHeight,
-            behavior: "smooth"
-          });
-        }
-      }, 150);
-      return;
-    }
-    
-    // Normal scrolling on home page
-    if (href === "#home") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      return;
-    }
-    
-    const element = document.querySelector(href);
-    if (element) {
-      const navbarHeight = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo({
-        top: elementPosition - navbarHeight,
-        behavior: "smooth"
-      });
+    const el = document.getElementById(href.slice(1));
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.pageYOffset - 80;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
   };
 
   const handleWhatsAppClick = () => {
-    trackEvent(EVENTS.WHATSAPP_CLICK, { platform: 'whatsapp', location: 'navbar' });
+    trackEvent(EVENTS.WHATSAPP_CLICK, {
+      platform: 'whatsapp',
+      location: 'navbar',
+    });
   };
-
-  const handleLifeOSClick = () => {
-    trackEvent('life-os-open', { source: 'navbar' });
-    if (onNavigateToLifeOS) {
-      onNavigateToLifeOS();
-    }
-    setOpen(false);
-    setDropdownOpen(false);
-  };
-
-  const handleDigitalTwinClick = () => {
-    trackEvent('digital-twin-opened', { source: 'navbar' });
-    if (onNavigateToDigitalTwin) {
-      onNavigateToDigitalTwin();
-    }
-    setOpen(false);
-    setDropdownOpen(false);
-  };
-
-  const isLifeOSActive = showLifeOS || currentPage === "lifeos";
-  const isDigitalTwinActive = showDigitalTwin || currentPage === "digital-twin";
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled 
-        ? "bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-xl" 
-        : "bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800/50"
-    }`}>
-      
-      <nav className="w-full px-6 lg:px-16 h-16 lg:h-20 flex items-center justify-between">
-        
-        {/* Logo */}
-        <motion.a
-          href="#home"
-          onClick={(e) => handleNavClick("#home", e)}
-          className="relative group flex-shrink-0"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+    <header
+      className={`sticky top-0 z-40 transition-colors ${
+        scrolled ? 'backdrop-blur-md' : ''
+      }`}
+      style={{
+        backgroundColor: scrolled
+          ? theme === 'dark'
+            ? 'rgba(11, 15, 20, 0.85)'
+            : 'rgba(247, 247, 245, 0.85)'
+          : 'var(--bg)',
+        borderBottom: `1px solid ${scrolled ? 'var(--border)' : 'transparent'}`,
+      }}
+    >
+      {/* Full-width nav no max-w container */}
+      <nav className="w-full px-6 md:px-12 lg:px-24 flex items-center justify-between h-16">
+        <Link
+          to="/"
+          className="font-semibold text-[15px] tracking-tight"
+          style={{ color: 'var(--ink)' }}
         >
-          <div className="absolute -inset-2 bg-gradient-to-r from-teal-500/20 to-emerald-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
-          
-          <div className="relative flex items-center gap-1">
-            <Sparkles className="w-5 h-5 text-teal-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <span className="font-black text-2xl tracking-tight text-slate-900 dark:text-white">
-              D2M
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-emerald-500 group-hover:from-teal-400 group-hover:to-emerald-400 transition-all duration-300">
-                .
-              </span>
-            </span>
-          </div>
-        </motion.a>
+          Daniel Maseya Mubu
+        </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-2">
-          <ul className="flex items-center gap-1 list-none">
-            {mainLinks.map((link) => {
-              const Icon = link.icon;
-              const isActive = activeSection === link.href.substring(1) && currentPage === "home" && !showLifeOS && !showDigitalTwin;
-              
-              return (
-                <li key={link.href}>
-                  <motion.a
-                    href={link.href}
-                    onClick={(e) => handleNavClick(link.href, e)}
-                    className={`relative px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-200 flex items-center gap-2 ${
-                      isActive
-                        ? "text-teal-600 dark:text-teal-400 bg-gradient-to-r from-teal-500/10 to-emerald-500/10"
-                        : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-slate-800/80"
-                    }`}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <Icon className="w-4 h-4" />
-                    <span>{link.label}</span>
-                    
-                    {isActive && (
-                      <motion.div
-                        layoutId="activeNav"
-                        className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full"
-                        transition={{ type: "spring", duration: 0.5 }}
-                      />
-                    )}
-                  </motion.a>
-                </li>
-              );
-            })}
-          </ul>
-
-          {/* Dropdown Menu */}
-          <div className="relative" ref={dropdownRef}>
-            <motion.button
-              onClick={() => setDropdownOpen(!dropdownOpen)}
-              className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-200 ${
-                dropdownOpen || dropdownLinks.some(link => activeSection === link.href.substring(1) && currentPage === "home")
-                  ? "text-teal-600 dark:text-teal-400 bg-gradient-to-r from-teal-500/10 to-emerald-500/10"
-                  : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-slate-800/80"
-              }`}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <LayoutDashboard className="w-4 h-4" />
-              <span>More</span>
-              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
-            </motion.button>
-
-            <AnimatePresence>
-              {dropdownOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute top-full right-0 mt-2 w-56 bg-white dark:bg-slate-900 rounded-xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden z-50"
+        <ul className="hidden md:flex items-center gap-5 list-none">
+          {links.map((link) => {
+            const isActive =
+              activeSection === link.href.slice(1) &&
+              location.pathname === '/';
+            return (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className="text-sm transition-colors"
+                  style={{
+                    color: isActive ? 'var(--ink)' : 'var(--ink-muted)',
+                  }}
                 >
-                  <div className="py-2">
-                    {dropdownLinks.map((link) => {
-                      const Icon = link.icon;
-                      const isActive = activeSection === link.href.substring(1) && currentPage === "home";
-                      const isDigitalTwin = link.href === "#digital-twin";
-                      const isLifeOSLink = link.href === "#lifeos";
-                      
-                      return (
-                        <motion.a
-                          key={link.href}
-                          href={link.href}
-                          onClick={(e) => handleNavClick(link.href, e)}
-                          className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-all duration-200 ${
-                            isActive
-                              ? "text-teal-600 dark:text-teal-400 bg-gradient-to-r from-teal-500/5 to-emerald-500/5"
-                              : isDigitalTwin && isDigitalTwinActive
-                                ? "text-white bg-gradient-to-r from-purple-500 to-pink-500"
-                                : isLifeOSLink && isLifeOSActive
-                                  ? "text-white bg-gradient-to-r from-teal-500 to-emerald-500"
-                                  : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800"
-                          }`}
-                          whileHover={{ x: 4 }}
-                        >
-                          <Icon className="w-4 h-4" />
-                          <span>{link.label}</span>
-                          {(isDigitalTwin && isDigitalTwinActive) && (
-                            <div className="ml-auto w-1.5 h-1.5 rounded-full bg-gradient-to-r from-purple-500 to-pink-500" />
-                          )}
-                          {(isLifeOSLink && isLifeOSActive) && (
-                            <div className="ml-auto w-1.5 h-1.5 rounded-full bg-gradient-to-r from-teal-500 to-emerald-500" />
-                          )}
-                          {isDigitalTwin && (
-                            <span className="ml-auto text-[8px] font-black tracking-widest px-1.5 py-0.5 rounded-full bg-purple-500/20 text-purple-500">
-                              β
-                            </span>
-                          )}
-                        </motion.a>
-                      );
-                    })}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        </div>
+                  {link.label}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
 
-        {/* Right Side Actions */}
-        <div className="flex items-center gap-2 flex-shrink-0">
-          <motion.a
-            href="https://wa.me/250792434027?text=Hi%20Daniel%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20collaborating%20with%20you.%20Let%27s%20connect!"
+        <div className="flex items-center gap-1">
+          {/* Language switcher desktop */}
+          <LanguageSwitcher />
+
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            className="hidden md:inline-flex p-2 rounded-md"
+            style={{ color: 'var(--ink-muted)' }}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+
+          <a
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsAppClick}
-            className="hidden lg:flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            aria-label="Chat on WhatsApp"
+            className="hidden md:inline-flex p-2 rounded-md"
+            style={{ color: 'var(--ink-muted)' }}
           >
-            <MessageCircle className="w-4 h-4" />
-            <span>Let's Chat</span>
-          </motion.a>
+            <MessageCircle size={18} />
+          </a>
 
-          <LanguageSwitcher />
-
-          <motion.button
+          <button
             type="button"
             onClick={onToggleTheme}
             aria-label="Toggle theme"
-            className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-teal-500/50 dark:hover:border-teal-500/50 transition-all duration-200"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="p-2 rounded-md"
+            style={{ color: 'var(--ink-muted)' }}
           >
-            {theme === "dark" ? (
-              <Sun className="w-5 h-5 text-teal-400" />
-            ) : (
-              <Moon className="w-5 h-5 text-slate-700" />
-            )}
-          </motion.button>
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
 
-          <motion.a
+          <a
             href="#contact"
-            onClick={(e) => handleNavClick("#contact", e)}
-            className="hidden lg:flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-teal-500 to-emerald-500 text-white rounded-xl text-sm font-medium hover:shadow-lg hover:shadow-teal-500/25 transition-all duration-300"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            onClick={(e) => handleNavClick(e, '#contact')}
+            className="hidden md:inline-flex items-center px-3.5 py-2 rounded-md text-sm font-medium text-white"
+            style={{ backgroundColor: 'var(--accent)' }}
           >
-            {t("navbar.letsTalk")}
-          </motion.a>
+            {t('navbar.contact')}
+          </a>
 
-          <motion.button
+          <button
             type="button"
-            onClick={() => setOpen(!open)}
+            onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
-            className="lg:hidden p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:border-teal-500/50 transition-all"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="md:hidden p-2 rounded-md"
+            style={{ color: 'var(--ink)' }}
           >
-            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </motion.button>
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
       </nav>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="lg:hidden overflow-hidden bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 shadow-2xl"
-          >
-            <div className="w-full px-6 py-6">
-              <div className="space-y-1 mb-6">
-                {[...mainLinks, ...dropdownLinks].map((link, index) => {
-                  const Icon = link.icon;
-                  const isDigitalTwin = link.href === "#digital-twin";
-                  const isLifeOSLink = link.href === "#lifeos";
-                  const isActive = isDigitalTwin ? isDigitalTwinActive : isLifeOSLink ? isLifeOSActive : false;
-                  
-                  return (
-                    <motion.a
-                      key={link.href}
-                      href={link.href}
-                      onClick={(e) => handleNavClick(link.href, e)}
-                      className={`flex items-center gap-3 w-full py-3.5 px-4 text-base font-medium rounded-xl transition-all ${
-                        isActive && isDigitalTwin
-                          ? "text-white bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg shadow-purple-500/30"
-                          : isActive && isLifeOSLink
-                            ? "text-white bg-gradient-to-r from-teal-500 to-emerald-500 shadow-lg shadow-teal-500/30"
-                            : isDigitalTwin
-                              ? "text-slate-700 dark:text-slate-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500"
-                              : isLifeOSLink
-                                ? "text-slate-700 dark:text-slate-300 hover:text-white hover:bg-gradient-to-r hover:from-teal-500 hover:to-emerald-500"
-                                : "text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-gradient-to-r hover:from-teal-500/10 hover:to-emerald-500/10"
-                      }`}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: (index + 1) * 0.05 }}
-                    >
-                      <Icon className="w-5 h-5" />
-                      <span>{link.label}</span>
-                      {isDigitalTwin && (
-                        <span className="ml-auto text-[8px] font-black tracking-widest px-2 py-0.5 rounded-full bg-white/20 text-white">
-                          β
-                        </span>
-                      )}
-                      {isLifeOSLink && (
-                        <span className="ml-auto text-[8px] font-black tracking-widest px-2 py-0.5 rounded-full bg-white/20 text-white">
-                          β
-                        </span>
-                      )}
-                    </motion.a>
-                  );
-                })}
-              </div>
+      {open && (
+        <div
+          className="md:hidden"
+          style={{
+            borderTop: '1px solid var(--border)',
+            backgroundColor: 'var(--bg)',
+          }}
+        >
+          <div className="w-full px-6 py-4">
+            <ul className="space-y-1 list-none">
+              {links.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="block py-2 text-base"
+                    style={{ color: 'var(--ink)' }}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
 
-              <div className="h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-800 to-transparent my-4" />
-
-              <motion.a
-                href="https://wa.me/250792434027?text=Hi%20Daniel%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20collaborating%20with%20you.%20Let%27s%20connect!"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => {
-                  handleWhatsAppClick();
-                  setOpen(false);
-                }}
-                className="flex items-center justify-center gap-3 w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 text-white font-medium text-base hover:shadow-lg hover:shadow-green-500/30 transition-all duration-300"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <MessageCircle className="w-5 h-5" />
-                <span>Chat on WhatsApp</span>
-              </motion.a>
-
-              <div className="h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-800 to-transparent my-4" />
-
-              <div className="mb-4">
-                <div className="flex items-center gap-2 px-4 py-2 mb-2">
-                  <Languages className="w-4 h-4 text-teal-500" />
-                  <span className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                    Select Language
-                  </span>
+              <li className="pt-3 pb-1">
+                <div
+                  className="flex items-center gap-2 pt-3"
+                  style={{ borderTop: '1px solid var(--border)' }}
+                >
+                  <LanguageSwitcher />
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  <LanguageSwitcher isMobile />
-                </div>
-              </div>
+              </li>
 
-              <button
-                type="button"
-                onClick={() => {
-                  onToggleTheme();
-                  setOpen(false);
-                }}
-                className="flex items-center justify-center gap-2 w-full mt-3 px-6 py-3.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-all"
-              >
-                {theme === "dark" ? (
-                  <>
-                    <Sun className="w-4 h-4" />
-                    Light Mode
-                  </>
-                ) : (
-                  <>
-                    <Moon className="w-4 h-4" />
-                    Dark Mode
-                  </>
-                )}
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <style>{`
-        @keyframes gradient {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        .animate-gradient {
-          background-size: 200% 100%;
-          animation: gradient 3s ease infinite;
-        }
-      `}</style>
+              <li className="pt-2">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    handleWhatsAppClick();
+                    setOpen(false);
+                  }}
+                  className="flex items-center justify-center gap-2 w-full py-2.5 rounded-md text-sm font-medium text-white"
+                  style={{ backgroundColor: 'var(--accent)' }}
+                >
+                  <MessageCircle size={16} />
+                  WhatsApp
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

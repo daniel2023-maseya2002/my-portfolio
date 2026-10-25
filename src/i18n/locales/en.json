@@ -13,6 +13,9 @@
     "digitalTwin": "Digital Twin"
   },
   "hero": {
+    "positioning": "I design, engineer and build digital solutions from web applications and backend systems to APIs, AI-powered experiences and user-centered digital products.",
+    "availabilityLine": "Open to opportunities · Remote and on-site",
+    "locationFallback": "Kigali, Rwanda",
     "status": "Available for Opportunities",
     "name": "DANIEL MASEYA",
     "title": "Building",
@@ -34,12 +37,19 @@
     "scroll": "SCROLL"
   },
   "about": {
+    "label": "About",
+    "heading": "A short introduction.",
+    "p1": "I'm a Software Engineer working mainly in Python and React, with experience across backend engineering, API design, databases, and applied AI. I studied Information Technology at AUCA in Kigali, and I've spent the last few years building production systems for clients in fintech, mobility, education, and agriculture.",
+    "p2": "I care about clarity in code and clarity in interfaces. Most of what I build starts as a real problem someone brought to me a registration flow, a booking system, a savings product and I try to ship it in a form that keeps working long after handover.",
+    "recent": "volunteer support for the digital-code awareness campaign at PNUD DRC.",
+    "resumeTitle": "Resume / CV",
+    "resumeDesc": "Download my full resume in PDF format.",
     "badge": "About Me",
     "title": "Crafting Digital",
     "titleHighlight": "Solutions",
     "titleEnd": "with Purpose",
-    "description1": "I'm a Full-Stack Engineer and UX Enthusiast passionate about turning complex challenges into intuitive, beautiful digital products. I enjoy bridging the gap between design thinking and robust backend infrastructure.",
-    "description2": "My experience spans diverse domains, including fintech, mobility platforms, and critical healthcare systems. I am deeply committed to clarity, performance, and maximizing user impact in every project I undertake.",
+    "description1": "I'm a Full-Stack Engineer and UX Enthusiast passionate about turning complex challenges into intuitive, beautiful digital products.",
+    "description2": "My experience spans diverse domains, including fintech, mobility platforms, and critical healthcare systems.",
     "coreTech": "Core Technologies",
     "proficiency": "Proficiency",
     "experience": "Experience",
@@ -55,7 +65,142 @@
     "impact": "Real-World Impact",
     "ctaTitle": "Ready to transform your vision?",
     "ctaDesc": "Let's collaborate on innovative, scalable, and user-centered projects.",
-    "ctaButton": "Start a Conversation"
+    "ctaButton": "Start a Conversation",
+    "recentlyLabel": "Recently:",
+    "view": "View",
+    "download": "Download CV"
+  },
+  "skills": {
+    "label": "Stack",
+    "heading": "Tools I use to build.",
+    "subheading": "A focused set of technologies no badge walls, just the stack I actually reach for.",
+    "badge": "Skills & Expertise",
+    "title": "Technical & Professional",
+    "titleHighlight": "Skill Set",
+    "description": "A comprehensive collection of technologies, tools, and professional capabilities I work with.",
+    "engineering": "Engineering",
+    "engineeringDesc": "Full-stack development expertise",
+    "ux": "UX / UI Design",
+    "uxDesc": "User-centered design approach",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "mobile": "Mobile",
+      "ai": "AI & Automation",
+      "design": "UI/UX Design",
+      "devops": "DevOps & Tools",
+      "professional": "Professional"
+    },
+    "skillsList": {
+      "javascript": "JavaScript",
+      "react": "React.js",
+      "html5": "HTML5",
+      "css3": "CSS3",
+      "tailwind": "Tailwind CSS",
+      "materialui": "Material UI",
+      "vite": "Vite",
+      "responsive": "Responsive Design",
+      "webui": "Web UI Design",
+      "python": "Python",
+      "java": "Java",
+      "springboot": "Spring Boot",
+      "django": "Django",
+      "djangorest": "Django REST",
+      "php": "PHP",
+      "sql": "SQL",
+      "postgresql": "PostgreSQL",
+      "restapi": "REST API Dev",
+      "restapis": "REST APIs",
+      "apiintegration": "API Integration",
+      "json": "JSON",
+      "axios": "Axios",
+      "auth": "Auth & Authorization",
+      "databasedesign": "Database Design",
+      "crud": "CRUD Development",
+      "dart": "Dart",
+      "flutter": "Flutter",
+      "android": "Android Development",
+      "mobileui": "Mobile UI Design",
+      "aiintegration": "AI Integration",
+      "generativeai": "Generative AI",
+      "aiassistants": "AI Assistants",
+      "aiagents": "AI Agents",
+      "virtualassistants": "Virtual Assistants",
+      "aichatbots": "AI Chatbots",
+      "conversationalai": "Conversational AI",
+      "promptengineering": "Prompt Engineering",
+      "openai": "OpenAI API",
+      "dialogflow": "Dialogflow",
+      "nlp": "Natural Language Processing",
+      "speechrecognition": "Speech Recognition",
+      "speechtotext": "Speech-to-Text",
+      "texttospeech": "Text-to-Speech",
+      "voiceassistants": "Voice Assistants",
+      "intelligentautomation": "Intelligent Automation",
+      "aiworkflow": "AI Workflow Integration",
+      "virtualassistantdev": "Virtual Assistant Development",
+      "aivirtualassistant": "AI Virtual Assistant",
+      "chatbotdev": "Chatbot Development",
+      "automatedcomms": "Automated Communication",
+      "workflowautomation": "Workflow Automation",
+      "conversationalworkflow": "Conversational Workflows",
+      "aicustomerservice": "AI Customer Service",
+      "uidesign": "UI/UX Design",
+      "figma": "Figma",
+      "wireframing": "Wireframing",
+      "prototyping": "Prototyping",
+      "designsystems": "Design Systems",
+      "userflow": "User Flow Design",
+      "interactiveprototyping": "Interactive Prototyping",
+      "git": "Git",
+      "github": "GitHub",
+      "gitlab": "GitLab",
+      "ssh": "SSH",
+      "vercel": "Vercel",
+      "render": "Render",
+      "infinityfree": "InfinityFree",
+      "androidstudio": "Android Studio",
+      "vscode": "VS Code",
+      "firebase": "Firebase",
+      "stripe": "Stripe",
+      "twilio": "Twilio",
+      "sendgrid": "SendGrid",
+      "formspree": "Formspree",
+      "jotform": "Jotform",
+      "systeme": "Systeme.io",
+      "googleanalytics": "Google Analytics",
+      "umami": "Umami Analytics",
+      "dns": "DNS Configuration",
+      "spf": "SPF",
+      "dkim": "DKIM",
+      "dmarc": "DMARC",
+      "techsupport": "Technical Support",
+      "itsupport": "IT Support",
+      "troubleshooting": "Software Troubleshooting",
+      "customersupport": "Customer Support",
+      "digitalcomms": "Digital Communication",
+      "techdocs": "Technical Documentation",
+      "datamanagement": "Data Management",
+      "research": "Research",
+      "projectmanagement": "Project Management",
+      "productdev": "Product Development",
+      "digitalproduct": "Digital Product Design",
+      "businessautomation": "Business Process Automation",
+      "remotecollab": "Remote Collaboration",
+      "problemsolving": "Problem Solving",
+      "techresearch": "Technical Research",
+      "requirements": "Requirements Analysis",
+      "testing": "Testing & Debugging",
+      "apitesting": "API Testing",
+      "fullstack": "Full-Stack Development",
+      "softwarearch": "Software Architecture",
+      "systemdesign": "System Design",
+      "framer-motion": "Framer Motion",
+      "lucide-react": "Lucide React",
+      "umami-analytics": "Umami Analytics",
+      "ai-integration": "AI Integration"
+    }
   },
   "digitalTwin": {
     "title": "Digital Twin",
@@ -171,7 +316,7 @@
     },
     "engineeringDNA": {
       "title": "My Engineering DNA",
-      "subtitle": "How I approach building software — from understanding to improvement",
+      "subtitle": "How I approach building software from understanding to improvement",
       "steps": {
         "understand": {
           "title": "Understand",
@@ -199,7 +344,7 @@
           "details": "I continuously refine and optimize based on user feedback and performance data."
         }
       },
-      "footer": "This process guides how I approach every project — from concept to delivery."
+      "footer": "This process guides how I approach every project from concept to delivery."
     },
     "whatICanBuild": {
       "title": "What I Can Build",
@@ -232,7 +377,7 @@
     },
     "askTwin": "Ask Twin",
     "closeAssistant": "Close Assistant",
-    "openAssistant": "Open LIFE OS Assistant"
+    "openAssistant": "Open Digital Twin Assistant"
   },
   "lifeOS": {
     "title": "LIFE OS",
@@ -337,6 +482,9 @@
     }
   },
   "projects": {
+    "label": "Selected Work",
+    "heading": "Real problems, working software.",
+    "subheading": "A selection of full-stack products, APIs, and interfaces. Each one was built to solve a specific problem, from booking systems to agronomic tools.",
     "badge": "Featured Work",
     "title": "Selected",
     "titleHighlight": "Projects",
@@ -351,8 +499,11 @@
     "discussSimilar": "Discuss Similar Project",
     "close": "Close Details",
     "noProjects": "No projects found in this category.",
+    "notFound": "Project not found",
+    "allProjects": "All projects",
+    "exploreAll": "Explore all projects",
     "imas": {
-      "title": "IMAS — Intelligent Mobility Assistance System",
+      "title": "IMAS: Intelligent Mobility Assistance System",
       "short": "Mobility platform for improving ride experiences in Kinshasa.",
       "role": "UX / UI / Frontend",
       "longDescription": "IMAS helps passengers request rides, track vehicles, and review drivers. I led the product flow, wireframes, UI design, and built the React prototype that communicates with backend APIs."
@@ -367,7 +518,7 @@
       "title": "Eye Care Management System",
       "short": "Health system for patient management and eyewear orders.",
       "role": "Architecture / UI",
-      "longDescription": "A hospital system handling appointments, prescriptions, and eyewear inventory — built as a full product with role-based dashboards."
+      "longDescription": "A hospital system handling appointments, prescriptions, and eyewear inventory built as a full product with role-based dashboards."
     },
     "auca": {
       "title": "AUCA English Professional Certificate",
@@ -379,50 +530,61 @@
       "title": "Cassie Posh Events",
       "short": "Luxury wedding and event planning website for bookings and organization of marriages, birthdays, and parties.",
       "role": "Developer / DevOps",
-      "longDescription": "This is a sophisticated, modern website for Cassie Posh Events, LLC, a luxury wedding and event planning company based in Philadelphia, serving clients throughout the Tri-State area. The website embodies elegance, sophistication, and professionalism through its thoughtful design and user experience."
+      "longDescription": "This is a sophisticated, modern website for Cassie Posh Events, LLC, a luxury wedding and event planning company based in Philadelphia, serving clients throughout the Tri-State area."
     },
     "jeremie": {
       "title": "Jeremy Nze's Portfolio",
       "short": "Personal portfolio website showcasing projects and skills.",
       "role": "Developer / DevOps",
-      "longDescription": "A modern, professional portfolio website built with React.js to showcase skills, experience, projects, and certifications. The portfolio features a clean, responsive design with smooth animations and a professional blue color scheme."
+      "longDescription": "A modern, professional portfolio website built with React.js to showcase skills, experience, projects, and certifications."
     },
     "bisman": {
-      "title": "Maîtrisez les marchés avec la précision d'un institutionnel - BismanFX Académique",
-      "short": "Académie de trading professionnelle. Des stratégies institutionnelles pour des résultats consistants.",
+      "title": "Maîtrisez les marchés avec la précision d'un institutionnel: BismanFX Académique",
+      "short": "Professional trading academy. Institutional strategies for consistent results.",
       "role": "Developer And Collaborator with Eng Ariel Aganze",
       "longDescription": "BismanFx Academy is a professional trading education platform founded by Matthieu Bisimwa, focused on institutional trading strategies (Smart Money Concepts) with structured training, live mentorship, and risk management guidance."
     },
     "stayease": {
-      "title": "StayEase Africa – Apartment Booking Platform",
+      "title": "StayEase Africa: Apartment Booking Platform",
       "short": "A full-stack apartment booking platform designed for Africa, enabling users to discover, book, and manage apartments with real-time availability and role-based access.",
       "role": "Full-Stack Developer & System Architect",
       "longDescription": "StayEase Africa is a full-stack web platform designed to simplify apartment discovery and booking across Africa. The system connects tenants, property owners, and administrators into a unified ecosystem."
     },
     "apartment": {
       "title": "A luxury Apartment Booking Platform for Africa",
-      "short": "A Ui Ux Design and prototype for a luxury apartment booking platform tailored for the African market, addressing unique housing and payment challenges.",
+      "short": "A UI/UX design and prototype for a luxury apartment booking platform tailored for the African market, addressing unique housing and payment challenges.",
       "role": "UX / UI",
-      "longDescription": "A luxury apartment booking platform designed for the African market, addressing unique housing and payment challenges. The design focuses on a seamless user experience, allowing users to easily discover, book, and manage apartments."
+      "longDescription": "A luxury apartment booking platform designed for the African market, addressing unique housing and payment challenges."
     },
     "salon": {
-    "title": "Nysha Hair Braiding – Salon Booking Platform",
-    "short": "Full-stack salon booking platform with online appointments, payments, and admin dashboard.",
-    "role": "Full-Stack Developer & System Architect",
-    "longDescription": "A complete salon management system for Nysha Hair Braiding, specializing in African braiding techniques. The platform allows customers to book appointments online, pay deposits via Stripe, and manage their reservations. Features include service catalog with pricing, working hours display, appointment management, payment processing, and an admin dashboard for salon owners to manage bookings and track revenue."
+      "title": "Nysha Hair Braiding: Salon Booking Platform",
+      "short": "Full-stack salon booking platform with online appointments, payments, and admin dashboard.",
+      "role": "Full-Stack Developer & System Architect",
+      "longDescription": "A complete salon management system for Nysha Hair Braiding, specializing in African braiding techniques. The platform allows customers to book appointments online, pay deposits via Stripe, and manage their reservations."
+    },
+    "mabele": {
+      "title": "MABELE Smart",
+      "short": "A mobile-first smart-agriculture concept for smallholder farmers in the DRC soil-moisture monitoring, camera-assisted crop-disease detection, weather-informed irrigation, and harvest guidance.",
+      "role": "Product concept, UI/UX & business model",
+      "longDescription": "A mobile-first assistant built around three pillars: Observer, Understand, Act. The concept treats the smartphone as the primary interface, so technology reaches farmers without tractors or desktop computers.",
+      "problem": "Smallholder farmers in the DRC often lack access to affordable, mobile-first agronomic tooling. Advice is scarce, irrigation is manual and reactive, and early signs of crop disease are usually identified too late to act on.",
+      "solution": "A mobile-first assistant built around three pillars Observer, Understand, Act.",
+      "contribution": "Product concept, mobile UI mock-ups, prototype screens, and business-model design contributed to a team submission in the Défis Urbains track of the Kinshasa AI Hackathon 2026.",
+      "achievement": "Kinshasa AI Hackathon 2026 Finalist (Défis Urbains track)",
+      "disclaimer": "Status note: MABELE Smart is a concept and design prototype. The screens shown are mock-ups. AI models, sensor hardware, and a production application are part of the roadmap not the shipped product."
     },
     "manuella": {
-    "title": "Manuella Portfolio – Accounting & Finance Professional",
-    "short": "A modern portfolio website for an Accounting and Finance professional.",
-    "role": "DevOps, Architecture & Developer",
-    "longDescription": "I designed and developed a clean, modern portfolio website for Manuella, an Accounting and Finance professional. As the DevOps architect, I managed the full deployment pipeline on Vercel, ensured optimal performance, and built a responsive, user‑friendly interface using React and Tailwind CSS."
+      "title": "Manuella Portfolio: Accounting & Finance Professional",
+      "short": "A modern portfolio website for an Accounting and Finance professional.",
+      "role": "DevOps, Architecture & Developer",
+      "longDescription": "I designed and developed a clean, modern portfolio website for Manuella, an Accounting and Finance professional. As the DevOps architect, I managed the full deployment pipeline on Vercel, ensured optimal performance, and built a responsive, user-friendly interface using React and Tailwind CSS."
     },
     "digital-twin": {
       "title": "Digital Twin Viewer",
       "short": "An interactive digital representation of skills, projects, and engineering capabilities.",
       "role": "Full-Stack Developer, UI/UX Designer & System Architect",
       "longDescription": "An interactive digital representation that lets visitors explore skills, projects, and engineering capabilities through an intelligent node-based interface.",
-      "problem": "Traditional portfolios are static and linear, forcing visitors to scroll through long pages of text. Recruiters, clients, and developers need a more engaging way to understand a software engineer's capabilities.",
+      "problem": "Traditional portfolios are static and linear, forcing visitors to scroll through long pages of text.",
       "solution": "Built an interactive Digital Twin system that visualizes professional capabilities through an intelligent node-based interface with multiple visitor modes.",
       "features": [
         "Interactive node-based visualization of skills and capabilities",
@@ -445,11 +607,11 @@
       ]
     },
     "lifeos": {
-      "title": "LIFE OS — AI Life Operating System",
+      "title": "LIFE OS AI Life Operating System",
       "short": "AI-powered career and growth navigator that helps users identify skill gaps and discover their next best actions.",
       "role": "Full-Stack Developer, UI/UX Designer & System Architect",
-      "longDescription": "LIFE OS is an AI-powered career and growth navigator that helps users identify skill gaps, explore career paths, and discover their next best actions. It features a personalized dashboard, goal tracking, skill analysis, and an intelligent assistant.",
-      "problem": "People struggle to navigate their career paths, identify skill gaps, and prioritize their learning. Most career tools are either too generic or require expensive coaching.",
+      "longDescription": "LIFE OS is an AI-powered career and growth navigator that helps users identify skill gaps, explore career paths, and discover their next best actions.",
+      "problem": "People struggle to navigate their career paths, identify skill gaps, and prioritize their learning.",
       "solution": "Built an intelligent career navigation system that analyzes skills, recommends learning paths, and provides personalized next actions using a rule-based engine.",
       "features": [
         "Personalized career dashboard",
@@ -472,28 +634,90 @@
       ]
     }
   },
+  "projectDetail": {
+    "problem": "Problem",
+    "approach": "Approach",
+    "keyFeatures": "Key features",
+    "contribution": "My contribution",
+    "recognition": "Recognition",
+    "screens": "Screens",
+    "stack": "Stack",
+    "status": "Status",
+    "live": "Live",
+    "repository": "Repository",
+    "openLive": "Open live project",
+    "viewGithub": "View on GitHub"
+  },
+  "projectsPage": {
+    "meta": "All work",
+    "title": "Projects",
+    "description": "Everything I have shipped, prototyped, or designed sorted newest first.",
+    "view": "View"
+  },
   "experience": {
+    "label": "Experience",
+    "heading": "Where I have worked.",
+    "subheading": "A timeline of my professional roles, internships, and volunteer work.",
     "badge": "Work History",
     "title": "Professional",
     "titleHighlight": "Experience",
-    "description": "My journey through professional roles, internships, and major project contributions — organized as a clear timeline.",
+    "description": "My journey through professional roles, internships, and major project contributions organized as a clear timeline.",
     "wantMore": "Want to know more?",
     "downloadResume": "Download my full resume or get in touch to discuss opportunities",
     "resume": "Resume",
     "openResume": "Open resume",
-    "freelance": {
-      "role": "Freelance Software Engineer & UI/UX Designer",
-      "org": "Freelance / Personal Projects",
-      "location": "Kigali, Rwanda",
+    "pnudDrc": {
+      "role": "Digital Code Awareness Volunteer",
+      "org": "PNUD DRC",
+      "location": "Democratic Republic of the Congo",
+      "kind": "Volunteer",
       "bullets": [
-        "Designed and implemented IMAS (mobility platform) UI and prototype; built React prototypes and coordinated API design.",
-        "Built core features for SavingDm (CreditJambo) including savings flows and transaction UI.",
-        "Collaborated with stakeholders to define product flows and converted Figma designs to production React components."
-      ],
-      "tag": "Self-initiated"
+        "Supporting awareness activities related to the digital code in the Democratic Republic of the Congo."
+      ]
+    },
+    "freelance": {
+      "role": "Freelance Software Developer",
+      "org": "Independent",
+      "location": "Remote",
+      "kind": "Freelance",
+      "bullets": [
+        "Designed and shipped full-stack products for clients across fintech, mobility, hospitality and education.",
+        "Built and deployed React + Django + PostgreSQL applications with authentication, payments and admin dashboards.",
+        "Worked directly with stakeholders to scope features, define flows, and ship to production."
+      ]
+    },
+    "aucaContract": {
+      "role": "Software Developer",
+      "org": "Adventist University of Central Africa (AUCA)",
+      "location": "Kigali, Rwanda",
+      "kind": "Contract",
+      "bullets": [
+        "Built the certificate-printing module for AUCA English Professional levels 1 and 2.",
+        "Implemented stored-procedure-driven registration and role-based dashboards."
+      ]
+    },
+    "tost": {
+      "role": "Software Engineering Intern",
+      "org": "Tost Group",
+      "location": "Kigali, Rwanda",
+      "kind": "Internship",
+      "bullets": [
+        "Worked on frontend features and bug fixes with React and Tailwind CSS.",
+        "Participated in user testing and iterated the UI based on feedback."
+      ]
+    },
+    "bittwok": {
+      "role": "UI/UX Designer",
+      "org": "Bittwok",
+      "location": "Kigali, Rwanda",
+      "kind": "Design",
+      "bullets": [
+        "Designed product flows and interfaces for early-stage features.",
+        "Produced wireframes and prototypes that fed directly into engineering work."
+      ]
     },
     "eyecare": {
-      "role": "Fullstack Developer — Eye Care Management System",
+      "role": "Fullstack Developer Eye Care Management System",
       "org": "University Project / Client",
       "location": "Remote",
       "bullets": [
@@ -504,7 +728,7 @@
       "tag": "HealthTech"
     },
     "auca": {
-      "role": "Backend & Frontend — AUCA Registration",
+      "role": "Backend & Frontend: AUCA Registration",
       "org": "Adventist University of Central Africa (AUCA)",
       "location": "Kigali, Rwanda",
       "bullets": [
@@ -525,13 +749,16 @@
     }
   },
   "education": {
+    "label": "Education",
+    "heading": "Academic background.",
+    "subheading": "Degrees and certifications that shape how I build.",
     "badge": "Academic Journey",
     "title": "Education &",
     "titleHighlight": "Certifications",
     "description": "A comprehensive overview of my academic achievements and professional certifications.",
     "total": "Total",
     "degrees": "Degrees",
-    "certificates": "Certificates",
+    "certificates": "Certifications",
     "all": "All",
     "degree": "Degrees",
     "certificate": "Certificates",
@@ -540,10 +767,12 @@
     "noTranscript": "No transcript available",
     "noRecords": "No education records found in this category.",
     "previewTranscript": "Preview transcript / certificate",
-  "open": "Open",
-  "loading": "Loading document...",
-  "toClose": "to close",
-  "toDownload": "to download",
+    "open": "Open",
+    "loading": "Loading document...",
+    "toClose": "to close",
+    "toDownload": "to download",
+    "viewTranscript": "View transcript",
+    "viewCertificate": "View certificate",
     "auca": {
       "institution": "Adventist University of Central Africa (AUCA)",
       "degree": "Bachelor of Science",
@@ -552,7 +781,7 @@
       "honors": "Dean's List (2025)",
       "highlights": [
         "Relevant coursework: Data Structures, Java, Web Development, Linux",
-        "Project: AUCA Master Registration System — backend & UI work"
+        "Project: AUCA Master Registration System backend & UI work"
       ]
     },
     "highschool": {
@@ -616,13 +845,18 @@
     }
   },
   "blog": {
+    "label": "Writing",
+    "heading": "Notes on engineering and design.",
+    "subheading": "Occasional writing about the decisions behind the projects technical choices, product thinking, and lessons from shipping.",
+    "viewAll": "View All Posts",
+    "readArticle": "Read Article",
     "badge": "Writing & Insights",
     "title": "Latest",
     "titleHighlight": "Articles",
-    "description": "Deep dives into design thinking, system architecture, and product development — sharing lessons from real projects.",
-    "viewAll": "View All Posts",
+    "description": "Deep dives into design thinking, system architecture, and product development sharing lessons from real projects.",
+    "pageHeading": "Writing & Notes.",
+    "pageSubheading": "A collection of articles, case studies, book notes, and technical writing.",
     "featured": "Featured",
-    "readArticle": "Read Article",
     "comingSoon": "Coming soon",
     "newsletterTitle": "Stay Updated",
     "newsletterDesc": "Get notified when I publish new case studies, tutorials, and insights about design and development.",
@@ -637,32 +871,41 @@
     "articles": "articles",
     "noArticles": "No articles found matching your criteria.",
     "clearFilters": "Clear filters",
+    "backToHome": "Back to Home",
+    "allFilter": "All",
+    "noPosts": "No posts found matching your criteria.",
     "posts": {
-        "imas": {
+      "imas": {
         "title": "Designing IMAS: A Mobility Experience for Kinshasa",
         "tag": "Case Study",
         "summary": "How I approached the UX for a mobility platform: mapping flows, defining personas, and turning real problems into clear interfaces.",
         "readingTime": "6 min read"
-        },
-        "savingdm": {
+      },
+      "savingdm": {
         "title": "From Idea to Architecture: SavingDm",
         "tag": "Engineering",
         "summary": "Breaking down the data model and API design for a savings and micro-credit app built with React and a Django backend.",
         "readingTime": "5 min read"
-        },
-        "eyecare": {
+      },
+      "eyecare": {
         "title": "Lessons from Building an Eye Care Management System",
         "tag": "Product",
         "summary": "What I learned about workflows, role-based dashboards, and patient-centered flows while designing a health system.",
         "readingTime": "4 min read"
-        }
+      }
     }
   },
+  "blogPost": {
+    "contentComingSoon": "Article content coming in a later phase."
+  },
   "contact": {
+    "label": "Contact",
+    "heading": "Have something in mind? Let's talk.",
+    "subheading": "Freelance, full-time, or collaborations  feel free to reach out. I usually reply within 24 hours.",
     "badge": "Get In Touch",
     "title": "Let's Work",
     "titleHighlight": "Together",
-    "description": "Have a project, job opportunity, or just want to say hi? Drop me a message — I'll get back to you within 24 hours.",
+    "description": "Have a project, job opportunity, or just want to say hi? Drop me a message I'll get back to you within 24 hours.",
     "email": "Email Me",
     "location": "Location",
     "quickResponse": "Quick Response",
@@ -688,166 +931,66 @@
     "networkError": "Network error. Check your connection and try again."
   },
   "footer": {
+    "quickLinks": "Quick Links",
+    "elsewhere": "Elsewhere",
     "designedBy": "Designed & Built by",
     "basedIn": "Based in",
     "openToRemote": "Open to Remote",
-    "quickLinks": "Quick Links",
     "connect": "Connect",
     "followMe": "Follow me on social media",
     "available": "Available for opportunities",
     "rights": "All rights reserved.",
     "backToTop": "Back to Top",
     "description": "Full-stack developer and UI/UX designer crafting beautiful, user-centered digital experiences across web and mobile platforms.",
-    "contact": "Contact",
-  "home": "Home",
-  "about": "About",
-  "skills": "Skills",
-  "projects": "Projects",
-  "experience": "Experience",
-  "education": "Education",
-  "blog": "Blog",
-  "linkedin": "LinkedIn",
-  "github": "GitHub",
-  "twitter": "Twitter",
-  "email": "Email",
-  "location": "Kigali, Rwanda",
-  "remote": "Remote Worldwide",
-  "timezone": "UTC+2",
-  "status": "Available for Opportunities",
-  "scroll": "SCROLL"
+    "contact": "Contact"
   },
-  "skills": {
-    "badge": "Skills & Expertise",
-    "title": "Technical & Professional",
-    "titleHighlight": "Skill Set",
-    "description": "A comprehensive collection of technologies, tools, and professional capabilities I work with.",
-    "engineering": "Engineering",
-    "engineeringDesc": "Full-stack development expertise",
-    "ux": "UX / UI Design",
-    "uxDesc": "User-centered design approach",
-    "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "mobile": "Mobile",
-      "ai": "AI & Automation",
-      "design": "UI/UX Design",
-      "devops": "DevOps & Tools",
-      "professional": "Professional",
-      "badge": "Skills & Expertise",
-      "title": "Full-Stack Development",
-      "titleHighlight": "& Design",
-      "description": "I work across both engineering and design, moving seamlessly from high-level product thinking to detailed UI implementation.",
-      "engineering": "Engineering",
-      "engineeringDesc": "Full-stack development expertise",
-      "ux": "UX / UI Design",
-      "uxDesc": "User-centered design approach"
-    },
-    "skillsList": {
-      "javascript": "JavaScript",
-      "react": "React.js",
-      "html5": "HTML5",
-      "css3": "CSS3",
-      "tailwind": "Tailwind CSS",
-      "materialui": "Material UI",
-      "vite": "Vite",
-      "responsive": "Responsive Design",
-      "webui": "Web UI Design",
-      "python": "Python",
-      "java": "Java",
-      "springboot": "Spring Boot",
-      "django": "Django",
-      "djangorest": "Django REST",
-      "php": "PHP",
-      "sql": "SQL",
-      "postgresql": "PostgreSQL",
-      "restapi": "REST API Dev",
-      "apiintegration": "API Integration",
-      "json": "JSON",
-      "axios": "Axios",
-      "auth": "Auth & Authorization",
-      "databasedesign": "Database Design",
-      "crud": "CRUD Development",
-      "dart": "Dart",
-      "flutter": "Flutter",
-      "android": "Android Development",
-      "mobileui": "Mobile UI Design",
-      "aiintegration": "AI Integration",
-      "generativeai": "Generative AI",
-      "aiassistants": "AI Assistants",
-      "aiagents": "AI Agents",
-      "virtualassistants": "Virtual Assistants",
-      "aichatbots": "AI Chatbots",
-      "conversationalai": "Conversational AI",
-      "promptengineering": "Prompt Engineering",
-      "openai": "OpenAI API",
-      "dialogflow": "Dialogflow",
-      "nlp": "Natural Language Processing",
-      "speechrecognition": "Speech Recognition",
-      "speechtotext": "Speech-to-Text",
-      "texttospeech": "Text-to-Speech",
-      "voiceassistants": "Voice Assistants",
-      "intelligentautomation": "Intelligent Automation",
-      "aiworkflow": "AI Workflow Integration",
-      "virtualassistantdev": "Virtual Assistant Development",
-      "aivirtualassistant": "AI Virtual Assistant",
-      "chatbotdev": "Chatbot Development",
-      "automatedcomms": "Automated Communication",
-      "workflowautomation": "Workflow Automation",
-      "conversationalworkflow": "Conversational Workflows",
-      "aicustomerservice": "AI Customer Service",
-      "uidesign": "UI/UX Design",
-      "figma": "Figma",
-      "wireframing": "Wireframing",
-      "prototyping": "Prototyping",
-      "designsystems": "Design Systems",
-      "userflow": "User Flow Design",
-      "interactiveprototyping": "Interactive Prototyping",
-      "git": "Git",
-      "github": "GitHub",
-      "gitlab": "GitLab",
-      "ssh": "SSH",
-      "vercel": "Vercel",
-      "infinityfree": "InfinityFree",
-      "androidstudio": "Android Studio",
-      "vscode": "VS Code",
-      "firebase": "Firebase",
-      "stripe": "Stripe",
-      "twilio": "Twilio",
-      "sendgrid": "SendGrid",
-      "formspree": "Formspree",
-      "jotform": "Jotform",
-      "systeme": "Systeme.io",
-      "googleanalytics": "Google Analytics",
-      "umami": "Umami Analytics",
-      "dns": "DNS Configuration",
-      "spf": "SPF",
-      "dkim": "DKIM",
-      "dmarc": "DMARC",
-      "techsupport": "Technical Support",
-      "itsupport": "IT Support",
-      "troubleshooting": "Software Troubleshooting",
-      "customersupport": "Customer Support",
-      "digitalcomms": "Digital Communication",
-      "techdocs": "Technical Documentation",
-      "datamanagement": "Data Management",
-      "research": "Research",
-      "projectmanagement": "Project Management",
-      "productdev": "Product Development",
-      "digitalproduct": "Digital Product Design",
-      "businessautomation": "Business Process Automation",
-      "remotecollab": "Remote Collaboration",
-      "problemsolving": "Problem Solving",
-      "techresearch": "Technical Research",
-      "requirements": "Requirements Analysis",
-      "testing": "Testing & Debugging",
-      "apitesting": "API Testing",
-      "fullstack": "Full-Stack Development",
-      "softwarearch": "Software Architecture",
-      "systemdesign": "System Design",
-      "framer-motion": "Framer Motion",
-      "lucide-react": "Lucide React",
-      "umami-analytics": "Umami Analytics",
-      "ai-integration": "AI Integration"
+  "groups": {
+  "softwareEngineering": {
+    "label": "Software Engineering",
+    "subtitle": "Production-grade backend and web systems"
+  },
+  "aiData": {
+    "label": "AI, Q&A & Data",
+    "subtitle": "Applied AI, LLM integration and data-aware workflows"
+  },
+  "productUx": {
+    "label": "Product & UI/UX",
+    "subtitle": "User-centered design from wireframe to prototype"
+  },
+  "innovation": {
+    "label": "Innovation & Entrepreneurship",
+    "subtitle": "Problem discovery, solution design and business thinking",
+    "items": {
+      "problemIdentification": "Problem identification",
+      "solutionDesign": "Solution design",
+      "productThinking": "Product thinking",
+      "businessModels": "Business model exploration",
+      "pitching": "Pitching & presentation",
+      "rapidPrototyping": "Rapid prototyping"
+    }
+  },
+  "digitalSolutions": {
+    "label": "Digital Solutions",
+    "subtitle": "End-to-end delivery of practical digital products",
+    "items": {
+      "webApps": "Web applications",
+      "bookingSystems": "Booking & reservation systems",
+      "dashboards": "Admin dashboards",
+      "apiIntegration": "API integration",
+      "cloudDeployment": "Cloud deployment"
+    }
+  },
+    "digitalOps": {
+      "label": "Digital Operations & Virtual Assistance",
+      "subtitle": "Supporting workflows, documentation and remote delivery",
+      "items": {
+        "workflowAutomation": "Workflow automation",
+        "techdocs": "Technical documentation",
+        "remotecollab": "Remote collaboration",
+        "projectmanagement": "Project management",
+        "datamanagement": "Data management",
+        "virtualAssistance": "Virtual assistance"
+      }
     }
   }
 }
