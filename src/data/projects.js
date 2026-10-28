@@ -55,6 +55,11 @@ import mabele2 from "../assets/projects/mabele-2.png";
 import mabele3 from "../assets/projects/mabele-3.png";
 import mabeleCover from "../assets/projects/mabele-cover.png";
 
+import dl1 from "../assets/projects/dl1.png";
+import dl2 from "../assets/projects/dl2.png";
+import dl3 from "../assets/projects/dl3.png";
+import dlcover from "../assets/projects/dlcover.png";
+
 const projects = [
   
   {
@@ -432,6 +437,33 @@ const projects = [
       "Clear payment processes",
       "User verification and trust signals",
       "Mobile-first responsive design"
+    ]
+  },
+  {
+    id: "dl-plomberie-and-forage",
+    slug: "Dl Plomberie & Forage",
+    translationKey: "projects.plomberie",
+    type: "eng",
+    tech: ["React.js", "Tailwind CSS", "whatsapp", "schema technique", "Vercel", "Stripe API", "Assistant"],
+    cover: dlcover,
+    images: [dl1, dl2, dl3],
+    liveUrl: "https://dlplomberieandforage.vercel.app/",
+    status: "Active",
+    category: "Web Page",
+    skills: ["react","tailwind", "uidesign"],
+    goals: ["frontend-developer", "build-saas"],
+    progress: 70,
+    role: "Frontend Developer & Ui/Ux",
+    description: "DL Plomberie & Forage est une entreprise basée à N'Sele / Mikonga 2, à Kinshasa. Nous intervenons sur trois domaines liés à l'eau : la plomberie (installations, réparations, réseaux), le forage (étude, réalisation, mise en service), et l'approvisionnement en eau (pompes, réservoirs, maintenance).",
+    problem: "Ir Delivrance had a problem how to prove to his customers that his company Dl plomberie is fiable and professional",
+    solution: "Built this web page help a lot Dl plomberie to be professionnel with his customers, and also help customers to understand how the job works, and ask any question.",
+    keyFeatures: [
+      "Installation de plomberie",
+      "Réparation de fuites et dépannage",
+      "Canalisations et réseaux",
+      "Installations sanitaires",
+      "Forage et étude de site",
+      "JPompes et approvisionnement en eau"
     ]
   },
 ];
